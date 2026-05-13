@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://liaplias.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://liaplias.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://liaplias.com/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/index.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Code Search -->
+  <url>
+    <loc>https://liaplias.com/en/code-search.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://liaplias.com/en/code-search.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/code-search.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Cooperation -->
+  <url>
+    <loc>https://liaplias.com/en/cooperation.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://liaplias.com/en/cooperation.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/cooperation.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Industries -->
+  <url>
+    <loc>https://liaplias.com/en/industries.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://liaplias.com/en/industries.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/industries.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Solutions -->
+  <url>
+    <loc>https://liaplias.com/en/solutions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://liaplias.com/en/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/solutions.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Partners -->
+  <url>
+    <loc>https://liaplias.com/en/partners.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://liaplias.com/en/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/partners.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://liaplias.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://liaplias.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/contact.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
