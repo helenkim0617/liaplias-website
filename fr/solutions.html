@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Solutions — LIAPLIAS | Indépendance de plateforme, Support local, Développement Grands Comptes</title>
+<meta name="description" content="LIAPLIAS propose trois solutions clés : un approvisionnement indépendant des plateformes, un support après-vente localisé en Europe et un développement grands comptes dédié aux fabricants mondiaux."/>
+<link rel="canonical" href="https://liaplias.com/fr/solutions.html"/>
+<link rel="alternate" hreflang="en" href="https://liaplias.com/en/solutions.html"/>
+<link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/solutions.html"/>
+<link rel="alternate" hreflang="de" href="https://liaplias.com/de/solutions.html"/>
+<link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/solutions.html"/>
+<link rel="alternate" hreflang="x-default" href="https://liaplias.com/en/solutions.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0a0f1e;--bg2:#0d1525;--surf:#111827;--surf2:#1a2440;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
+  --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+  --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
+  --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
+  --ease:250ms cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{cursor:pointer;font:inherit;border:none;background:none}
+::selection{background:rgba(45,127,255,.3)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#1e3060;border-radius:3px}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.5rem)}
+h2{font-size:clamp(1.6rem,4vw,2.6rem)}
+h3{font-size:1.2rem}
+h4{font-size:.95rem;font-weight:600}
+p{max-width:65ch}
+.c{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.sec{padding-block:clamp(4rem,8vw,7rem)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.2rem}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.78rem 1.85rem;border-radius:var(--r);
+  font-family:'Space Grotesk',sans-serif;font-size:.875rem;font-weight:600;
+  letter-spacing:.03em;white-space:nowrap;transition:all var(--ease)}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{background:var(--blue-l);transform:translateY(-2px);box-shadow:0 8px 28px var(--blue-glow)}
+.btn-o{background:transparent;color:var(--cyan);border:1.5px solid rgba(0,212,255,.4)}
+.btn-o:hover{background:rgba(0,212,255,.08);border-color:var(--cyan);transform:translateY(-2px)}
+.btn-lg{padding:.92rem 2.35rem;font-size:.95rem}
+.btn-sm{padding:.5rem 1.1rem;font-size:.78rem}
+@keyframes pulse-glow{
+  0%  {box-shadow:0 0 0 0   rgba(45,127,255,.55),0 8px 28px rgba(45,127,255,.25)}
+  50% {box-shadow:0 0 0 8px rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.45)}
+  100%{box-shadow:0 0 0 0   rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.25)}
+}
+.btn-pulse{animation:pulse-glow 1.5s cubic-bezier(.4,0,.6,1) infinite}
+.btn-pulse:hover{animation:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* Nav */
+#nav{position:fixed;inset-inline:0;top:0;z-index:1000;height:var(--nav-h);display:flex;align-items:center;
+  transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
+#nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
+#nav.hd{transform:translateY(-100%)}
+.ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+  max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em}
+.logo em{font-style:normal;color:var(--cyan)}
+.nl{display:flex;align-items:center;gap:1.6rem}
+.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--text-mid);
+  transition:color var(--ease);position:relative;padding-block:.25rem}
+.na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;
+  background:var(--cyan);transition:width var(--ease)}
+.na:hover,.na.act{color:var(--text)}
+.na:hover::after,.na.act::after{width:100%}
+.nr{display:flex;align-items:center;gap:.65rem}
+.lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
+  border:1px solid var(--border2);border-radius:6px;padding:3px}
+.lb{font-size:.67rem;font-weight:700;letter-spacing:.07em;padding:4px 9px;border-radius:4px;
+  color:var(--text-mid);transition:all var(--ease);cursor:pointer}
+.lb:hover{color:var(--text)}
+.lb.act{background:var(--blue);color:#fff}
+.lb[disabled]{opacity:.3;cursor:not-allowed;pointer-events:none}
+.ham{display:none;flex-direction:column;gap:5px;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--ease)}
+.ham.op span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.op span:nth-child(2){opacity:0}
+.ham.op span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.menu-lang {display: none;}
+@media(max-width:920px){
+  .nl{display:none;flex-direction:column;gap:1.5rem;position:fixed;
+    inset:var(--nav-h) 0 0;background:var(--bg);padding:2.5rem 1.5rem;z-index:999;overflow-y:auto}
+  .nl.op{display:flex}
+  .nl .na{font-size:0.9rem;color:var(--text)}
+  .ham{display:flex}
+  .hm{display:none!important}
+  .top-lang{display:none!important}
+  .menu-lang{display:flex;justify-content:center;gap:0.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
+  .menu-lang .lb{font-size:0.67rem;padding:4px 9px}
+}
+
+/* Page hero */
+.page-hero{padding-top:calc(var(--nav-h) + 5rem);padding-bottom:4rem;
+  background:linear-gradient(180deg,rgba(45,127,255,.08) 0%,transparent 100%);
+  border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:36px 36px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 30%,transparent 100%)}
+.page-hero .inner{position:relative;z-index:1}
+.page-hero h1{margin-bottom:.85rem}
+.page-hero p{color:var(--text-mid);font-size:1rem;max-width:600px}
+
+/* Solution panels — large alternating layout */
+.sol-section{padding-block:clamp(4rem,8vw,7rem)}
+.sol-section+.sol-section{border-top:1px solid var(--border)}
+.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.sol-grid.rev{direction:rtl}
+.sol-grid.rev>*{direction:ltr}
+
+/* Number accent */
+.sol-num{
+  font-family:'Space Grotesk',sans-serif;font-size:7rem;font-weight:800;
+  line-height:1;letter-spacing:-.04em;
+  background:linear-gradient(135deg,rgba(45,127,255,.2),rgba(0,212,255,.08));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:-.75rem;display:block;
+}
+.sol-meta h2{margin-bottom:1rem}
+.sol-meta p{font-size:.95rem;color:var(--text-mid);line-height:1.75;max-width:100%;margin-bottom:1.5rem}
+
+/* Feature list */
+.feat-list{display:flex;flex-direction:column;gap:.85rem;margin-bottom:2rem}
+.feat-item{display:flex;align-items:flex-start;gap:.85rem}
+.feat-check{
+  width:22px;height:22px;border-radius:50%;flex-shrink:0;margin-top:.1rem;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:#fff;
+}
+.feat-item p{font-size:.875rem;color:var(--text-mid);line-height:1.65;max-width:100%}
+.feat-item strong{color:var(--text);font-weight:600}
+
+/* Visual card */
+.sol-card{
+  background:var(--surf);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:2.5rem;position:relative;overflow:hidden;
+}
+.sol-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(45,127,255,.08),transparent);
+  pointer-events:none;
+}
+.sol-card-icon{font-size:3rem;margin-bottom:1.5rem;display:block;position:relative;z-index:1}
+.sol-card h3{font-size:1.05rem;margin-bottom:.5rem;position:relative;z-index:1}
+.sol-card-desc{font-size:.85rem;color:var(--text-mid);line-height:1.65;
+  max-width:100%;position:relative;z-index:1;margin-bottom:1.5rem}
+
+/* Metrics row inside card */
+.sol-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;position:relative;z-index:1}
+.sol-metric{
+  background:rgba(255,255,255,.03);border:1px solid var(--border);
+  border-radius:var(--r);padding:1rem;
+}
+.sol-metric-val{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:800;
+  background:linear-gradient(135deg,var(--blue-l),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  display:block;margin-bottom:.15rem;}
+.sol-metric-lbl{font-size:.7rem;color:var(--text-dim);letter-spacing:.05em}
+
+/* Sub-items list in card */
+.card-items{display:flex;flex-direction:column;gap:.6rem;position:relative;z-index:1}
+.card-item{display:flex;align-items:flex-start;gap:.6rem;
+  padding:.65rem .75rem;background:rgba(255,255,255,.025);
+  border:1px solid var(--border);border-radius:var(--r);
+  transition:border-color var(--ease),background var(--ease)}
+.card-item:hover{border-color:rgba(0,212,255,.25);background:rgba(0,212,255,.03)}
+.ci-dot{width:5px;height:5px;border-radius:50%;background:var(--cyan);flex-shrink:0;margin-top:.35rem}
+.ci-text{font-size:.8rem;color:var(--text-mid);line-height:1.55;max-width:100%}
+.ci-text strong{color:var(--text);font-weight:500}
+
+/* CTA */
+.cta-wrap{background:linear-gradient(135deg,rgba(45,127,255,.14),rgba(0,212,255,.07));
+  border:1px solid rgba(45,127,255,.22);border-radius:var(--r-lg);
+  padding:clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem);text-align:center;position:relative;overflow:hidden}
+.cta-wrap::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 55% 55% at 50% -5%,rgba(45,127,255,.15),transparent);pointer-events:none}
+.cta-wrap h2{position:relative;z-index:1;margin-bottom:.75rem}
+.cta-wrap p{position:relative;z-index:1;color:var(--text-mid);max-width:500px;
+  margin-inline:auto;margin-bottom:2rem;font-size:.95rem}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;position:relative;z-index:1}
+
+/* Footer */
+footer{background:var(--surf);border-top:1px solid var(--border);padding-block:2.5rem 1.5rem;margin-top:4rem}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-inner p{font-size:.75rem;color:var(--text-dim)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-size:.75rem;color:var(--text-dim);transition:color var(--ease)}
+.foot-links a:hover{color:var(--text)}
+
+@media(max-width:900px){
+  .sol-grid,.sol-grid.rev{grid-template-columns:1fr;direction:ltr;gap:2.5rem}
+  .sol-num{font-size:5rem}
+  .sol-metrics{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .sol-metrics{grid-template-columns:1fr}
+}
+</style>
+<!-- RFQ 样式 -->
+<style>
+.rfq-counter{display:inline-flex;align-items:center;gap:0.3rem;padding:0.3rem 0.65rem;background:rgba(45,127,255,0.16);border:1px solid rgba(45,127,255,0.4);border-radius:999px;color:var(--text);font-size:0.75rem;font-weight:600;cursor:pointer;transition:all var(--ease);white-space:nowrap;margin-left:-6px;margin-right:12px}
+.rfq-counter:hover{background:rgba(45,127,255,0.28);border-color:var(--cyan);box-shadow:0 0 20px var(--cyan-glow);transform:translateY(-1px)}
+.rfq-counter:active{transform:scale(0.96)}
+.rfq-counter #rfqCount{color:var(--cyan);font-weight:700}
+.rfq-panel{position:fixed;top:0;right:-440px;width:440px;height:100%;background:#fff;box-shadow:-4px 0 20px rgba(0,0,0,0.15);z-index:9999;transition:right 0.25s ease;padding:1.5rem;overflow-y:auto;box-sizing:border-box;color:#1a2a3a}
+.rfq-panel.open{right:0}
+.rfq-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.rfq-panel-header h3{margin:0;font-size:1.05rem;font-weight:700;color:#0a1a2a}
+.rfq-close{background:none;border:none;font-size:1.4rem;line-height:1;color:#5a6a7a;cursor:pointer;padding:0.2rem 0.4rem;border-radius:4px}
+.rfq-close:hover{background:#f1f4f7;color:#0a1a2a}
+.rfq-list-header{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0 0.3rem 0.3rem;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:#8b9bbb;border-bottom:1px solid #e5e7eb}
+#rfqItems{max-height:260px;overflow-y:auto;margin-bottom:0.5rem}
+.rfq-empty{font-size:0.85rem;color:#8b9bbb;padding:1rem 0.4rem;text-align:center;margin:0}
+.rfq-item-row{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0.4rem 0.3rem;border-bottom:1px solid #f0f2f5;font-size:0.8rem}
+.rfq-item-row:last-child{border-bottom:none}
+.rfq-col-size{color:#5a6a7a;text-align:center;font-variant-numeric:tabular-nums}
+.rfq-col-code{color:#0a1a2a;font-weight:500;white-space:nowrap}
+.rfq-col-qty{text-align:center;color:#0a1a2a;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center;min-width:72px;gap:10px}
+.rfq-col-remove{background:none;border:none;color:#b0bac6;font-size:1.1rem;line-height:1;cursor:pointer;padding:0}
+.rfq-col-remove:hover{color:#d64545}
+.rfq-contact-block{margin-top:1.25rem;border-top:1px solid #e5e7eb;padding-top:1rem}
+.rfq-contact-title{font-weight:600;margin:0 0 10px 0;font-size:0.85rem;color:#0a1a2a}
+.rfq-field-label{display:block;margin-bottom:10px;font-size:0.8rem;color:#5a6a7a}
+.rfq-field-label-last{margin-bottom:4px}
+.rfq-field-input{width:100%;margin-top:4px;padding:8px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:0.85rem;color:#1a2a3a}
+.rfq-field-input:focus{outline:none;border-color:#0052a0;box-shadow:0 0 0 2px rgba(0,82,160,0.12)}
+.rfq-submit-wrap{margin-top:1.25rem}
+.quote-btn{background:#0052a0;color:#fff;border:none;padding:0.7rem 2rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s,transform .1s;text-decoration:none;display:block;width:100%;text-align:center}
+.quote-btn:hover{background:#003d7a;transform:translateY(-1px)}
+@media (max-width: 480px) {
+  .rfq-panel { width: 100vw; max-width: 100vw; }
+  .rfq-list-header,
+  .rfq-item-row { grid-template-columns: 50px 1fr 64px 24px; font-size: 0.75rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="ni">
+    <a href="/fr/index.html" class="logo">LIA<em>PLIAS</em></a>
+    <ul class="nl" id="nl">
+      <li><a class="na" href="/fr/index.html" data-p="index.html">Accueil</a></li>
+      <li><a class="na" href="/fr/cooperation.html" data-p="cooperation.html">Coopération</a></li>
+      <li><a class="na" href="/fr/industries.html" data-p="industries.html">Secteurs</a></li>
+      <li><a class="na" href="/fr/code-search.html" data-p="code-search.html">Recherche Code</a></li>
+      <li><a class="na" href="/fr/custom-cnc.html" data-p="custom-cnc.html">Custom CNC</a></li>
+      <li><a class="na" href="/fr/solutions.html" data-p="solutions.html">Solutions</a></li>
+      <li><a class="na" href="/fr/partners.html" data-p="partners.html">Partenaires</a></li>
+      <li><a class="na" href="/fr/contact.html" data-p="contact.html">Contact</a></li>
+      <li class="menu-lang">
+        <a href="/en/solutions.html" class="lb">EN</a>
+        <a href="/de/solutions.html" class="lb">DE</a>
+        <a href="/fr/solutions.html" class="lb act">FR</a>
+        <a href="/zh/solutions.html" class="lb">中</a>
+      </li>
+<li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
+
+    </ul>
+    <div class="nr">
+      <div class="lp hm">
+        <a href="/en/solutions.html" class="lb">EN</a>
+        <a href="/de/solutions.html" class="lb">DE</a>
+        <a href="/fr/solutions.html" class="lb act">FR</a>
+        <a href="/zh/solutions.html" class="lb">中</a>
+      </div>
+      <a href="/fr/code-search.html" class="btn btn-p btn-sm hm btn-pulse">Demander un devis</a>
+      <button class="ham" id="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="c inner">
+    <div class="eyebrow">Solutions</div>
+    <h1>Trois solutions. Une seule marque.</h1>
+    <p>LIAPLIAS s'articule autour de trois avantages structurels : l'indépendance vis-à-vis d'une plateforme unique, un support après-vente localisé et une gestion grands comptes dédiée aux volumes élevés.</p>
+  </div>
+</div>
+
+<!-- SOLUTION 1: Platform Independence -->
+<section class="sol-section" id="s1">
+  <div class="c">
+    <div class="sol-grid rev">
+      <div class="sol-meta rv">
+        <span class="sol-num">01</span>
+        <div class="eyebrow">Indépendance de plateforme</div>
+        <h2>Votre chaîne logistique. Liée à aucune plateforme.</h2>
+        <p>LIAPLIAS opère en tant que marque directe — ni une place de marché, ni un courtier. Vos commandes, spécifications et accords tarifaires sont gérés directement avec nous. Pas de dépendance de plateforme, pas d'ajustement algorithmique des prix, pas de risque de substitution de fournisseur à votre insu.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Relation de marque directe</strong> — vous traitez directement avec LIAPLIAS, sans intermédiaire tiers susceptible de modifier les conditions ou de retirer des produits.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Spécifications verrouillées</strong> — les spécifications des pièces, les nuances de matériaux et les affectations d'usines validées sont fixes sur votre compte. Aucune substitution sans votre accord.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Propriété des codes LIA</strong> — vos numéros de pièces LIA appartiennent à votre système d'achats. Ils garantissent des spécifications stables face aux fluctuations du marché.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Structure tarifaire transparente</strong> — le prix unitaire, les coûts d'outillage et le fret sont détaillés séparément. Aucun frais groupé ou marge cachée.</p>
+          </div>
+        </div>
+        <a href="/fr/contact.html" class="btn btn-p btn-pulse">Discuter de vos besoins</a>
+      </div>
+      <div class="sol-card rv d2">
+        <span class="sol-card-icon">🔓</span>
+        <h3>Pourquoi l'indépendance est essentielle</h3>
+        <p class="sol-card-desc">La plupart des acheteurs industriels ont déjà fait l'expérience des risques liés aux plateformes : changement de fournisseur, produit re-référencé, variation de prix sans préavis. LIAPLIAS élimine complètement ce risque.</p>
+        <div class="card-items">
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Aucun intermédiaire</strong> — contrats directs, communication directe, responsabilité directe.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Numéros de pièces stables</strong> — les codes LIA sont des références permanentes qui ne changent pas avec les conditions du marché.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Documentation prête pour l'audit</strong> — toutes les spécifications, certificats et rapports de contrôle qualité sont archivés et disponibles indéfiniment sur demande.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Redondance multi-usines</strong> — chaque catégorie de produit dispose de 2 à 3 sources de production qualifiées pour sécuriser vos délais de livraison.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION 2: Localized After-Sales -->
+<section class="sol-section" id="s2" style="background:var(--bg2)">
+  <div class="c">
+    <div class="sol-grid">
+      <div class="sol-card rv">
+        <span class="sol-card-icon">🇪🇺</span>
+        <h3>Service après-vente — Au plus proche de vous</h3>
+        <p class="sol-card-desc">Les problèmes de qualité, les écarts de livraison et les questions techniques sont résolus sur votre fuseau horaire et dans votre langue. Le support après-vente LIAPLIAS n'est pas redirigé vers un centre d'appels en Chine, mais pris en charge par une équipe dédiée au marché européen.</p>
+        <div class="sol-metrics">
+          <div class="sol-metric">
+            <span class="sol-metric-val">24h</span>
+            <span class="sol-metric-lbl">Délai de réponse aux réclamations</span>
+          </div>
+          <div class="sol-metric">
+            <span class="sol-metric-val">EN / FR</span>
+            <span class="sol-metric-lbl">Langues de support</span>
+          </div>
+          <div class="sol-metric">
+            <span class="sol-metric-val">1</span>
+            <span class="sol-metric-lbl">Interlocuteur technique dédié</span>
+          </div>
+          <div class="sol-metric">
+            <span class="sol-metric-val">100%</span>
+            <span class="sol-metric-lbl">Livraisons traçables par lot</span>
+          </div>
+        </div>
+      </div>
+      <div class="sol-meta rv d2">
+        <span class="sol-num">02</span>
+        <div class="eyebrow">Support Après-Vente</div>
+        <h2>Responsabilité locale. Pas d'excuses à distance.</h2>
+        <p>Lorsqu'un lot présente un problème dimensionnel, vous avez besoin d'une solution immédiate, pas d'un délai lié au décalage horaire. LIAPLIAS maintient une structure de support européenne avec des protocoles d'escalade clairs et des engagements de réponse documentés.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Réponse aux réclamations qualité sous 24 heures</strong> — et non 5 jours ouvrés. Analyse des causes racines sous 72 heures pour les non-conformités confirmées.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Remplacement ou avoir sous un cycle de livraison</strong> — pour les lots défectueux confirmés, nous résolvons le problème à nos frais, pas aux vôtres.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Système de traçabilité LIA</strong> — chaque numéro de lot est lié à l'usine, à la date de production, au rapport QC et au certificat matière. L'investigation repose sur des données précises.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Interlocuteur grands comptes dédié</strong> — une personne unique qui connaît vos spécifications, votre historique et vos exigences de livraison. Pas de file d'attente anonyme.</p>
+          </div>
+        </div>
+        <a href="/fr/contact.html" class="btn btn-p btn-pulse">Parler à notre équipe</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION 3: Key Account Development -->
+<section class="sol-section" id="s3">
+  <div class="c">
+    <div class="sol-grid rev">
+      <div class="sol-meta rv">
+        <span class="sol-num">03</span>
+        <div class="eyebrow">Développement Grands Comptes</div>
+        <h2>Conçu pour les acheteurs à grande échelle.</h2>
+        <p>Pour les directeurs d'achats et les équipes d'approvisionnement ayant des besoins réguliers et volumineux en composants, LIAPLIAS propose un programme Grands Comptes structuré — avec des prix consolidés, des livraisons planifiées et un support technique dédié pour gérer l'intégralité de votre portefeuille de composants standard.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Accords-cadres annuels</strong> — des prix fixes sur 12 mois avec des remises échelonnées par volume. Une prévisibilité budgétaire pour votre cycle d'achats.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Consolidation de portefeuille</strong> — nous associons vos pièces HASCO ou Meusburger existantes aux équivalents LIA et fournissons un catalogue unique consolidé pour vos composants standard.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Réapprovisionnement planifié</strong> — pour les références à haute fréquence, nous mettons en place un stock de sécurité de notre côté et déclenchons les expéditions selon votre calendrier, de manière proactive.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Consultation technique incluse</strong> — notre équipe examine la nomenclature (BOM) de vos outillages pour identifier les opportunités de consolidation, les spécifications alternatives ou les pistes de réduction des coûts.</p>
+          </div>
+        </div>
+        <a href="/fr/contact.html" class="btn btn-p btn-pulse">Demander un accès Grands Comptes</a>
+      </div>
+      <div class="sol-card rv d2">
+        <span class="sol-card-icon">🤝</span>
+        <h3>Avantages du programme Grands Comptes</h3>
+        <p class="sol-card-desc">Une relation d'approvisionnement structurée à long terme — et non des commandes au coup par coup. Conçu pour les équipes gérant de 50 à plus de 500 références de composants sur plusieurs projets d'outillage.</p>
+        <div class="card-items">
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Prix annuels fixes</strong> — aucune volatilité du marché spot. Vos coûts unitaires sont contractuellement garantis pour la durée de l'accord.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Service de gestion des nomenclatures (BOM)</strong> — nous maintenons votre catalogue de composants dans le système LIA et signalons proactivement les articles obsolètes ou hors spécifications.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Créneaux de production prioritaires</strong> — les commandes Grands Comptes sont planifiées en priorité avant les commandes spot dans nos usines. Les délais sont garantis contractuellement.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Revue d'activité trimestrielle</strong> — analyse de la consommation, introduction de nouveaux produits et révision des prix chaque trimestre. La chaîne logistique pensée comme un partenariat géré.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Support douanier & conformité</strong> — documentation CE, classification douanière à l'importation et certificats de conformité REACH/RoHS centralisés pour vos fichiers d'audit.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec" style="padding-top:0">
+  <div class="c">
+    <div class="cta-wrap rv">
+      <h2>Quelle solution correspond à votre entreprise ?</h2>
+      <p>Faites-nous part de vos exigences d'approvisionnement et nous vous recommanderons le modèle d'engagement idéal — de la première commande à l'accord-cadre à long terme.</p>
+      <div class="cta-btns">
+        <a href="/fr/contact.html" class="btn btn-p btn-lg btn-pulse">Contacter notre équipe</a>
+        <a href="/fr/code-search.html" class="btn btn-o btn-lg">Rechercher des produits</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="foot-inner">
+      <p>© 2026 LIAPLIAS. Tous droits réservés. Géré par NOLVO.</p>
+      <div class="foot-links">
+        <a href="/fr/index.html">Accueil</a>
+        <a href="/fr/code-search.html">Recherche Code</a>
+        <a href="mailto:info@liaplias.com">info@liaplias.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const nav = document.getElementById('nav');
+  let lastY = 0, ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        nav.classList.toggle('sc', y > 12);
+        if (y > 90 && y > lastY + 10) nav.classList.add('hd');
+        else if (y < lastY - 5) nav.classList.remove('hd');
+        lastY = y;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  const ham = document.getElementById('ham');
+  const nl = document.getElementById('nl');
+  if (ham && nl) {
+    ham.addEventListener('click', () => {
+      const open = nl.classList.toggle('op');
+      ham.classList.toggle('op', open);
+      ham.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    nl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nl.classList.remove('op');
+        ham.classList.remove('op');
+        ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  const curPage = location.pathname.split('/').filter(Boolean).pop() || 'solutions.html';
+  document.querySelectorAll('[data-p]').forEach(a => {
+    if (a.getAttribute('data-p') === curPage) a.classList.add('act');
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+})();
+</script>
+<script>
+(function() {
+  let currentPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  if (currentPage === 'en' || currentPage === 'zh' || currentPage === 'de' || currentPage === 'fr') {
+    currentPage = 'index.html';
+  }
+  const cleanCurrentPage = currentPage.replace('.html', '');
+  document.querySelectorAll('.na').forEach(link => {
+    let targetPage = link.getAttribute('data-p');
+    if (!targetPage) return;
+    const cleanTargetPage = targetPage.replace('.html', '');
+    if (cleanTargetPage === cleanCurrentPage) {
+      link.classList.add('act');
+    }
+  });
+})();
+</script>
+<!-- RFQ 侧边栏面板 -->
+<div class="rfq-panel" id="rfqPanel">
+  <div class="rfq-panel-header">
+    <h3>RFQ List</h3>
+    <button class="rfq-close" onclick="toggleRfqPanel()">&times;</button>
+  </div>
+  <div class="rfq-list-header">
+    <span class="rfq-col-size">Size</span>
+    <span class="rfq-col-code">LIA Code</span>
+    <span class="rfq-col-qty">Qty</span>
+    <span class="rfq-col-remove"></span>
+  </div>
+  <div id="rfqItems"><p class="rfq-empty">No items added yet.</p></div>
+  <div class="rfq-contact-block">
+    <p class="rfq-contact-title">Contact Information (Required)</p>
+    <label class="rfq-field-label">Full Name *<input type="text" id="rfqName" placeholder="John Doe" class="rfq-field-input"></label>
+    <label class="rfq-field-label">Company Name *<input type="text" id="rfqCompany" placeholder="Your Company" class="rfq-field-input"></label>
+    <label class="rfq-field-label rfq-field-label-last">Email Address *<input type="email" id="rfqEmail" placeholder="you@company.com" class="rfq-field-input"></label>
+  </div>
+  <div class="rfq-submit-wrap">
+    <a href="#" class="quote-btn" id="submitRfqBtn">Submit RFQ</a>
+  </div>
+</div>
+
+<script src="../rfq-submit.js"></script>
+</body>
+</html>

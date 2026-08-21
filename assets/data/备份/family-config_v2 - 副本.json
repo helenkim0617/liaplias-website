@@ -1,0 +1,44 @@
+{
+  "_comment": "category_path 和 category_name 字段已于2026-08-08移除——这两个值现在由 build-families_v2.js 运行时从 category-mapping.json 动态查表得出（按 category_code 反查所属SEO分类），不再在这里手动维护静态副本。这是本次核对时发现的问题：家族页面的面包屑/返回链接原本硬编码了SEO分类的URL，一旦 category-mapping.json 里的 seo_slug 改名，这里就要跟着手动改，属于单一权威来源原则的违反。修复后，本文件只保留每个 family 详情页自己特有的内容。",
+  "families": {
+    "EP01": {
+      "name": "Ejector Pin",
+      "slug": "ejector-pin-ep01",
+      "title": "Ejector Pin - LIAPLIAS EP01 Series | Compatible with HASCO & Meusburger",
+      "h1": "Ejector Pin",
+      "family_sub": "Product Family Code: EP01",
+      "tech_sub": "Precision ejector pins · {count} variants available",
+      "din": "",
+      "overview_fields": [
+        { "source": "spec_display", "label": "Size" },
+        { "source": "material", "label": "Material", "pending": true },
+        { "source": "hardness", "label": "Hardness", "pending": true },
+        { "source": "surface", "label": "Surface", "pending": true }
+      ],
+      "notice": [
+        "Material, surface treatment, tolerance and hardness details will be confirmed before quotation."
+      ]
+    },
+    "SS01": {
+      "name": "Guide Pillar, Angle Pin",
+      "slug": "guide-pillar-angle-pin-ss01",
+      "title": "Guide Pillar, Angle Pin - LIAPLIAS SS01 Series | HASCO Compatible",
+      "h1": "Guide Pillar, Angle Pin",
+      "family_sub": "Product Family Code: SS01",
+      "tech_sub": "Precision guide pillars · {count} variants available",
+      "din": "DIN ISO 8404-A (approx.)",
+      "overview_fields": [
+        { "source": "spec_display", "label": "Size" },
+        { "source": "material", "label": "Material" },
+        { "source": "hardness", "label": "Hardness" },
+        { "source": "param3_value", "label": "Thread" },
+        { "source": "surface", "label": "Surface", "pending": true }
+      ],
+      "notice": [
+        "Material and hardness values are approximate (≈) reference specifications.",
+        "Surface treatment and tolerance details will be confirmed before quotation.",
+        "This product line has HASCO cross-reference only; no corresponding Meusburger code exists."
+      ]
+    }
+  }
+}

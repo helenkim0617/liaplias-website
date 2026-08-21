@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Branchen — LIAPLIAS | Präzisions-CNC-Teile</title>
+<meta name="description" content="LIAPLIAS Standardkomponenten für den Formenbau beliefern weltweit die Branchen Automobil, Elektronik, erneuerbare Energien, Bauwesen und Luftfahrt."/>
+<link rel="canonical" href="https://liaplias.com/de/industries.html"/>
+<link rel="alternate" hreflang="en" href="https://liaplias.com/en/industries.html"/>
+<link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/industries.html"/>
+<link rel="alternate" hreflang="de" href="https://liaplias.com/de/industries.html"/>
+<link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/industries.html"/>
+<link rel="alternate" hreflang="x-default" href="https://liaplias.com/en/industries.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0a0f1e;--bg2:#0d1525;--surf:#111827;--surf2:#1a2440;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
+  --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+  --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
+  --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
+  --ease:250ms cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{cursor:pointer;font:inherit;border:none;background:none}
+::selection{background:rgba(45,127,255,.3)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#1e3060;border-radius:3px}
+h1,h2,h3,h4{
+  font-family:'Space Grotesk',sans-serif;
+  line-height:1.1;font-weight:700}
+h1{font-size:clamp(1.9rem,5vw,3.2rem)}
+h2{font-size:clamp(1.5rem,4vw,2.4rem)}
+h3{font-size:1.1rem}
+h4{font-size:.92rem;font-weight:600}
+p{max-width:65ch}
+.c{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.sec{padding-block:clamp(4rem,8vw,7rem)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.2rem}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.78rem 1.85rem;border-radius:var(--r);
+  font-family:'Space Grotesk',sans-serif;font-size:.875rem;font-weight:600;
+  letter-spacing:.03em;white-space:nowrap;transition:all var(--ease)}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{background:var(--blue-l);transform:translateY(-2px);box-shadow:0 8px 28px var(--blue-glow)}
+.btn-o{background:transparent;color:var(--cyan);border:1.5px solid rgba(0,212,255,.4)}
+.btn-o:hover{background:rgba(0,212,255,.08);border-color:var(--cyan);transform:translateY(-2px)}
+.btn-lg{padding:.92rem 2.35rem;font-size:.95rem}
+.btn-sm{padding:.5rem 1.1rem;font-size:.78rem}
+@keyframes pulse-glow{
+  0%  {box-shadow:0 0 0 0   rgba(45,127,255,.55),0 8px 28px rgba(45,127,255,.25)}
+  50% {box-shadow:0 0 0 8px rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.45)}
+  100%{box-shadow:0 0 0 0   rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.25)}
+}
+.btn-pulse{animation:pulse-glow 1.5s cubic-bezier(.4,0,.6,1) infinite}
+.btn-pulse:hover{animation:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ── NAV ── */
+#nav{position:fixed;inset-inline:0;top:0;z-index:1000;height:var(--nav-h);display:flex;align-items:center;
+  transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
+#nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
+#nav.hd{transform:translateY(-100%)}
+.ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+  max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em}
+.logo em{font-style:normal;color:var(--cyan)}
+.nl{display:flex;align-items:center;gap:1.6rem}
+.na{font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:500;
+  letter-spacing:.04em;color:var(--text-mid);
+  transition:color var(--ease);position:relative;padding-block:.25rem}
+.na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;
+  background:var(--cyan);transition:width var(--ease)}
+.na:hover,.na.act{color:var(--text)}
+.na:hover::after,.na.act::after{width:100%}
+.nr{display:flex;align-items:center;gap:.65rem}
+.lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
+  border:1px solid var(--border2);border-radius:6px;padding:3px}
+.lb{font-family:'Space Grotesk',sans-serif;font-size:.67rem;font-weight:700;
+  letter-spacing:.07em;padding:4px 9px;border-radius:4px;
+  color:var(--text-mid);transition:all var(--ease);cursor:pointer}
+.lb:hover{color:var(--text)}
+.lb.act{background:var(--blue);color:#fff}
+.lb[disabled]{opacity:.3;cursor:not-allowed;pointer-events:none}
+.ham{display:none;flex-direction:column;gap:5px;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--ease)}
+.ham.op span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.op span:nth-child(2){opacity:0}
+.ham.op span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.menu-lang{display:none}
+@media(max-width:920px){
+  .nl{display:none;flex-direction:column;gap:1.5rem;position:fixed;
+    inset:var(--nav-h) 0 0;background:var(--bg);padding:2.5rem 1.5rem;z-index:999;overflow-y:auto}
+  .nl.op{display:flex}
+  .nl .na{font-size:.9rem;color:var(--text)}
+  .ham{display:flex}
+  .hm{display:none!important}
+  .menu-lang{display:flex;justify-content:center;gap:.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
+  .menu-lang .lb{font-size:.67rem;padding:4px 9px}
+}
+
+/* ── PAGE HERO ── */
+.page-hero{padding-top:calc(var(--nav-h) + 5rem);padding-bottom:4rem;
+  background:linear-gradient(180deg,rgba(45,127,255,.08) 0%,transparent 100%);
+  border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:36px 36px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 30%,transparent 100%)}
+.page-hero .inner{position:relative;z-index:1}
+.page-hero h1{margin-bottom:.85rem}
+.page-hero p{color:var(--text-mid);font-size:1rem;max-width:600px}
+
+/* ── INDUSTRY SECTIONS ── */
+.ind-section{padding-block:clamp(3.5rem,7vw,6rem)}
+.ind-section+.ind-section{border-top:1px solid var(--border)}
+.ind-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.ind-layout.rev{direction:rtl}
+.ind-layout.rev>*{direction:ltr}
+.ind-number{font-family:'Space Grotesk',sans-serif;font-size:5rem;font-weight:800;
+  line-height:1;color:rgba(45,127,255,.12);margin-bottom:-.5rem;letter-spacing:-.03em}
+.ind-badge{display:inline-flex;align-items:center;gap:.4rem;
+  background:rgba(45,127,255,.12);border:1px solid rgba(45,127,255,.25);
+  border-radius:100px;padding:.28rem .85rem;
+  font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue-l);margin-bottom:1rem}
+.ind-meta h2{margin-bottom:.85rem}
+.ind-meta p{font-size:.92rem;color:var(--text-mid);line-height:1.75;max-width:100%;margin-bottom:1.25rem}
+.prod-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.ptag{padding:.3rem .75rem;border-radius:6px;font-size:.72rem;font-weight:600;
+  background:rgba(0,212,255,.06);color:var(--cyan);border:1px solid rgba(0,212,255,.18)}
+.ind-stats{display:flex;gap:2rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.istat{display:flex;flex-direction:column;gap:.2rem}
+.istat-n{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:800;
+  background:linear-gradient(135deg,var(--blue-l),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.istat-l{font-size:.72rem;color:var(--text-dim);letter-spacing:.05em}
+.ind-visual{background:var(--surf);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:2.5rem;display:flex;flex-direction:column;gap:1rem}
+.vis-icon{font-size:3.5rem;margin-bottom:.5rem}
+.vis-items{display:flex;flex-direction:column;gap:.75rem}
+.vis-item{display:flex;align-items:flex-start;gap:.75rem;
+  padding:.75rem;background:rgba(255,255,255,.025);border-radius:var(--r);
+  border:1px solid var(--border);transition:border-color var(--ease),background var(--ease)}
+.vis-item:hover{border-color:rgba(45,127,255,.3);background:rgba(45,127,255,.04)}
+.vi-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);flex-shrink:0;margin-top:.35rem}
+.vi-text h4{font-size:.85rem;margin-bottom:.2rem}
+.vi-text p{font-size:.78rem;color:var(--text-mid);max-width:100%;line-height:1.6}
+
+/* ── CTA ── */
+.cta-wrap{background:linear-gradient(135deg,rgba(45,127,255,.14),rgba(0,212,255,.07));
+  border:1px solid rgba(45,127,255,.22);border-radius:var(--r-lg);
+  padding:clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem);text-align:center;position:relative;overflow:hidden}
+.cta-wrap::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 55% 55% at 50% -5%,rgba(45,127,255,.15),transparent);pointer-events:none}
+.cta-wrap h2{position:relative;z-index:1;margin-bottom:.75rem}
+.cta-wrap p{position:relative;z-index:1;color:var(--text-mid);max-width:500px;
+  margin-inline:auto;margin-bottom:2rem;font-size:.95rem}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;position:relative;z-index:1}
+
+/* ── FOOTER ── */
+footer{background:var(--surf);border-top:1px solid var(--border);padding-block:2.5rem 1.5rem;margin-top:4rem}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-inner p{font-size:.75rem;color:var(--text-dim)}
+.fop{font-family:'Space Grotesk',sans-serif}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-size:.75rem;color:var(--text-dim);transition:color var(--ease)}
+.foot-links a:hover{color:var(--text)}
+
+@media(max-width:900px){
+  .ind-layout,.ind-layout.rev{grid-template-columns:1fr;direction:ltr;gap:2rem}
+  .ind-number{font-size:3.5rem}
+}
+</style>
+<!-- RFQ 样式 -->
+<style>
+.rfq-counter{display:inline-flex;align-items:center;gap:0.3rem;padding:0.3rem 0.65rem;background:rgba(45,127,255,0.16);border:1px solid rgba(45,127,255,0.4);border-radius:999px;color:var(--text);font-size:0.75rem;font-weight:600;cursor:pointer;transition:all var(--ease);white-space:nowrap;margin-left:-6px;margin-right:12px}
+.rfq-counter:hover{background:rgba(45,127,255,0.28);border-color:var(--cyan);box-shadow:0 0 20px var(--cyan-glow);transform:translateY(-1px)}
+.rfq-counter:active{transform:scale(0.96)}
+.rfq-counter #rfqCount{color:var(--cyan);font-weight:700}
+.rfq-panel{position:fixed;top:0;right:-440px;width:440px;height:100%;background:#fff;box-shadow:-4px 0 20px rgba(0,0,0,0.15);z-index:9999;transition:right 0.25s ease;padding:1.5rem;overflow-y:auto;box-sizing:border-box;color:#1a2a3a}
+.rfq-panel.open{right:0}
+.rfq-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.rfq-panel-header h3{margin:0;font-size:1.05rem;font-weight:700;color:#0a1a2a}
+.rfq-close{background:none;border:none;font-size:1.4rem;line-height:1;color:#5a6a7a;cursor:pointer;padding:0.2rem 0.4rem;border-radius:4px}
+.rfq-close:hover{background:#f1f4f7;color:#0a1a2a}
+.rfq-list-header{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0 0.3rem 0.3rem;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:#8b9bbb;border-bottom:1px solid #e5e7eb}
+#rfqItems{max-height:260px;overflow-y:auto;margin-bottom:0.5rem}
+.rfq-empty{font-size:0.85rem;color:#8b9bbb;padding:1rem 0.4rem;text-align:center;margin:0}
+.rfq-item-row{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0.4rem 0.3rem;border-bottom:1px solid #f0f2f5;font-size:0.8rem}
+.rfq-item-row:last-child{border-bottom:none}
+.rfq-col-size{color:#5a6a7a;text-align:center;font-variant-numeric:tabular-nums}
+.rfq-col-code{color:#0a1a2a;font-weight:500;white-space:nowrap}
+.rfq-col-qty{text-align:center;color:#0a1a2a;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center;min-width:72px;gap:10px}
+.rfq-col-remove{background:none;border:none;color:#b0bac6;font-size:1.1rem;line-height:1;cursor:pointer;padding:0}
+.rfq-col-remove:hover{color:#d64545}
+.rfq-contact-block{margin-top:1.25rem;border-top:1px solid #e5e7eb;padding-top:1rem}
+.rfq-contact-title{font-weight:600;margin:0 0 10px 0;font-size:0.85rem;color:#0a1a2a}
+.rfq-field-label{display:block;margin-bottom:10px;font-size:0.8rem;color:#5a6a7a}
+.rfq-field-label-last{margin-bottom:4px}
+.rfq-field-input{width:100%;margin-top:4px;padding:8px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:0.85rem;color:#1a2a3a}
+.rfq-field-input:focus{outline:none;border-color:#0052a0;box-shadow:0 0 0 2px rgba(0,82,160,0.12)}
+.rfq-submit-wrap{margin-top:1.25rem}
+.quote-btn{background:#0052a0;color:#fff;border:none;padding:0.7rem 2rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s,transform .1s;text-decoration:none;display:block;width:100%;text-align:center}
+.quote-btn:hover{background:#003d7a;transform:translateY(-1px)}
+@media (max-width: 480px) {
+  .rfq-panel { width: 100vw; max-width: 100vw; }
+  .rfq-list-header,
+  .rfq-item-row { grid-template-columns: 50px 1fr 64px 24px; font-size: 0.75rem; }
+}
+</style>
+</style>
+</head>
+<body>
+
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="ni">
+    <a href="/de/index.html" class="logo">LIAP<em>LIAS</em></a>
+    <ul class="nl" id="nl" role="list">
+      <li><a class="na" href="/de/index.html"        data-p="index.html">Startseite</a></li>
+      <li><a class="na" href="/de/cooperation.html"  data-p="cooperation.html">Kooperation</a></li>
+      <li><a class="na" href="/de/industries.html"   data-p="industries.html">Branchen</a></li>
+      <li><a class="na" href="/de/code-search.html"  data-p="code-search.html">Code-Suche</a></li>
+      <li><a class="na" href="/de/custom-cnc.html"    data-p="custom-cnc.html">Custom CNC</a></li>
+      <li><a class="na" href="/de/solutions.html"    data-p="solutions.html">Lösungen</a></li>
+      <li><a class="na" href="/de/partners.html"     data-p="partners.html">Partner</a></li>
+      <li><a class="na" href="/de/contact.html"      data-p="contact.html">Kontakt</a></li>
+      <li class="menu-lang">
+        <a href="/en/industries.html" class="lb">EN</a>
+        <a href="/de/industries.html" class="lb act">DE</a>
+        <a href="/fr/industries.html" class="lb">FR</a>
+        <a href="/zh/industries.html" class="lb">中</a>
+      </li>
+<li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
+    </ul>
+    <div class="nr">
+      <div class="lp hm" aria-label="Language">
+        <a href="/en/industries.html" class="lb">EN</a>
+        <a href="/de/industries.html" class="lb act">DE</a>
+        <a href="/fr/industries.html" class="lb">FR</a>
+        <a href="/zh/industries.html" class="lb">中</a>
+      </div>
+      <a href="/de/contact.html#quote" class="btn btn-p btn-sm hm btn-pulse">Angebot anfordern</a>
+      <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="c inner">
+    <div class="eyebrow rv">Bediente Branchen</div>
+    <h1 class="rv d1">Entwickelt für jede Branche,<br>in der Präzision zählt.</h1>
+    <p class="rv d2">LIAPLIAS Standardkomponenten werden von Ingenieuren im Formenbau, in Automobilwerken, bei Elektronikherstellern und in Anlagen für erneuerbare Energien in ganz Europa und Asien spezifiziert.</p>
+  </div>
+</div>
+
+<section class="ind-section">
+  <div class="c">
+    <div class="ind-layout rv d1">
+      <div class="ind-meta">
+        <div class="ind-number">01</div>
+        <div class="ind-badge">Kernmarkt</div>
+        <h2>Formen- &amp; Werkzeugbau</h2>
+        <p>Spritzgusswerkzeuge, Druckgusswerkzeuge und Stanzwerkzeuge sind auf standardisierte Komponenten angewiesen, die über Millionen von Zyklen maßhaltig bleiben. LIAPLIAS-Komponenten sind maßlich kompatibel mit den Serien von HASCO und Meusburger — direkter 1:1-Ersatz für europäische Werkzeugbauten.</p>
+        <div class="prod-tags">
+          <span class="ptag">Führungssäulen GP</span>
+          <span class="ptag">Führungsbuchsen GB</span>
+          <span class="ptag">Auswerferstifte EP / EF</span>
+          <span class="ptag">Rückstoßstifte RP</span>
+          <span class="ptag">Angussbuchsen SB</span>
+          <span class="ptag">Werkzeugfedern SP</span>
+          <span class="ptag">Zentrierringe LR</span>
+          <span class="ptag">Zylinderschrauben mit Innensechskant SC</span>
+        </div>
+        <a href="/de/code-search.html" class="btn btn-p btn-pulse">Formenbau-Komponenten suchen</a>
+        <div class="ind-stats">
+          <div class="istat"><div class="istat-n">200+</div><div class="istat-l">Werkzeug-SKUs</div></div>
+          <div class="istat"><div class="istat-n">h6/H7</div><div class="istat-l">Standardtoleranz</div></div>
+          <div class="istat"><div class="istat-n">58–62</div><div class="istat-l">HRC Härte</div></div>
+        </div>
+      </div>
+      <div class="ind-visual rv d2">
+        <div class="vis-icon">🔩</div>
+        <div class="vis-items">
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>HASCO &amp; Meusburger kompatibel</h4>
+              <p>Abmessungen und Toleranzen entsprechen exakt den europäischen Standards. Suchen Sie nach HASCO-Code und erhalten Sie ein maßgleiches LIAPLIAS-Produkt.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Standardmaterial: Stahl 1.2210</h4>
+              <p>Alle Führungs- und Auswerferkomponenten bestehen aus legiertem Stahl 1.2210 mit 58–62 HRC. Materialzeugnisse sind bei jeder Lieferung enthalten.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Feingestufte Auswerferstifte bis φ1,0 mm</h4>
+              <p>Die Kategorie EF umfasst feingestufte Auswerferstifte von φ1,0 mm bis φ9,5 mm mit standardmäßiger Nitrierbehandlung, erhältlich in Durchmesserabstufungen von 0,5 mm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ind-section" style="background:var(--bg2)">
+  <div class="c">
+    <div class="ind-layout">
+      <div class="ind-meta rv">
+        <div class="ind-number">02</div>
+        <div class="ind-badge">Hohes Volumen</div>
+        <h2>Automobilindustrie</h2>
+        <p>Werkzeug- und Vorrichtungsanwendungen in der Automobilindustrie erfordern Komponenten, die ihre Maßhaltigkeit auch bei hohen Produktionsvolumina beibehalten. LIAPLIAS-Komponenten erfüllen die Anforderungen an Wiederholgenauigkeit und Rückverfolgbarkeit von IATF 16949-konformen Lieferketten.</p>
+        <div class="prod-tags">
+          <span class="ptag">Präzisions-Zentrierbolzen LP</span>
+          <span class="ptag">Kugel-Führungsbuchsen BG</span>
+          <span class="ptag">Kugel-Führungssäulen BP</span>
+          <span class="ptag">Graphitbuchsen GG</span>
+          <span class="ptag">Gasdruckfedern NS</span>
+          <span class="ptag">Schrägstifte AP</span>
+        </div>
+        <a href="/de/code-search.html" class="btn btn-p btn-pulse">Automobil-Komponenten suchen</a>
+        <div class="ind-stats">
+          <div class="istat"><div class="istat-n">±0,005</div><div class="istat-l">mm Präzisionsgrad</div></div>
+          <div class="istat"><div class="istat-n">100%</div><div class="istat-l">Chargenrückverfolgbar</div></div>
+        </div>
+      </div>
+      <div class="ind-visual rv d1">
+        <div class="vis-icon">🚗</div>
+        <div class="vis-items">
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>P5 Präzisionsgrad verfügbar</h4>
+              <p>Kugelführungssysteme und Präzisions-Zentrierbolzen sind im Grad P5 (±0,005 mm) für Vorrichtungsanwendungen erhältlich, die eine Wiederholgenauigkeit im Mikrometerbereich erfordern.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Vollständige Chargenrückverfolgbarkeit</h4>
+              <p>Jede Lieferung enthält eine LIA-Chargennummer, die mit Materialzeugnissen, Härteprotokollen und Maßberichten verknüpft ist — ein auditfertiges Dokumentationspaket.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Versorgung mit Gasdruckfedern</h4>
+              <p>Die Kategorie NS umfasst Standard-Gasdruckfedern für Stanz- und Umformwerkzeuge in verschiedenen Kraftstufen, geeignet für Automobilwerkzeuge mit hohen Zyklenzahlen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ind-section">
+  <div class="c">
+    <div class="ind-layout rev">
+      <div class="ind-meta">
+        <div class="ind-number">03</div>
+        <div class="ind-badge">Schnell wachsend</div>
+        <h2>Elektronik &amp; 3C</h2>
+        <p>Werkzeuge für die Unterhaltungselektronik erfordern feintolerierte Auswerfersysteme und kompakte Führungselemente für kleine, komplexe Formstrukturen. LIAPLIAS feingestufte Auswerferstifte (EF-Serie) und Flachauswerfer (EB-Serie) werden häufig in Präzisions-Kunststoffformen eingesetzt.</p>
+        <div class="prod-tags">
+          <span class="ptag">Auswerferstifte feingestuft EF</span>
+          <span class="ptag">Flachauswerfer EB</span>
+          <span class="ptag">Auswerferhülsen ES</span>
+          <span class="ptag">Kompakte Führungselemente GP/GB</span>
+          <span class="ptag">Kleine Werkzeugfedern SP</span>
+        </div>
+        <a href="/de/code-search.html" class="btn btn-p btn-pulse">Elektronik-Komponenten suchen</a>
+        <div class="ind-stats">
+          <div class="istat"><div class="istat-n">φ1,0mm</div><div class="istat-l">Min. Stiftdurchmesser</div></div>
+          <div class="istat"><div class="istat-n">±0,01</div><div class="istat-l">mm Standardtoleranz</div></div>
+        </div>
+      </div>
+      <div class="ind-visual rv d1">
+        <div class="vis-icon">📱</div>
+        <div class="vis-items">
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>EF-Serie bis zu φ1,0 mm</h4>
+              <p>Feingestufte Auswerferstifte für dünnwandige und mikrostrukturierte Kunststoffteile. Nitrierte Oberfläche für verbesserte Verschleißfestigkeit in hochzyklischen Elektronikformen.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Flachauswerfer-Serie</h4>
+              <p>EB-Serie zum Auswerfen dünner Rippen und schmaler Schlitzmerkmale. Breite ab 1 mm, erhältlich in Standard- und Sonderlängen.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Schnelle Nachbestellung, kurze Lieferzeiten</h4>
+              <p>Die Elektronikproduktion ist schnelllebig. Freigegebene LIAPLIAS-Spezifikationen können innerhalb von 24 Stunden bestellt werden. Standard-Lieferzeit: 7–10 Werktage ab Werk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ind-section" style="background:var(--bg2)">
+  <div class="c">
+    <div class="ind-layout">
+      <div class="ind-meta rv">
+        <div class="ind-number">04</div>
+        <div class="ind-badge">Starkes Wachstum</div>
+        <h2>Erneuerbare Energien</h2>
+        <p>Formen für EV-Batteriegehäuse, Werkzeuge für Solarpanelrahmen und Vorrichtungen für Windkraftkomponenten erfordern korrosionsbeständige, hochbelastbare Form-Hardware. LIAPLIAS Edelstahlvarianten (SS-Suffix) und Temperierkomponenten (TR-Serie) dienen Werkzeuganwendungen im Bereich der erneuerbaren Energien.</p>
+        <div class="prod-tags">
+          <span class="ptag">Edelstahl-Führungssäulen GP-SS</span>
+          <span class="ptag">Edelstahl-Auswerferstifte EP-SS</span>
+          <span class="ptag">Temperierelemente TR</span>
+          <span class="ptag">Schwerlastfedern SP-SH</span>
+          <span class="ptag">Große Zentrierringe LR</span>
+        </div>
+        <a href="/de/code-search.html" class="btn btn-p btn-pulse">Komponenten für erneuerbare Energien suchen</a>
+      </div>
+      <div class="ind-visual rv d1">
+        <div class="vis-icon">⚡</div>
+        <div class="vis-items">
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Edelstahlvarianten</h4>
+              <p>Produkte mit SS-Suffix verwenden Edelstahl 1.4112 oder vergleichbar für korrosionsbeständige Umgebungen — Anwendungen mit Batterie-Elektrolytkontakt und feuchte Formbereiche.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Temperierung (TR)</h4>
+              <p>Armaturen der TR-Serie für Formkühl- und Heizkreisläufe, kompatibel mit Standard G1/4" und G3/8" Rohranschlüssen.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Unterstützung für Großwerkzeuge</h4>
+              <p>Führungssäulen bis φ80 mm, Federn bis AD63 mm — ausgelegt für große Formen von EV-Batteriegehäusen und Strukturbauteilwerkzeuge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ind-section">
+  <div class="c">
+    <div class="ind-layout rev">
+      <div class="ind-meta">
+        <div class="ind-number">05</div>
+        <div class="ind-badge">Nischensegment</div>
+        <h2>Bauwesen &amp; Architektur</h2>
+        <p>Architekturbeschläge, Sanitärarmaturen und Komponenten für modulare Bausysteme sind auf Präzisions-Druckguss- und Spritzgusswerkzeuge angewiesen. LIAPLIAS liefert Standard-Formkomponenten an Werkzeugbauer, die diesen Sektor bedienen.</p>
+        <div class="prod-tags">
+          <span class="ptag">Druckguss-Führungssysteme GP/GB</span>
+          <span class="ptag">Schwere/Extra-Schwere Federn SP-SH/SE</span>
+          <span class="ptag">Zentrierelemente LP/LB</span>
+          <span class="ptag">Angussbuchsen SB</span>
+        </div>
+        <a href="/de/code-search.html" class="btn btn-p btn-pulse">Bauwesen-Komponenten suchen</a>
+      </div>
+      <div class="ind-visual rv d1">
+        <div class="vis-icon">🏗️</div>
+        <div class="vis-items">
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Selbstschmierend für Druckguss</h4>
+              <p>Die Serie der Graphitbuchsen (GG) bietet eine selbstschmierende Führung unter Hochtemperatur-Druckgussbedingungen ohne externe Schmierung — verlängerte Lebensdauer.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Extra-Schwerlastfedern</h4>
+              <p>SP-SE (extra-schwer, grün) und SP-SH (schwer, rot) Serien für hocheffizienten Auswurf in Formen für große Baukomponenten.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ind-section" style="background:var(--bg2)">
+  <div class="c">
+    <div class="ind-layout">
+      <div class="ind-meta rv">
+        <div class="ind-number">06</div>
+        <div class="ind-badge">Hohe Spezifikation</div>
+        <h2>Luftfahrt &amp; Industrie</h2>
+        <p>Präzisionsvorrichtungskomponenten für Zulieferer in der Luftfahrt erfordern vollständige Maßrückverfolgbarkeit und zertifizierte Materialgüten. LIAPLIAS Präzisionsprodukte (P5) erfüllen diese Dokumentations- und Genauigkeitsanforderungen.</p>
+        <div class="prod-tags">
+          <span class="ptag">Präzisions-Zentrierbolzen LP-P5</span>
+          <span class="ptag">Kugel-Führungssäulen BP-P5</span>
+          <span class="ptag">Präzisions-Führungselemente GP-P5</span>
+          <span class="ptag">Edelstahl-Befestigungselemente SC-SS</span>
+        </div>
+        <a href="/de/code-search.html" class="btn btn-p btn-pulse">Präzisionskomponenten suchen</a>
+      </div>
+      <div class="ind-visual rv d1">
+        <div class="vis-icon">✈️</div>
+        <div class="vis-items">
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>P5 Präzisionsgrad</h4>
+              <p>Produkte mit dem Suffix -P5 werden mit einer Genauigkeit von ±0,005 mm hergestellt und geprüft, geeignet für Vorrichtungs- und Montagewerkzeuganwendungen in der Luftfahrt.</p>
+            </div>
+          </div>
+          <div class="vis-item">
+            <div class="vi-dot"></div>
+            <div class="vi-text">
+              <h4>Vollständiges Dokumentationspaket</h4>
+              <p>Materialzeugnisse (EN 10204 3.1), Härteprüfberichte und CMM-Maßprotokolle sind auf Anfrage bei jeder Chargenlieferung erhältlich.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:3rem">
+  <div class="c">
+    <div class="cta-wrap rv">
+      <h2>Finden Sie die richtige Komponente<br>für Ihre Branche.</h2>
+      <p>Suchen Sie in über 400 SKUs nach HASCO-Code, Meusburger-Code oder Produktschlüsselwort — oder laden Sie eine Stückliste für eine Sammelanfrage hoch.</p>
+      <div class="cta-btns">
+        <a href="/de/code-search.html" class="btn btn-p btn-lg btn-pulse">Nach Code suchen</a>
+        <a href="/de/contact.html"     class="btn btn-o btn-lg">Kontaktieren Sie unser Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="c">
+    <div class="foot-inner">
+      <p>© 2026 LIAPLIAS. Alle Rechte vorbehalten. <span class="fop">Betrieben von NOLVO.</span></p>
+      <div class="foot-links">
+        <a href="/de/index.html">Startseite</a>
+        <a href="/de/code-search.html">Code-Suche</a>
+        <a href="mailto:info@liaplias.com">info@liaplias.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const nav = document.getElementById('nav');
+  let lastY = 0, ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        nav.classList.toggle('sc', y > 12);
+        if (y > 90 && y > lastY + 10) nav.classList.add('hd');
+        else if (y < lastY - 5) nav.classList.remove('hd');
+        lastY = y;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  const ham = document.getElementById('ham');
+  const nl  = document.getElementById('nl');
+  if (ham && nl) {
+    ham.addEventListener('click', () => {
+      const open = nl.classList.toggle('op');
+      ham.classList.toggle('op', open);
+      ham.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    nl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nl.classList.remove('op');
+        ham.classList.remove('op');
+        ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  const curPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  document.querySelectorAll('[data-p]').forEach(a => {
+    if (a.getAttribute('data-p') === curPage) a.classList.add('act');
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+})();
+
+// ── 导航高亮 ──────────────────────────────────────────────────────
+(function() {
+  let currentPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  if (currentPage === 'en' || currentPage === 'zh' || currentPage === 'de' || currentPage === 'fr') {
+    currentPage = 'index.html';
+  }
+  const cleanCurrentPage = currentPage.replace('.html', '');
+  document.querySelectorAll('.na').forEach(link => {
+    let targetPage = link.getAttribute('data-p');
+    if (!targetPage) return;
+    const cleanTargetPage = targetPage.replace('.html', '');
+    if (cleanTargetPage === cleanCurrentPage) {
+      link.classList.add('act');
+    }
+  });
+})();
+</script>
+<!-- RFQ 侧边栏面板 -->
+<div class="rfq-panel" id="rfqPanel">
+  <div class="rfq-panel-header">
+    <h3>RFQ List</h3>
+    <button class="rfq-close" onclick="toggleRfqPanel()">&times;</button>
+  </div>
+  <div class="rfq-list-header">
+    <span class="rfq-col-size">Size</span>
+    <span class="rfq-col-code">LIA Code</span>
+    <span class="rfq-col-qty">Qty</span>
+    <span class="rfq-col-remove"></span>
+  </div>
+  <div id="rfqItems"><p class="rfq-empty">No items added yet.</p></div>
+  <div class="rfq-contact-block">
+    <p class="rfq-contact-title">Contact Information (Required)</p>
+    <label class="rfq-field-label">Full Name *<input type="text" id="rfqName" placeholder="John Doe" class="rfq-field-input"></label>
+    <label class="rfq-field-label">Company Name *<input type="text" id="rfqCompany" placeholder="Your Company" class="rfq-field-input"></label>
+    <label class="rfq-field-label rfq-field-label-last">Email Address *<input type="email" id="rfqEmail" placeholder="you@company.com" class="rfq-field-input"></label>
+  </div>
+  <div class="rfq-submit-wrap">
+    <a href="#" class="quote-btn" id="submitRfqBtn">Submit RFQ</a>
+  </div>
+</div>
+
+<script src="../rfq-submit.js"></script>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!--
+  2026-08-08 修复说明：
+  - meta description / og:description / JSON-LD description 原本硬编码为通用句式，
+    没有使用 category-mapping.json 里针对每个分类单独写的 meta_description_en，改为 Precision ejector pins, blade ejectors &amp; sleeves compliant with DIN ISO 8694, HASCO Z40 &amp; Meusburger E3000. Nitrided steel, fast dispatch. Request a quote!
+  - Hero区域的介绍段落原本是硬编码的通用句子，改为 LIAPLIAS provides a comprehensive range of precision ejector pins, blade ejectors, and ejector sleeves engineered for 1:1 interchangeability with HASCO (Z40) and Meusburger (E3000) mold standards. Fully compliant with DIN ISO 8694, our components feature nitrided surface treatments (up to 950 HV) and hardened core steel for exceptional wear resistance and anti-galling performance under extreme cycle counts. Download 3D CAD models or request an instant quote today.，使用 category-mapping.json 里的真实文案
+  - 顶部"Browse by category"快捷入口原本硬编码写死6个分类的slug/名称，改为 <a href="/en/categories/guide-pillars-bushings.html" class="hcat">Guide Pillars &amp; Guide Bushings</a>
+    <a href="/en/categories/ejector-pins.html" class="hcat">Ejector Pins</a>
+    <a href="/en/categories/mold-fasteners.html" class="hcat">Mold Fasteners</a>
+    <a href="/en/categories/die-springs.html" class="hcat">Die Springs</a>
+    <a href="/en/categories/locating-centering-components.html" class="hcat">Locating &amp; Centering Components</a>
+    <a href="/en/categories/mold-standard-components.html" class="hcat">Mold Standard Components</a>，
+    由 build-categories.js 动态生成，以后分类改名/新增分类不用再手动改模板
+  - 底部"Related Categories"用的占位符是 <li><a href="/en/categories/guide-pillars-bushings.html">Guide Pillars &amp; Guide Bushings</a></li><li><a href="/en/categories/mold-fasteners.html">Mold Fasteners</a></li><li><a href="/en/categories/die-springs.html">Die Springs</a></li><li><a href="/en/categories/locating-centering-components.html">Locating &amp; Centering Components</a></li><li><a href="/en/categories/mold-standard-components.html">Mold Standard Components</a></li>（保持不变），
+    此前 build-categories.js 的正则只匹配 （少了_bottom），导致这里从未被填充，
+    已在脚本侧修复正则
+
+  2026-08-09 German rollout：整个模板改成EN/DE两语言共用（不再各语言各一份模板）——
+  - 原 // 改名为不带_en后缀的通用占位符
+    （Ejector Pins/Precision ejector pins, blade ejectors &amp; sleeves compliant with DIN ISO 8694, HASCO Z40 &amp; Meusburger E3000. Nitrided steel, fast dispatch. Request a quote!/LIAPLIAS provides a comprehensive range of precision ejector pins, blade ejectors, and ejector sleeves engineered for 1:1 interchangeability with HASCO (Z40) and Meusburger (E3000) mold standards. Fully compliant with DIN ISO 8694, our components feature nitrided surface treatments (up to 950 HV) and hardened core steel for exceptional wear resistance and anti-galling performance under extreme cycle counts. Download 3D CAD models or request an instant quote today.），因为德语版会用同一套占位符承接德语内容
+  - 新增 en（html lang属性+canonical/og:url自引用）、ejector-pins/auswerferstifte（两个语言版真实slug，
+    用于hreflang标签+语言切换器）、act/（当前语言在切换器里显示active态）
+  - 新增约40个  界面文案占位符，由 build-categories.js 的 UI_STRINGS 字典按语言填充
+  - 约定：canonical/og:url自引用、hreflang标签、语言切换器EN/DE两个按钮 = 真实指向两个语言版本；
+    其余站内链接（导航栏/面包屑Home&Categories/Hero区Code Search提示/底部CTA/页脚导航）目前仍统一指向
+    英文版页面（因为cooperation/industries/code-search/solutions/partners/contact/privacy/terms/首页
+    这些页面还没有德语版），但显示文字会翻译——跟详情页"返回分类"链接用的是同一个处理原则，
+    等这些页面陆续做出德语版后再把对应链接切换过去
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+<title>Ejector Pins | HASCO Compatible Mold Components | LIAPLIAS</title>
+<meta name="description" content="Precision ejector pins, blade ejectors &amp; sleeves compliant with DIN ISO 8694, HASCO Z40 &amp; Meusburger E3000. Nitrided steel, fast dispatch. Request a quote!"/>
+<link rel="canonical" href="https://liaplias.com/en/categories/ejector-pins.html"/>
+<link rel="alternate" hreflang="en" href="https://liaplias.com/en/categories/ejector-pins.html"/>
+<link rel="alternate" hreflang="de" href="https://liaplias.com/de/categories/auswerferstifte.html"/>
+<link rel="alternate" hreflang="x-default" href="https://liaplias.com/en/categories/ejector-pins.html"/>
+<meta name="robots" content="index, follow"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Ejector Pins | HASCO &amp; Meusburger Compatible | LIAPLIAS"/>
+<meta property="og:description" content="Precision ejector pins, blade ejectors &amp; sleeves compliant with DIN ISO 8694, HASCO Z40 &amp; Meusburger E3000. Nitrided steel, fast dispatch. Request a quote!"/>
+<meta property="og:url" content="https://liaplias.com/en/categories/ejector-pins.html"/>
+<meta property="og:site_name" content="LIAPLIAS"/>
+<meta property="og:image" content="https://liaplias.com/assets/images/og-cover.jpg"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://liaplias.com/en/" },
+    { "@type": "ListItem", "position": 2, "name": "Categories", "item": "https://liaplias.com/en/categories/" },
+    { "@type": "ListItem", "position": 3, "name": "Ejector Pins", "item": "https://liaplias.com/en/categories/ejector-pins.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Ejector Pins",
+  "description": "Precision ejector pins, blade ejectors &amp; sleeves compliant with DIN ISO 8694, HASCO Z40 &amp; Meusburger E3000. Nitrided steel, fast dispatch. Request a quote!",
+  "url": "https://liaplias.com/en/categories/ejector-pins.html",
+  "about": { "@type": "Thing", "name": "Ejector Pins" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<style>
+/* ===== 主页样式变量 ===== */
+:root{
+  --bg:#0a0f1e;--bg2:#0d1525;--surf:#111827;--surf2:#1a2440;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
+  --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+  --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
+  --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
+  --ease:250ms cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{cursor:pointer;font:inherit;border:none;background:none}
+img{display:block;max-width:100%}
+::selection{background:rgba(45,127,255,.3)}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.08;font-weight:700}
+h1{font-size:clamp(2.2rem,5vw,3.4rem)}
+h2{font-size:clamp(1.6rem,3.2vw,2.2rem)}
+h3{font-size:1.05rem}
+p{max-width:65ch}
+.c{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.sec{padding-block:clamp(2.5rem,5vw,4rem)}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.68rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.1rem}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);flex-shrink:0}
+.menu-lang{display:none}
+
+/* ===== 按钮 ===== */
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.78rem 1.85rem;border-radius:var(--r);
+  font-family:'Space Grotesk',sans-serif;font-size:.875rem;font-weight:600;
+  letter-spacing:.03em;white-space:nowrap;transition:all var(--ease)}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{background:var(--blue-l);transform:translateY(-2px);box-shadow:0 8px 28px var(--blue-glow)}
+.btn-o{background:transparent;color:var(--cyan);border:1.5px solid rgba(0,212,255,.4)}
+.btn-o:hover{background:rgba(0,212,255,.08);border-color:var(--cyan);transform:translateY(-2px);box-shadow:0 8px 28px var(--cyan-glow)}
+.btn-sm{padding:.5rem 1.1rem;font-size:.78rem}
+@keyframes strong-pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(45,127,255,.7),0 0 0 0 rgba(0,212,255,.5)}50%{transform:scale(1.05);box-shadow:0 0 0 12px rgba(45,127,255,0),0 0 0 6px rgba(0,212,255,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(45,127,255,0),0 0 0 0 rgba(0,212,255,0)}}
+.btn-pulse{animation:strong-pulse 1.2s ease-in-out infinite}
+.btn-pulse:hover{animation:none;transform:scale(1);transition:transform .2s}
+
+/* ===== 导航 ===== */
+#nav{position:fixed;inset-inline:0;top:0;z-index:1000;height:var(--nav-h);display:flex;align-items:center;
+  transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
+#nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
+#nav.hd{transform:translateY(-100%)}
+.ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+  max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em;display:flex;align-items:center;color:var(--text)}
+.logo em{font-style:normal;color:var(--cyan)}
+.nl{display:flex;align-items:center;gap:1.6rem}
+.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--text-mid);
+  transition:color var(--ease);position:relative;padding-block:.25rem}
+.na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--cyan);transition:width var(--ease)}
+.na:hover,.na.act{color:var(--text)}
+.na:hover::after,.na.act::after{width:100%}
+.nr{display:flex;align-items:center;gap:.65rem}
+.lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
+  border:1px solid var(--border2);border-radius:6px;padding:3px}
+.lb{font-size:.67rem;font-weight:700;letter-spacing:.07em;padding:4px 9px;border-radius:4px;
+  color:var(--text-mid);transition:all var(--ease);cursor:pointer}
+.lb:hover{color:var(--text)}
+.lb.act{background:var(--blue);color:#fff}
+.ham{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--ease)}
+.ham.op span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.op span:nth-child(2){opacity:0}
+.ham.op span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* ===== 面包屑 ===== */
+.breadcrumb{padding:calc(var(--nav-h) + 1.5rem) 0 0}
+.breadcrumb .c{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--text-dim)}
+.breadcrumb a{color:var(--text-mid);transition:color var(--ease)}
+.breadcrumb a:hover{color:var(--cyan)}
+.breadcrumb span.sep{color:var(--text-dim)}
+.breadcrumb span.cur{color:var(--text-mid)}
+
+/* ===== Hero ===== */
+.cat-hero{padding-block:1.5rem 0}
+.cat-hero h1{margin-bottom:.9rem}
+.cat-hero p{color:var(--text-mid);font-size:.95rem;line-height:1.75;max-width:640px}
+.cat-hero p a{color:var(--cyan)}
+.cat-hero p a:hover{color:var(--blue-l)}
+
+/* ===== 分类快捷入口（顶部，复用主分类页风格） ===== */
+
+.category-quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.2rem;
+  align-items: baseline;
+  padding: 0.2rem 0;
+  margin: 0.5rem 0 1.5rem 0;
+}
+.quick-label {
+  color: var(--text-mid);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.category-quick-nav a {
+  color: var(--blue-l);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.category-quick-nav a:hover {
+  color: var(--text);
+}
+
+/* ===== 产品列表 — 每行4个，紧凑卡片 ===== */
+.product-count{font-size:0.82rem;color:var(--text-dim);margin:0.6rem 0 1.75rem}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+.product-card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:1rem 1.2rem;display:flex;flex-direction:column;gap:0.25rem;
+  transition:border-color var(--ease),transform var(--ease),box-shadow var(--ease)}
+.product-card:hover{border-color:rgba(45,127,255,.4);transform:translateY(-3px);
+  box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.product-card .sku{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.7rem;color:var(--cyan)}
+.product-card .sku a{color:var(--cyan);text-decoration:none}
+.product-card .sku a:hover{color:var(--blue-l)}
+.product-card .category-badge{display:inline-block;font-size:0.5rem;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;color:var(--cyan);
+  background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);
+  border-radius:100px;padding:0.05rem 0.5rem;align-self:flex-start}
+.product-card .name{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:0.8rem;color:var(--text)}
+.product-card .specs{font-size:0.65rem;color:var(--text-mid);line-height:1.5}
+.product-card .specs b{color:var(--text-dim);font-weight:500}
+.product-card .view-link{font-size:0.6rem;font-weight:600;letter-spacing:0.06em;
+  text-transform:uppercase;color:var(--blue-l);display:inline-flex;align-items:center;
+  gap:0.3rem;transition:gap var(--ease),color var(--ease);margin-top:0.1rem;text-decoration:none}
+.product-card .view-link:hover{gap:0.55rem;color:var(--cyan)}
+
+/* ===== 关联分类（底部） ===== */
+.related-cats{padding-block:2.5rem;border-top:1px solid var(--border);margin-top:1rem}
+.related-cats h3{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:1rem}
+.related-cats ul{display:flex;flex-wrap:wrap;gap:.65rem}
+.related-cats li a{display:inline-flex;align-items:center;font-size:.8rem;color:var(--text-mid);
+  background:rgba(255,255,255,.03);border:1px solid var(--border2);border-radius:100px;
+  padding:.4rem 1rem;transition:all var(--ease)}
+.related-cats li a:hover{color:var(--text);border-color:rgba(0,212,255,.35);background:rgba(0,212,255,.05)}
+.cat-ctab{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.75rem}
+
+/* ===== Footer ===== */
+footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4.5rem 2rem}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.fb .logo{margin-bottom:1rem;display:block;font-size:1.3rem;color:var(--text)}
+.fb .logo em{font-style:normal;color:var(--cyan)}
+.fb p{font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.4rem;max-width:270px}
+.fcol h5{font-family:'Space Grotesk',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.1rem}
+.fcol ul{display:flex;flex-direction:column;gap:.7rem}
+.fcol a{font-size:.8rem;color:var(--text-mid);transition:color var(--ease)}
+.fcol a:hover{color:var(--text)}
+.fbot{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fbot p,.fop{font-size:.72rem;color:var(--text-dim)}
+.fop{font-family:'Space Grotesk',sans-serif;letter-spacing:.06em;color:var(--text-mid)}
+
+/* ===== 响应式 ===== */
+@media(max-width:920px){
+  .nl{display:none;flex-direction:column;gap:1.5rem;position:fixed;inset:var(--nav-h) 0 0;
+    background:var(--bg);padding:2.5rem 1.5rem;z-index:999;overflow-y:auto}
+  .nl.op{display:flex}
+  .nl .na{font-size:0.9rem;color:var(--text)}
+  .ham{display:flex}
+  .hm{display:none!important}
+  .menu-lang{display:flex;justify-content:center;gap:0.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
+  .menu-lang .lb{font-size:0.67rem;padding:4px 9px}
+}
+@media(max-width:768px){
+  .product-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+}
+@media(max-width:480px){
+  .product-grid{grid-template-columns:1fr 1fr}
+  .cat-ctab{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:1024px){.fg{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.fg{grid-template-columns:1fr}}
+/* ===== 分类标签样式 — 与首页一致 ===== */
+.hcats{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.hcats-label{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);margin-right:.3rem}
+.hcat{font-size:.76rem;font-weight:500;color:var(--blue-l);background:rgba(45,127,255,.1);
+  border:1px solid rgba(45,127,255,.3);border-radius:100px;padding:.4rem 1rem;
+  transition:all var(--ease);cursor:pointer}
+.hcat:hover{color:var(--text);border-color:var(--cyan);background:rgba(0,212,255,.12);transform:translateY(-1px)}
+@media(max-width:640px){.hcats{gap:.5rem}.hcats-label{width:100%;margin-bottom:.2rem}}
+
+/* ===== rc-* 卡片样式（与 code search 保持一致，2026-08-08）===== */
+.result-card {
+  background: var(--surf);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+.result-card:hover {
+  border-color: rgba(45, 127, 255, .4);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .4);
+}
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-link:hover {
+  text-decoration: none;
+}
+.card-link .rc-foot {
+  position: relative;
+  z-index: 2;
+}
+.view-detail-hint {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: var(--cyan);
+  font-weight: 500;
+  margin-top: 0.15rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.card-link:hover .view-detail-hint {
+  opacity: 1;
+}
+.rc-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.rc-lia {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: .06em;
+  margin-bottom: .25rem;
+}
+.rc-name {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+.rc-badge {
+  flex-shrink: 0;
+  padding: .2rem .6rem;
+  border-radius: 100px;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: rgba(45, 127, 255, .15);
+  color: var(--blue-l);
+  border: 1px solid rgba(45, 127, 255, .25);
+  white-space: nowrap;
+}
+.rc-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .4rem .75rem;
+}
+.rc-spec {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+.rc-spec-key {
+  font-size: .65rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.rc-spec-val {
+  font-size: .82rem;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+.rc-compat {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+}
+.rcc {
+  font-size: .65rem;
+  font-weight: 600;
+  padding: .18rem .5rem;
+  border-radius: 4px;
+  background: rgba(0, 212, 255, .08);
+  color: var(--cyan);
+  border: 1px solid rgba(0, 212, 255, .2);
+}
+.rc-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: .75rem;
+  border-top: 1px solid var(--border);
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+.rc-avail {
+  font-size: .72rem;
+  color: var(--text-dim);
+}
+.rc-avail span {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- ===== 导航 ===== -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="ni">
+    <a href="/en/index.html" class="logo" aria-label="LIAPLIAS home">LIAP<em>LIAS</em></a>
+    <ul class="nl" id="nl" role="list">
+      <li><a class="na" href="/en/index.html" data-p="index.html">Home</a></li>
+      <li><a class="na" href="/en/cooperation.html" data-p="cooperation.html">Cooperation</a></li>
+      <li><a class="na" href="/en/industries.html" data-p="industries.html">Industries</a></li>
+      <li><a class="na" href="/en/code-search.html" data-p="code-search.html">Code Search</a></li>
+      <li><a class="na" href="/en/solutions.html" data-p="solutions.html">Solutions</a></li>
+      <li><a class="na" href="/en/partners.html" data-p="partners.html">Partners</a></li>
+      <li><a class="na" href="/en/contact.html" data-p="contact.html">Contact</a></li>
+      <li class="menu-lang">
+        <a href="/en/categories/ejector-pins.html" class="lb act">EN</a>
+        <a href="/de/categories/auswerferstifte.html" class="lb ">DE</a>
+        <a href="/en/categories/ejector-pins.html" class="lb">FR</a>
+        <a href="/en/categories/ejector-pins.html" class="lb">中</a>
+      </li>
+      <li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
+    </ul>
+    <div class="nr">
+      <div class="lp hm" aria-label="Select language">
+        <a href="/en/categories/ejector-pins.html" class="lb act">EN</a>
+        <a href="/de/categories/auswerferstifte.html" class="lb ">DE</a>
+<a href="/en/categories/ejector-pins.html" class="lb">FR</a>
+<a href="/en/categories/ejector-pins.html" class="lb">中</a>
+      </div>
+      <a href="/en/code-search.html" class="btn btn-p btn-sm hm btn-pulse">Get a Quote</a>
+      <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== 面包屑 ===== -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="c">
+    <a href="/en/index.html">Home</a>
+    <span class="sep">›</span>
+    <a href="/en/categories/">Categories</a>
+    <span class="sep">›</span>
+    <span class="cur">Ejector Pins</span>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="sec cat-hero">
+  <div class="c">
+    <div class="rv">
+      <div class="eyebrow">Ejector Pins</div>
+      <h1>Ejector Pins</h1>
+      <p>
+        LIAPLIAS provides a comprehensive range of precision ejector pins, blade ejectors, and ejector sleeves engineered for 1:1 interchangeability with HASCO (Z40) and Meusburger (E3000) mold standards. Fully compliant with DIN ISO 8694, our components feature nitrided surface treatments (up to 950 HV) and hardened core steel for exceptional wear resistance and anti-galling performance under extreme cycle counts. Download 3D CAD models or request an instant quote today.
+        Browse our range below, or search by your existing part number in <a href="/en/code-search.html">Code Search →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 分类快捷入口（顶部） ===== -->
+<div class="c">
+<div class="hcats">
+    <span class="hcats-label">Browse by category</span>
+    <a href="/en/categories/guide-pillars-bushings.html" class="hcat">Guide Pillars &amp; Guide Bushings</a>
+    <a href="/en/categories/ejector-pins.html" class="hcat">Ejector Pins</a>
+    <a href="/en/categories/mold-fasteners.html" class="hcat">Mold Fasteners</a>
+    <a href="/en/categories/die-springs.html" class="hcat">Die Springs</a>
+    <a href="/en/categories/locating-centering-components.html" class="hcat">Locating &amp; Centering Components</a>
+    <a href="/en/categories/mold-standard-components.html" class="hcat">Mold Standard Components</a>
+</div>
+</div>
+<!-- ===== 产品列表 ===== -->
+<section class="sec" style="padding-top:1rem">
+  <div class="c">
+    <div class="rv">
+      <div class="eyebrow">Product Range</div>
+      <h2>Browse Ejector Pins</h2>
+      <div class="product-count">1006 products available</div>
+    </div>
+    <div class="product-grid rv">
+      
+    <div class="result-card rv">
+      <a href="/en/products/ejector-pin-ep01.html" class="card-link">
+        <div class="rc-head">
+          <div>
+            <div class="rc-lia">EP01</div>
+            <div class="rc-name">Ejector pin, cylindrical head</div>
+          </div>
+          <span class="rc-badge">EP01</span>
+        </div>
+        <div class="rc-specs">
+          <div class="rc-spec"><div class="rc-spec-key">DIN</div><div class="rc-spec-val">DIN 1530-1</div></div>
+          <div class="rc-spec"><div class="rc-spec-key">Standard</div><div class="rc-spec-val">EN ISO 6751</div></div>
+          
+          <div class="rc-spec"><div class="rc-spec-key">Lengths</div><div class="rc-spec-val">965 options</div></div>
+          
+        </div>
+        <div class="rc-compat">
+          <span class="rcc">965/965 lengths cross-reference verified</span>
+        </div>
+        <div class="rc-foot">
+          <div>
+            <div class="rc-avail">Status: <span>Available for Quotation</span></div>
+            <div class="view-detail-hint">🔍 View all lengths →</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+    </div>
+  </div>
+</section>
+
+<!-- ===== 关联分类（底部）+ CTA ===== -->
+<section class="related-cats">
+  <div class="c">
+    <div class="rv">
+      <h3>Related Categories</h3>
+      <ul>
+        <li><a href="/en/categories/guide-pillars-bushings.html">Guide Pillars &amp; Guide Bushings</a></li><li><a href="/en/categories/mold-fasteners.html">Mold Fasteners</a></li><li><a href="/en/categories/die-springs.html">Die Springs</a></li><li><a href="/en/categories/locating-centering-components.html">Locating &amp; Centering Components</a></li><li><a href="/en/categories/mold-standard-components.html">Mold Standard Components</a></li>
+      </ul>
+      <div class="cat-ctab">
+        <a href="/en/contact.html#quote" class="btn btn-p">Request Quote</a>
+        <a href="/en/contact.html" class="btn btn-o">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="c">
+    <div class="fg">
+      <div class="fb">
+        <span class="logo">LIAP<em>LIAS</em></span>
+        <p>Precision CNC Parts — China Made, World Ready.</p>
+        <p>Operated by NOLVO</p>
+        <p>LIAPLIAS® Trademark registered in EU &amp; US.</p>
+      </div>
+      <div class="fcol">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="/en/cooperation.html">Cooperation</a></li>
+          <li><a href="/en/industries.html">Industries</a></li>
+          <li><a href="/en/code-search.html">Code Search</a></li>
+          <li><a href="/en/solutions.html">Solutions</a></li>
+          <li><a href="/en/partners.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/en/privacy.html">Privacy Policy</a></li>
+          <li><a href="/en/terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li>
+          <li><a href="https://liaplias.com">liaplias.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2026 LIAPLIAS. All rights reserved.</p>
+      <span class="fop">Operated by NOLVO</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== RFQ 侧边栏面板 ===== -->
+<div class="rfq-panel" id="rfqPanel">
+  <div class="rfq-panel-header">
+    <h3>RFQ List</h3>
+    <button class="rfq-close" onclick="toggleRfqPanel()">&times;</button>
+  </div>
+  <div class="rfq-list-header">
+    <span class="rfq-col-size">Size</span>
+    <span class="rfq-col-code">LIA Code</span>
+    <span class="rfq-col-qty">Qty</span>
+    <span class="rfq-col-remove"></span>
+  </div>
+  <div id="rfqItems"><p class="rfq-empty">No items added yet.</p></div>
+  <div class="rfq-contact-block">
+    <p class="rfq-contact-title">Contact Information (Required)</p>
+    <label class="rfq-field-label">
+      Full Name *
+      <input type="text" id="rfqName" placeholder="John Doe" class="rfq-field-input">
+    </label>
+    <label class="rfq-field-label">
+      Company Name *
+      <input type="text" id="rfqCompany" placeholder="Your Company" class="rfq-field-input">
+    </label>
+    <label class="rfq-field-label rfq-field-label-last">
+      Email Address *
+      <input type="email" id="rfqEmail" placeholder="you@company.com" class="rfq-field-input">
+    </label>
+  </div>
+  <div class="rfq-submit-wrap">
+    <a href="#" class="quote-btn" style="width:100%;text-align:center;display:block;" id="submitRfqBtn">Submit RFQ</a>
+  </div>
+</div>
+
+<script src="/rfq-submit.js"></script>
+
+<script>
+(function() {
+  // 导航滚动效果
+  const nav = document.getElementById('nav');
+  let lastY = 0, ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        var y = window.scrollY;
+        nav.classList.toggle('sc', y > 12);
+        if (y > 90 && y > lastY + 10) nav.classList.add('hd');
+        else if (y < lastY - 5) nav.classList.remove('hd');
+        lastY = y;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // 移动端汉堡菜单
+  var ham = document.getElementById('ham');
+  var nl = document.getElementById('nl');
+  if (ham && nl) {
+    ham.addEventListener('click', function() {
+      var open = nl.classList.toggle('op');
+      ham.classList.toggle('op', open);
+      ham.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    nl.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        nl.classList.remove('op');
+        ham.classList.remove('op');
+        ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // 滚动显示动画
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.rv').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // 导航高亮
+  var currentPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  if (currentPage === 'en' || currentPage === 'zh' || currentPage === 'de' || currentPage === 'fr') {
+    currentPage = 'index.html';
+  }
+  var cleanCurrentPage = currentPage.replace('.html', '');
+  document.querySelectorAll('.na').forEach(function(link) {
+    var targetPage = link.getAttribute('data-p');
+    if (!targetPage) return;
+    var cleanTargetPage = targetPage.replace('.html', '');
+    if (cleanTargetPage === cleanCurrentPage) {
+      link.classList.add('act');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

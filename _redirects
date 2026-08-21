@@ -1,0 +1,16 @@
+# Download files - 必须放在最前面
+/downloads/*          /downloads/:splat 200
+# Root redirect to English by default
+/                    /en/index.html    301
+# Language redirects
+/en                  /en/index.html    301
+/zh                  /zh/index.html    301
+/de                  /de/index.html    301
+/fr                  /fr/index.html    301
+# Category slug redirects
+/en/categories/guide-pillars-guide-bushings.html    /en/categories/guide-pillars-bushings.html    301
+/en/categories/guide-pillars-guide-bushings          /en/categories/guide-pillars-bushings          301
+/en/categories/mold-fastening-components.html    /en/categories/mold-fasteners.html    301
+/en/categories/mold-fastening-components          /en/categories/mold-fasteners          301
+/en/categories/mold-die-springs.html              /en/categories/die-springs.html        301
+/en/categories/mold-die-springs                    /en/categories/die-springs              301

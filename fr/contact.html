@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Demander un devis — LIAPLIAS</title>
+  <meta name="description" content="Contactez LIAPLIAS pour des demandes de produits, rapprochement de nomenclature (BOM) ou demandes de devis. Exploité par NOLVO. Réponse sous un jour ouvré." />
+  <link rel="canonical" href="https://liaplias.com/fr/contact.html" />
+  <link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/contact.html" />
+  <link rel="alternate" hreflang="de" href="https://liaplias.com/de/contact.html" />
+  <link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/contact.html" />
+  <link rel="alternate" hreflang="en" href="https://liaplias.com/en/contact.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --bg:#0a0f1e;--bg2:#0d1525;--surf:#111827;--surf2:#1a2440;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
+  --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+  --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
+  --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
+  --ease:250ms cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{cursor:pointer;font:inherit;border:none;background:none}
+::selection{background:rgba(45,127,255,.3)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#1e3060;border-radius:3px}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.5rem)}
+h2{font-size:clamp(1.6rem,4vw,2.6rem)}
+h3{font-size:1.15rem}
+h4{font-size:.95rem;font-weight:600}
+p{max-width:65ch}
+.c{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.sec{padding-block:clamp(4rem,8vw,7rem)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.2rem}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.78rem 1.85rem;border-radius:var(--r);
+  font-family:'Space Grotesk',sans-serif;font-size:.875rem;font-weight:600;
+  letter-spacing:.03em;white-space:nowrap;transition:all var(--ease)}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{background:var(--blue-l);transform:translateY(-2px);box-shadow:0 8px 28px var(--blue-glow)}
+.btn-o{background:transparent;color:var(--cyan);border:1.5px solid rgba(0,212,255,.4)}
+.btn-o:hover{background:rgba(0,212,255,.08);border-color:var(--cyan);transform:translateY(-2px)}
+.btn-lg{padding:.92rem 2.35rem;font-size:.95rem}
+.btn-sm{padding:.5rem 1.1rem;font-size:.78rem}
+@keyframes pulse-glow{
+  0%  {box-shadow:0 0 0 0   rgba(45,127,255,.55),0 8px 28px rgba(45,127,255,.25)}
+  50% {box-shadow:0 0 0 8px rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.45)}
+  100%{box-shadow:0 0 0 0   rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.25)}
+}
+.btn-pulse{animation:pulse-glow 1.5s cubic-bezier(.4,0,.6,1) infinite}
+.btn-pulse:hover{animation:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ── Nav (cooperation 标准结构) ── */
+#nav{position:fixed;inset-inline:0;top:0;z-index:1000;height:var(--nav-h);
+  display:flex;align-items:center;
+  transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
+#nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
+#nav.hd{transform:translateY(-100%)}
+.ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+  max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em}
+.logo em{font-style:normal;color:var(--cyan)}
+.nl{display:flex;align-items:center;gap:1.6rem}
+.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--text-mid);
+  transition:color var(--ease);position:relative;padding-block:.25rem}
+.na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;
+  background:var(--cyan);transition:width var(--ease)}
+.na:hover,.na.act{color:var(--text)}
+.na:hover::after,.na.act::after{width:100%}
+.nr{display:flex;align-items:center;gap:.65rem}
+.lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
+  border:1px solid var(--border2);border-radius:6px;padding:3px}
+.lb{font-size:.67rem;font-weight:700;letter-spacing:.07em;padding:4px 9px;border-radius:4px;
+  color:var(--text-mid);transition:all var(--ease);cursor:pointer}
+.lb:hover{color:var(--text)}
+.lb.act{background:var(--blue);color:#fff}
+.lb[disabled]{opacity:.3;cursor:not-allowed;pointer-events:none}
+.ham{display:none;flex-direction:column;gap:5px;padding:4px;background:transparent}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--ease)}
+.ham.op span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.op span:nth-child(2){opacity:0}
+.ham.op span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.menu-lang{display:none}
+
+@media(max-width:920px){
+  .nl{display:none;flex-direction:column;gap:1.5rem;position:fixed;
+    inset:var(--nav-h) 0 0;background:var(--bg);padding:2.5rem 1.5rem;z-index:999;overflow-y:auto}
+  .nl.op{display:flex}
+  .nl .na{font-size:0.9rem;color:var(--text)}
+  .ham{display:flex}
+  .hm{display:none!important}
+  .top-lang{display:none!important}
+  .menu-lang{display:flex;justify-content:center;gap:0.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
+  .menu-lang .lb{font-size:0.67rem;padding:4px 9px}
+}
+
+/* ── 以下是你原有的 contact 页面样式（保持不变）────────────────── */
+/* 全局背景微颗粒噪点蒙版 */
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999; opacity: .4;
+}
+
+/* 按钮脉冲动画 */
+@keyframes strong-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(45,127,255,.7), 0 0 0 0 rgba(0,212,255,.5); }
+  50% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(45,127,255,0), 0 0 0 5px rgba(0,212,255,0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(45,127,255,0), 0 0 0 0 rgba(0,212,255,0); }
+}
+.btn-pulse { animation: strong-pulse 1.5s ease-in-out infinite; }
+.btn-pulse:hover { animation: none; transform: scale(1); }
+
+/* 页面 Hero 区域 */
+.page-hero {
+  padding-top: 160px; padding-bottom: 60px;
+  padding-inline: clamp(1.5rem, 6vw, 5rem);
+  position: relative; overflow: hidden;
+  background: linear-gradient(170deg, #0a0f1e 0%, #0c1530 100%);
+}
+.page-hero::after {
+  content: ''; position: absolute; top: -100px; right: -60px;
+  width: 560px; height: 560px;
+  background: radial-gradient(circle, rgba(45,127,255,.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+  color: var(--cyan); text-transform: uppercase; margin-bottom: 1.25rem;
+}
+.hero-tag::before { content: ''; width: 20px; height: 2px; background: var(--cyan); }
+.page-hero h1 {
+  font-family: var(--ff-head); font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -.02em; max-width: 800px;
+  color: var(--text);
+}
+.hero-gradient {
+  background: linear-gradient(90deg, var(--cyan) 0%, var(--blue-l) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  display: inline-block;
+}
+.page-hero p { max-width: 540px; color: var(--muted); margin-top: 1.4rem; font-size: 1.05rem; line-height: 1.75; }
+
+/* SLA 徽章 */
+.sla-row { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: 1.8rem; }
+.sla-badge {
+  display: flex; align-items: center; gap: .45rem;
+  background: rgba(0,212,255,.05); border: 1px solid rgba(0,212,255,.18);
+  border-radius: 100px; padding: .35rem 1rem;
+  font-size: .78rem; color: var(--cyan); font-weight: 500; letter-spacing: .02em;
+}
+.sla-badge::before { content: ''; width: 5px; height: 5px; background: var(--cyan); border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 6px var(--cyan); }
+
+/* 联系页面布局 */
+.contact-layout {
+  display: grid; grid-template-columns: 1fr 440px; gap: 3.5rem;
+   padding: 30px 0 90px;
+  align-items: start;
+}
+
+/* 信息卡片 */
+.info-stack { display: flex; flex-direction: column; gap: 1.4rem; }
+.info-card {
+  background: var(--surf); border: 1px solid rgba(255,255,255,.05);
+  border-radius: var(--r-lg); padding: 1.8rem;
+  display: flex; gap: 1.2rem; align-items: flex-start;
+  transition: border-color var(--ease), transform var(--ease);
+}
+.info-card:hover { border-color: rgba(45,127,255,.35); transform: translateY(-2px); }
+.info-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  border-radius: 10px; background: linear-gradient(135deg, rgba(45,127,255,.15), rgba(0,212,255,.08));
+  border: 1px solid rgba(45,127,255,.2);
+  display: flex; align-items: center; justify-content: center;
+}
+.info-icon svg { width: 18px; height: 18px; stroke: var(--cyan); fill: none; stroke-width: 1.8; }
+.info-label { font-size: .68rem; font-weight: 700; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; margin-bottom: .35rem; }
+.info-value { font-size: 1rem; color: var(--text); font-weight: 600; }
+.info-value a { color: var(--cyan); transition: color var(--ease); }
+.info-value a:hover { color: var(--blue-l); }
+.info-sub { font-size: .85rem; color: var(--muted); margin-top: .3rem; line-height: 1.6; }
+
+/* 表单面板 */
+.form-panel {
+  background: var(--surf); border: 1px solid rgba(255,255,255,.05);
+  border-radius: var(--r-lg); padding: 2.2rem;
+  position: sticky; top: 94px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+.tab-switch {
+  display: flex; background: rgba(255,255,255,.03);
+  border: 1px solid var(--border2); border-radius: 8px;
+  padding: 3px; gap: 3px; margin-bottom: 2rem;
+}
+.tab-btn {
+  flex: 1; background: none; border: none; cursor: pointer;
+  color: var(--muted); font-family: var(--ff-head);
+  font-size: .8rem; font-weight: 600; letter-spacing: .02em;
+  padding: .65rem .4rem; border-radius: 6px; transition: all var(--ease); white-space: nowrap;
+}
+.tab-btn.active { background: var(--blue); color: #fff; box-shadow: 0 4px 12px rgba(45,127,255,.2); }
+.tab-btn:hover:not(.active) { color: var(--text); background: rgba(255,255,255,.02); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.form-group { display: flex; flex-direction: column; gap: .45rem; margin-bottom: 1.25rem; }
+.form-group label { font-size: .7rem; font-weight: 600; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; text-align: left; }
+.form-group input, .form-group select, .form-group textarea {
+  background: rgba(255,255,255,.02); border: 1px solid var(--border2);
+  border-radius: 8px; color: var(--text); font-family: var(--ff-body);
+  font-size: .9rem; padding: .75rem 1rem; outline: none;
+  transition: border-color var(--ease), box-shadow var(--ease); width: 100%; -webkit-appearance: none; appearance: none;
+}
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(136,153,187,.35); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--blue-l); box-shadow: 0 0 0 3px rgba(45,127,255,.15);
+}
+.form-group select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238b9bbb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 1rem center; background-size: 12px; padding-right: 2.5rem;
+}
+.form-group select option { background: var(--surf); color: var(--text); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+/* BOM 上传区域 */
+.upload-zone {
+  border: 1.5px dashed var(--border); border-radius: 8px;
+  padding: 1.6rem; text-align: center; cursor: pointer;
+  background: rgba(255,255,255,.01); transition: all var(--ease); margin-bottom: 1.25rem;
+}
+.upload-zone:hover { border-color: var(--blue-l); background: rgba(45,127,255,.02); }
+.upload-zone p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+.upload-zone strong { color: var(--cyan); }
+.upload-zone input { display: none; }
+.upload-filename { font-size: .78rem; color: var(--cyan); margin-top: .6rem; min-height: 1.2em; font-weight: 500; }
+
+/* 提交按钮 */
+.form-submit {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  width: 100%; background: var(--blue); color: #fff;
+  font-family: var(--ff-head); font-size: .95rem; font-weight: 600; letter-spacing: .02em;
+  border: none; border-radius: 6px; padding: .88rem;
+  cursor: pointer; transition: all var(--ease);
+}
+.form-submit:hover { background: var(--blue-l); transform: translateY(-1px); box-shadow: 0 6px 20px var(--blue-glow); }
+.form-note { font-size: .75rem; color: rgba(136,153,187,.4); margin-top: .95rem; line-height: 1.6; text-align: center; }
+.form-note a { color: var(--blue-l); }
+
+/* 通用分区样式 */
+.section { padding: 90px clamp(1.5rem, 6vw, 5rem); position: relative; width: 100%; display: block; clear: both; }
+.section-label {
+  font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+  color: var(--cyan); text-transform: uppercase; margin-bottom: 1.25rem;
+  display: inline-flex; align-items: center; gap: .55rem;
+}
+.section-label::before { content: ''; width: 20px; height: 2px; background: var(--cyan); }
+.section-title { font-family: var(--ff-head); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -.01em; color: var(--text); }
+.divider { width: 100%; height: 1px; background: linear-gradient(90deg, rgba(45,127,255,.15), transparent); }
+
+/* FAQ 手风琴 */
+.faq-list { max-width: 800px; margin-top: 3.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.faq-item { background: var(--bg); border: 1px solid rgba(255,255,255,.05); border-radius: 8px; overflow: hidden; transition: border-color var(--ease); }
+.faq-item:hover { border-color: rgba(45,127,255,.25); }
+.faq-q {
+  width: 100%; background: none; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.3rem 1.6rem; color: var(--text);
+  font-family: var(--ff-body); font-size: .95rem; font-weight: 600;
+  text-align: left; gap: 1.5rem; transition: background var(--ease);
+}
+.faq-q:hover { background: rgba(255,255,255,.01); }
+.faq-chevron { flex-shrink: 0; width: 18px; height: 18px; stroke: var(--muted); fill: none; stroke-width: 2; transition: transform .3s var(--ease); }
+.faq-item.open { border-color: rgba(45,127,255,.35); background: var(--surf); }
+.faq-item.open .faq-chevron { transform: rotate(180deg); stroke: var(--cyan); }
+.faq-a { display: none; padding: 0 1.6rem 1.4rem; color: var(--muted); font-size: .9rem; line-height: 1.7; border-top: 1px solid rgba(255,255,255,.02); padding-top: 1rem; }
+.faq-item.open .faq-a { display: block; }
+
+/* Footer */
+footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); padding: 4.5rem clamp(1.5rem, 6vw, 5rem) 2rem; position: relative; width: 100%; display: block; clear: both; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-brand .nav-logo { margin-bottom: 1rem; display: block; }
+.footer-brand p { font-size: .8rem; color: var(--muted); line-height: 1.65; margin-bottom: .4rem; max-width: 280px; }
+.footer-col h5 { font-family: var(--ff-head); font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: .7rem; }
+.footer-col a { font-size: .8rem; color: var(--muted); transition: color var(--ease); }
+.footer-col a:hover { color: var(--text); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.05); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-bottom p { font-size: .72rem; color: rgba(136,153,187,.4); }
+.footer-op { font-family: var(--ff-head); font-size: .72rem; letter-spacing: .06em; color: var(--muted); }
+
+/* Toast 提示 */
+.toast {
+  position: fixed; bottom: 2rem; right: 2rem; background: var(--surf2); border: 1px solid var(--cyan);
+  border-radius: 8px; padding: 1rem 1.5rem; font-size: .88rem; color: var(--text);
+  box-shadow: 0 12px 40px rgba(0,0,0,.5); transform: translateY(150%); opacity: 0; transition: transform .3s, opacity .3s; z-index: 2000;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* 响应式 */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 920px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .form-panel { position: static; }
+}
+@media (max-width: 768px) {
+  .form-row2 { grid-template-columns: 1fr; gap: 0; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+<!-- RFQ 样式 -->
+<style>
+.rfq-counter{display:inline-flex;align-items:center;gap:0.3rem;padding:0.3rem 0.65rem;background:rgba(45,127,255,0.16);border:1px solid rgba(45,127,255,0.4);border-radius:999px;color:var(--text);font-size:0.75rem;font-weight:600;cursor:pointer;transition:all var(--ease);white-space:nowrap;margin-left:-6px;margin-right:12px}
+.rfq-counter:hover{background:rgba(45,127,255,0.28);border-color:var(--cyan);box-shadow:0 0 20px var(--cyan-glow);transform:translateY(-1px)}
+.rfq-counter:active{transform:scale(0.96)}
+.rfq-counter #rfqCount{color:var(--cyan);font-weight:700}
+.rfq-panel{position:fixed;top:0;right:-440px;width:440px;height:100%;background:#fff;box-shadow:-4px 0 20px rgba(0,0,0,0.15);z-index:9999;transition:right 0.25s ease;padding:1.5rem;overflow-y:auto;box-sizing:border-box;color:#1a2a3a}
+.rfq-panel.open{right:0}
+.rfq-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.rfq-panel-header h3{margin:0;font-size:1.05rem;font-weight:700;color:#0a1a2a}
+.rfq-close{background:none;border:none;font-size:1.4rem;line-height:1;color:#5a6a7a;cursor:pointer;padding:0.2rem 0.4rem;border-radius:4px}
+.rfq-close:hover{background:#f1f4f7;color:#0a1a2a}
+.rfq-list-header{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0 0.3rem 0.3rem;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:#8b9bbb;border-bottom:1px solid #e5e7eb}
+#rfqItems{max-height:260px;overflow-y:auto;margin-bottom:0.5rem}
+.rfq-empty{font-size:0.85rem;color:#8b9bbb;padding:1rem 0.4rem;text-align:center;margin:0}
+.rfq-item-row{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0.4rem 0.3rem;border-bottom:1px solid #f0f2f5;font-size:0.8rem}
+.rfq-item-row:last-child{border-bottom:none}
+.rfq-col-size{color:#5a6a7a;text-align:center;font-variant-numeric:tabular-nums}
+.rfq-col-code{color:#0a1a2a;font-weight:500;white-space:nowrap}
+.rfq-col-qty{text-align:center;color:#0a1a2a;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center;min-width:72px;gap:10px}
+.rfq-col-remove{background:none;border:none;color:#b0bac6;font-size:1.1rem;line-height:1;cursor:pointer;padding:0}
+.rfq-col-remove:hover{color:#d64545}
+.rfq-contact-block{margin-top:1.25rem;border-top:1px solid #e5e7eb;padding-top:1rem}
+.rfq-contact-title{font-weight:600;margin:0 0 10px 0;font-size:0.85rem;color:#0a1a2a}
+.rfq-field-label{display:block;margin-bottom:10px;font-size:0.8rem;color:#5a6a7a}
+.rfq-field-label-last{margin-bottom:4px}
+.rfq-field-input{width:100%;margin-top:4px;padding:8px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:0.85rem;color:#1a2a3a}
+.rfq-field-input:focus{outline:none;border-color:#0052a0;box-shadow:0 0 0 2px rgba(0,82,160,0.12)}
+.rfq-submit-wrap{margin-top:1.25rem}
+.quote-btn{background:#0052a0;color:#fff;border:none;padding:0.7rem 2rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s,transform .1s;text-decoration:none;display:block;width:100%;text-align:center}
+.quote-btn:hover{background:#003d7a;transform:translateY(-1px)}
+@media (max-width: 480px) {
+  .rfq-panel { width: 100vw; max-width: 100vw; }
+  .rfq-list-header,
+  .rfq-item-row { grid-template-columns: 50px 1fr 64px 24px; font-size: 0.75rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION (cooperation 标准结构) -->
+<nav id="nav">
+  <div class="ni">
+    <a href="/fr/index.html" class="logo">LIAP<em>LIAS</em></a>
+    <ul class="nl" id="nl">
+      <li><a class="na" href="/fr/index.html" data-p="index.html">Accueil</a></li>
+      <li><a class="na" href="/fr/cooperation.html" data-p="cooperation.html">Coopération</a></li>
+      <li><a class="na" href="/fr/industries.html" data-p="industries.html">Secteurs</a></li>
+      <li><a class="na" href="/fr/code-search.html" data-p="code-search.html">Recherche par code</a></li>
+      <li><a class="na" href="/fr/custom-cnc.html" data-p="custom-cnc.html">Custom CNC</a></li>
+      <li><a class="na" href="/fr/solutions.html" data-p="solutions.html">Solutions</a></li>
+      <li><a class="na" href="/fr/partners.html" data-p="partners.html">Partenaires</a></li>
+      <li><a class="na" href="/fr/contact.html" data-p="contact.html">Contact</a></li>
+      <li class="menu-lang">
+        <a href="/en/contact.html" class="lb">EN</a>
+        <a href="/de/contact.html" class="lb">DE</a>
+        <a href="/fr/contact.html" class="lb act">FR</a>
+        <a href="/zh/contact.html" class="lb">中</a>
+      </li>
+<li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
+    </ul>
+    <div class="nr">
+      <div class="lp hm">
+        <a href="/en/contact.html" class="lb">EN</a>
+        <a href="/de/contact.html" class="lb">DE</a>
+        <a href="/fr/contact.html" class="lb act">FR</a>
+        <a href="/zh/contact.html" class="lb">中</a>
+      </div>
+      <a href="/fr/contact.html#quote" class="btn btn-p btn-sm hm btn-pulse">Demander un devis</a>
+      <button class="ham" id="ham" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+<div class="c"> 
+  <div class="rv">
+    <div class="hero-tag">Contact</div>
+    <h1>
+      Un seul contact.<br>
+      <span class="hero-gradient">Pleine<br>responsabilité.</span>
+    </h1>
+    <p>Que vous ayez besoin d'un devis, d'un rapprochement de nomenclature (BOM) ou d'une clarification technique — contactez-nous directement. Pas de centres d'appels, pas de files d'attente de tickets.</p>
+    <div class="sla-row">
+      <span class="sla-badge">Réponse sous un jour ouvré</span>
+      <span class="sla-badge">Rapprochement HASCO / Meusburger</span>
+      <span class="sla-badge">Import de BOM supporté</span>
+    </div>
+  </div>
+ </div>
+</header>
+
+<div class="c"> 
+<div class="contact-layout" id="quote">
+  <div class="info-stack rv d1">
+    <div class="info-card">
+      <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div><div class="info-label">E-mail</div><div class="info-value"><a href="mailto:info@liaplias.com">info@liaplias.com</a></div><div class="info-sub">Pour les demandes générales, les devis et les questions techniques.</div></div>
+    </div>
+</div>
+    <div class="info-card">
+      <div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div><div class="info-label">Délai de réponse</div><div class="info-value">Sous un jour ouvré</div><div class="info-sub">Lun–Ven, heures ouvrables CET et CST. Les demandes urgentes sont signalées en conséquence.</div></div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+      <div><div class="info-label">Exploité par</div><div class="info-value">NOLVO</div><div class="info-sub">LIAPLIAS est une marque déposée (EUIPO & USPTO). Toutes les opérations commerciales sont gérées par NOLVO.</div></div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div><div class="info-label">Couverture</div><div class="info-value">Europe · Asie-Pacifique · Amériques</div><div class="info-sub">Expédition directe depuis la Chine. Partenaires d'entrepôt européens pour certaines références. Incoterms flexibles : EXW, DAP, CIF.</div></div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div><div class="info-label">Recherche par code</div><div class="info-value"><a href="/fr/code-search.html">Rechercher par code LIA / HASCO / Meusburger →</a></div><div class="info-sub">Trouvez les équivalents exacts de produits avant de soumettre votre demande.</div></div>
+    </div>
+  </div>
+
+
+  <div class="form-panel rv d2">
+    <div class="tab-switch">
+      <button class="tab-btn active" data-tab="quote">Demander un devis</button>
+      <button class="tab-btn" data-tab="bom">Rapprochement BOM</button>
+      <button class="tab-btn" data-tab="general">Général</button>
+    </div>
+
+    <div class="tab-content active" id="tab-quote">
+      <form id="quoteForm" novalidate>
+        <div class="form-row2">
+          <div class="form-group"><label for="q-name">Nom complet *</label><input type="text" id="q-name" name="name" placeholder="Max Müller" required /></div>
+          <div class="form-group"><label for="q-company">Société *</label><input type="text" id="q-company" name="company" placeholder="Acme GmbH" required /></div>
+        </div>
+        <div class="form-group"><label for="q-email">E-mail professionnel *</label><input type="email" id="q-email" name="email" placeholder="max@acme.com" required /></div>
+        <div class="form-group"><label for="q-lia">Code(s) LIA / HASCO / Meusburger</label><input type="text" id="q-lia" name="codes" placeholder="ex. LIA-GP-20-0100-HC-SS-P5, HASCO Z00 …" /></div>
+        <div class="form-group"><label for="q-qty">Quantité & exigence de livraison</label><input type="text" id="q-qty" name="quantity" placeholder="ex. 500 pièces, livraison sous 4 semaines, DAP Hambourg" /></div>
+        <div class="form-group"><label for="q-notes">Remarques supplémentaires</label><textarea id="q-notes" name="notes" placeholder="Variantes de matériau, classe de tolérance, traitement de surface ou toute autre spécification…"></textarea></div>
+        <button type="submit" class="form-submit"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Envoyer la demande de devis</button>
+        <p class="form-note">Nous répondons sous un jour ouvré. <a href="mailto:info@liaplias.com">info@liaplias.com</a></p>
+      </form>
+    </div>
+
+    <div class="tab-content" id="tab-bom">
+      <form id="bomForm" novalidate>
+        <div class="form-group"><label for="b-name">Nom complet *</label><input type="text" id="b-name" name="name" placeholder="Max Müller" required /></div>
+        <div class="form-group"><label for="b-email">E-mail professionnel *</label><input type="email" id="b-email" name="email" placeholder="max@acme.com" required /></div>
+        <div class="form-group"><label>Fichier BOM (Excel / CSV)</label><div class="upload-zone" id="uploadZone"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="1.5" style="margin:0 auto .6rem"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><p><strong>Cliquez ou glissez-déposez</strong> votre fichier BOM ici<br><span style="font-size:.75rem">Supporte HASCO, Meusburger ou tout format tabulaire</span></p><div class="upload-filename" id="uploadFilename"></div><input type="file" id="b-file" name="bom_file" accept=".xlsx,.xls,.csv,.ods" /></div></div>
+        <div class="form-group"><label for="b-notes">Instructions de rapprochement</label><textarea id="b-notes" name="notes" placeholder="ex. Remplacer toutes les goupilles de guidage HASCO Z00 par des équivalents LIA, tolérance cible P5, matériau 1.2344…"></textarea></div>
+        <button type="submit" class="form-submit"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Soumettre la BOM pour rapprochement</button>
+        <p class="form-note">Résultats BOM avec codes LIA + prix retournés sous 2 jours ouvrés.</p>
+      </form>
+    </div>
+
+    <div class="tab-content" id="tab-general">
+      <form id="generalForm" novalidate>
+        <div class="form-row2"><div class="form-group"><label for="g-name">Nom *</label><input type="text" id="g-name" name="name" placeholder="Votre nom" required /></div><div class="form-group"><label for="g-email">E-mail *</label><input type="email" id="g-email" name="email" placeholder="vous@entreprise.com" required /></div></div>
+        <div class="form-group"><label for="g-subject">Sujet</label><select id="g-subject" name="subject"><option value="" disabled selected>Sélectionnez un sujet</option><option>Information produit</option><option>Spécification technique</option><option>Demande de partenaire / distributeur</option><option>Presse / médias</option><option>Autre</option></select></div>
+        <div class="form-group"><label for="g-msg">Message *</label><textarea id="g-msg" name="message" placeholder="Votre question ou message…" style="min-height:130px" required></textarea></div>
+        <button type="submit" class="form-submit"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Envoyer le message</button>
+        <p class="form-note">Direct vers <a href="mailto:info@liaplias.com">info@liaplias.com</a> — pas de réponses automatiques.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<section class="section">
+<div class="c">  
+  <div class="rv">
+    <div class="section-label">FAQ</div>
+    <div class="section-title">Questions fréquentes</div>
+  </div>
+  <div class="faq-list rv d1">
+    <div class="faq-item"><button class="faq-q">Quelle est la quantité de commande minimale ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Il n'y a pas de quantité minimale générale pour les articles de catalogue standard. Pour les spécifications particulières ou les combinaisons de suffixes non standard, une production minimale peut être requise. Indiquez votre besoin dans le formulaire de devis et nous le confirmerons.</div></div>
+    <div class="faq-item"><button class="faq-q">Pouvez-vous rapprocher notre nomenclature HASCO ou Meusburger existante ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Oui — c'est un service clé. Importez votre BOM dans l'onglet "Rapprochement BOM" ou utilisez notre outil de <a href="/fr/code-search.html" style="color:var(--cyan)">Recherche par code</a> pour trouver des équivalents avant de soumettre une demande.</div></div>
+    <div class="faq-item"><button class="faq-q">Quels délais de livraison dois-je prévoir ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Les articles en stock sont expédiés sous 3 à 5 jours ouvrés. Les configurations personnalisées ou les commandes en grande quantité nécessitent généralement un délai de production de 3 à 6 semaines. Le délai de livraison est confirmé avec chaque devis.</div></div>
+    <div class="faq-item"><button class="faq-q">Quels Incoterms supportez-vous ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">EXW (origine), FOB, CIF et DAP sont tous supportés. Nous travaillons avec des transitaires établis pour le traitement des importations dans l'UE et aux États-Unis. La documentation douanière est fournie par défaut.</div></div>
+    <div class="faq-item"><button class="faq-q">Comment devenir distributeur agréé ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Visitez la page <a href="/fr/partners.html" style="color:var(--cyan)">Partenaires</a> et soumettez une candidature. Nous examinons toutes les candidatures sous 3 jours ouvrés et répondons avec les critères de qualification.</div></div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><span class="nav-logo">LIAP<em>LIAS</em></span><p>Pièces CNC de précision — Fabriquées en Chine, prêtes pour le monde.</p><p>Exploité par NOLVO</p><p>LIAPLIAS® Marque déposée dans l'UE et aux États-Unis.</p></div>
+    <div class="footer-col"><h5>Navigation</h5><ul><li><a href="/fr/cooperation.html">Coopération</a></li><li><a href="/fr/industries.html">Secteurs</a></li><li><a href="/fr/code-search.html">Recherche par code</a></li><li><a href="/fr/solutions.html">Solutions</a></li><li><a href="/fr/partners.html">Partenaires</a></li></ul></div>
+    <div class="footer-col"><h5>Juridique</h5><ul><li><a href="/fr/privacy.html">Politique de confidentialité</a></li><li><a href="/fr/terms.html">Conditions d'utilisation</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li><li><a href="https://liaplias.com">liaplias.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 LIAPLIAS. Tous droits réservés.</p><span class="footer-op">Exploité par NOLVO</span></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+  // 1. 统一导航栏滚动与智能显隐
+  const nav = document.getElementById('nav');
+  let lastY = 0, ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        nav.classList.toggle('sc', y > 12);
+        if (y > 90 && y > lastY + 10) nav.classList.add('hd');
+        else if (y < lastY - 5) nav.classList.remove('hd');
+        lastY = y;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // 2. 统一移动端汉堡菜单行为 (cooperation 标准)
+  const ham = document.getElementById('ham');
+  const nl = document.getElementById('nl');
+  if (ham && nl) {
+    ham.addEventListener('click', () => {
+      const open = nl.classList.toggle('op');
+      ham.classList.toggle('op', open);
+      ham.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    nl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nl.classList.remove('op');
+        ham.classList.remove('op');
+        ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // 3. 统一交错显现逻辑
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -10px 0px' });
+  document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+
+  // 4. 标签页切换交互
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      const targetContent = document.getElementById('tab-' + btn.dataset.tab);
+      if(targetContent) targetContent.classList.add('active');
+    });
+  });
+
+  // 5. BOM拖拽与点击文件上传交互
+  const uploadZone = document.getElementById('uploadZone');
+  const fileInput = document.getElementById('b-file');
+  const uploadFilename = document.getElementById('uploadFilename');
+  if (uploadZone && fileInput) {
+    uploadZone.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files[0]) uploadFilename.textContent = '📎 ' + fileInput.files[0].name;
+    });
+    uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.style.borderColor = 'var(--blue-l)'; });
+    uploadZone.addEventListener('dragleave', () => { uploadZone.style.borderColor = ''; });
+    uploadZone.addEventListener('drop', e => {
+      e.preventDefault(); uploadZone.style.borderColor = '';
+      const f = e.dataTransfer.files[0];
+      if (f) { fileInput.files = e.dataTransfer.files; uploadFilename.textContent = '📎 ' + f.name; }
+    });
+  }
+
+  // 6. 全局提示框 (Toast)
+  const toast = document.getElementById('toast');
+  function showToast(msg) {
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 5000);
+  }
+
+  // 7. 多表单通用智能提交拦截逻辑
+  async function handleForm(form, type, successMsg) {
+    if (!form) return;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.form-submit');
+      const originalHtml = btn.innerHTML;
+      btn.disabled = true; btn.textContent = 'Envoi…';
+
+      const data = Object.fromEntries(new FormData(form));
+      data.form_type = type; data.lang = 'fr';
+
+      try {
+        await fetch('/api/inquiries', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      } catch(err) {
+        // 容错处理
+      }
+
+      form.reset();
+      if (uploadFilename) uploadFilename.textContent = '';
+      btn.disabled = false; btn.innerHTML = '✓ Envoyé';
+      showToast(successMsg);
+      setTimeout(() => { btn.innerHTML = originalHtml; }, 4000);
+    });
+  }
+
+  handleForm(document.getElementById('quoteForm'), 'quote', "✓ Demande de devis envoyée. Nous répondrons sous un jour ouvré.");
+  handleForm(document.getElementById('bomForm'), 'bom_matching', '✓ BOM soumise. Les codes LIA rapprochés seront retournés sous 2 jours ouvrés.');
+  handleForm(document.getElementById('generalForm'), 'general', '✓ Message envoyé à info@liaplias.com');
+
+  // 8. FAQ 手风琴点击折叠收拢
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // 9. 锚点定位优化
+  if (window.location.hash === '#quote') {
+    setTimeout(() => {
+      document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+})();
+</script>
+
+<script>
+(function() {
+  let currentPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  if (currentPage === 'en' || currentPage === 'zh' || currentPage === 'de' || currentPage === 'fr') {
+    currentPage = 'index.html';
+  }
+  const cleanCurrentPage = currentPage.replace('.html', '');
+  document.querySelectorAll('.na').forEach(link => {
+    let targetPage = link.getAttribute('data-p');
+    if (!targetPage) return;
+    const cleanTargetPage = targetPage.replace('.html', '');
+    if (cleanTargetPage === cleanCurrentPage) {
+      link.classList.add('act');
+    }
+  });
+})();
+</script>
+<!-- RFQ 侧边栏面板 -->
+<div class="rfq-panel" id="rfqPanel">
+  <div class="rfq-panel-header">
+    <h3>RFQ List</h3>
+    <button class="rfq-close" onclick="toggleRfqPanel()">&times;</button>
+  </div>
+  <div class="rfq-list-header">
+    <span class="rfq-col-size">Size</span>
+    <span class="rfq-col-code">LIA Code</span>
+    <span class="rfq-col-qty">Qty</span>
+    <span class="rfq-col-remove"></span>
+  </div>
+  <div id="rfqItems"><p class="rfq-empty">No items added yet.</p></div>
+  <div class="rfq-contact-block">
+    <p class="rfq-contact-title">Contact Information (Required)</p>
+    <label class="rfq-field-label">Full Name *<input type="text" id="rfqName" placeholder="John Doe" class="rfq-field-input"></label>
+    <label class="rfq-field-label">Company Name *<input type="text" id="rfqCompany" placeholder="Your Company" class="rfq-field-input"></label>
+    <label class="rfq-field-label rfq-field-label-last">Email Address *<input type="email" id="rfqEmail" placeholder="you@company.com" class="rfq-field-input"></label>
+  </div>
+  <div class="rfq-submit-wrap">
+    <a href="#" class="quote-btn" id="submitRfqBtn">Submit RFQ</a>
+  </div>
+</div>
+
+<script src="../rfq-submit.js"></script>
+</body>
+</html>

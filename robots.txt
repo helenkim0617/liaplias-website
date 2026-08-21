@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /en/
+Allow: /zh/
+Allow: /de/
+Allow: /fr/
+Disallow: /assets/data/
+Disallow: /workers/
+
+Sitemap: https://liaplias.com/sitemap.xml

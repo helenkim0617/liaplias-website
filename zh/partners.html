@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>合作伙伴 — LIAPLIAS</title>
+  <meta name="description" content="LIAPLIAS与精密模具标准件分销商、OEM厂商及系统集成商开展合作。申请成为授权合作伙伴。" />
+  <link rel="canonical" href="https://liaplias.com/zh/partners.html" />
+  <link rel="alternate" hreflang="en" href="https://liaplias.com/en/partners.html" />
+  <link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/partners.html" />
+  <link rel="alternate" hreflang="de" href="https://liaplias.com/de/partners.html" />
+  <link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/partners.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#0a0f1e;--bg2:#0d1525;--surf:#111827;--surf2:#1a2440;
+      --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+      --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
+      --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+      --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
+      --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
+      --ease:250ms cubic-bezier(.4,0,.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;
+      font-size:16px;line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    button{cursor:pointer;font:inherit;border:none;background:none}
+    ::selection{background:rgba(45,127,255,.3)}
+    ::-webkit-scrollbar{width:5px}
+    ::-webkit-scrollbar-track{background:var(--bg)}
+    ::-webkit-scrollbar-thumb{background:#1e3060;border-radius:3px}
+    h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;font-weight:700}
+    h1{font-size:clamp(2rem,5vw,3.5rem)}
+    h2{font-size:clamp(1.6rem,4vw,2.6rem)}
+    h3{font-size:1.15rem}
+    h4{font-size:.95rem;font-weight:600}
+    p{max-width:65ch}
+    .c{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+    .sec{padding-block:clamp(4rem,8vw,7rem)}
+    .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;
+      letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.2rem}
+    .eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);flex-shrink:0}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.78rem 1.85rem;border-radius:var(--r);
+      font-family:'Space Grotesk',sans-serif;font-size:.875rem;font-weight:600;
+      letter-spacing:.03em;white-space:nowrap;transition:all var(--ease)}
+    .btn-p{background:var(--blue);color:#fff}
+    .btn-p:hover{background:var(--blue-l);transform:translateY(-2px);box-shadow:0 8px 28px var(--blue-glow)}
+    .btn-o{background:transparent;color:var(--cyan);border:1.5px solid rgba(0,212,255,.4)}
+    .btn-o:hover{background:rgba(0,212,255,.08);border-color:var(--cyan);transform:translateY(-2px)}
+    .btn-lg{padding:.92rem 2.35rem;font-size:.95rem}
+    .btn-sm{padding:.5rem 1.1rem;font-size:.78rem}
+    @keyframes pulse-glow{
+      0%  {box-shadow:0 0 0 0   rgba(45,127,255,.55),0 8px 28px rgba(45,127,255,.25)}
+      50% {box-shadow:0 0 0 8px rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.45)}
+      100%{box-shadow:0 0 0 0   rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.25)}
+    }
+    .btn-pulse{animation:pulse-glow 1.5s cubic-bezier(.4,0,.6,1) infinite}
+    .btn-pulse:hover{animation:none}
+    .rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+    .rv.in{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+    /* ── Nav (cooperation 标准结构) ── */
+    #nav{position:fixed;inset-inline:0;top:0;z-index:1000;height:var(--nav-h);
+      display:flex;align-items:center;
+      transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
+    #nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
+    #nav.hd{transform:translateY(-100%)}
+    .ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+      max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+    .logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em}
+    .logo em{font-style:normal;color:var(--cyan)}
+    .nl{display:flex;align-items:center;gap:1.6rem}
+    .na{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--text-mid);
+      transition:color var(--ease);position:relative;padding-block:.25rem}
+    .na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;
+      background:var(--cyan);transition:width var(--ease)}
+    .na:hover,.na.act{color:var(--text)}
+    .na:hover::after,.na.act::after{width:100%}
+    .nr{display:flex;align-items:center;gap:.65rem}
+    .lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
+      border:1px solid var(--border2);border-radius:6px;padding:3px}
+    .lb{font-size:.67rem;font-weight:700;letter-spacing:.07em;padding:4px 9px;border-radius:4px;
+      color:var(--text-mid);transition:all var(--ease);cursor:pointer}
+    .lb:hover{color:var(--text)}
+    .lb.act{background:var(--blue);color:#fff}
+    .lb[disabled]{opacity:.3;cursor:not-allowed;pointer-events:none}
+    .ham{display:none;flex-direction:column;gap:5px;padding:4px;background:transparent}
+    .ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--ease)}
+    .ham.op span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .ham.op span:nth-child(2){opacity:0}
+    .ham.op span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .menu-lang{display:none}
+
+    @media(max-width:920px){
+      .nl{display:none;flex-direction:column;gap:1.5rem;position:fixed;
+        inset:var(--nav-h) 0 0;background:var(--bg);padding:2.5rem 1.5rem;z-index:999;overflow-y:auto}
+      .nl.op{display:flex}
+      .nl .na{font-size:0.9rem;color:var(--text)}
+      .ham{display:flex}
+      .hm{display:none!important}
+      .top-lang{display:none!important}
+      .menu-lang{display:flex;justify-content:center;gap:0.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
+      .menu-lang .lb{font-size:0.67rem;padding:4px 9px}
+    }
+
+    /* ── 页面特有样式 ── */
+    .page-hero {
+      padding-top: 160px; padding-bottom: 80px;
+      padding-inline: clamp(1.5rem, 6vw, 5rem);
+      position: relative; overflow: hidden;
+      background: linear-gradient(170deg, #0a0f1e 0%, #0c1530 100%);
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: .55rem;
+      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+      color: var(--cyan); text-transform: uppercase; margin-bottom: 1.25rem;
+    }
+    .hero-tag::before { content: ''; width: 20px; height: 2px; background: var(--cyan); }
+    .page-hero h1 {
+      font-family: var(--ff-head);
+      font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+      font-weight: 800; line-height: 1.15;
+      letter-spacing: -.02em;
+      max-width: 800px;
+      color: var(--text);
+    }
+    .hero-gradient {
+      background: linear-gradient(90deg, var(--cyan) 0%, var(--blue-l) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      display: inline-block;
+    }
+    .hero-muted { color: var(--muted); display: inline-block; }
+    .page-hero p {
+      max-width: 600px; color: var(--muted);
+      margin-top: 1.6rem; font-size: 1.05rem; line-height: 1.75;
+    }
+
+    .section { padding: 90px clamp(1.5rem, 6vw, 5rem); position: relative; width: 100%; display: block; clear: both; }
+    .section-label {
+      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+      color: var(--cyan); text-transform: uppercase; margin-bottom: 1.25rem;
+      display: inline-flex; align-items: center; gap: .55rem;
+    }
+    .section-label::before { content: ''; width: 20px; height: 2px; background: var(--cyan); }
+    .section-title {
+      font-family: var(--ff-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700; letter-spacing: -.01em; line-height: 1.2;
+      color: var(--text);
+    }
+    .section-body { color: var(--muted); max-width: 560px; margin-top: .9rem; font-size: .95rem; }
+    .divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, rgba(45,127,255,.15), transparent);
+    }
+
+    .types-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .type-card {
+      background: var(--surf); border: 1px solid rgba(255,255,255,.05);
+      padding: 2.5rem 2rem; border-radius: var(--r-lg);
+      transition: border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+    }
+    .type-card:hover {
+      border-color: rgba(45,127,255,.4); transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.4), 0 0 0 1px rgba(45,127,255,.1) inset;
+    }
+    .type-icon {
+      width: 46px; height: 46px; border-radius: 12px;
+      background: linear-gradient(135deg, rgba(45,127,255,.15), rgba(0,212,255,.08));
+      border: 1px solid rgba(45,127,255,.2);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;
+    }
+    .type-icon svg { width: 20px; height: 20px; stroke: var(--cyan); fill: none; stroke-width: 1.8; }
+    .type-card h3 { font-family: var(--ff-head); font-size: 1.15rem; font-weight: 700; margin-bottom: .6rem; color: var(--text); }
+    .type-card p { font-size: .88rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.25rem; }
+    .type-tag {
+      display: inline-block; font-size: .68rem; font-weight: 600; letter-spacing: .08em;
+      color: var(--blue-l); text-transform: uppercase; border: 1px solid rgba(45,127,255,.25);
+      padding: .25rem .75rem; border-radius: 100px; background: rgba(45,127,255,.04);
+    }
+
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3.5rem; }
+    .why-item { display: flex; flex-direction: column; gap: .6rem; }
+    .why-num {
+      font-family: var(--ff-head); font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1;
+      background: linear-gradient(135deg, var(--blue-l), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .why-item h4 { font-family: var(--ff-head); font-size: .95rem; font-weight: 700; color: var(--text); }
+    .why-item p { font-size: .85rem; color: var(--muted); line-height: 1.6; }
+
+    .scope-section { background: var(--surf); }
+    .scope-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; margin-top: 3rem; }
+    .scope-col h4 { font-family: var(--ff-head); font-size: 1.1rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: .6rem; }
+    .scope-col h4::before { content: ''; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .scope-col.included h4 { color: var(--text); }
+    .scope-col.included h4::before { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+    .scope-col.excluded h4 { color: var(--muted); }
+    .scope-col.excluded h4::before { background: #ff4d6d; box-shadow: 0 0 8px #ff4d6d; }
+    .scope-list { display: flex; flex-direction: column; gap: .85rem; }
+    .scope-list li { display: flex; align-items: flex-start; gap: .75rem; font-size: .88rem; color: var(--muted); line-height: 1.6; }
+    .scope-list li::before { content: ''; flex-shrink: 0; margin-top: .55rem; width: 5px; height: 5px; border-radius: 50%; }
+    .scope-col.included .scope-list li::before { background: var(--cyan); }
+    .scope-col.excluded .scope-list li::before { background: #ff4d6d; }
+
+    .process-container { position: relative; margin-top: 4rem; }
+    .p-line { position: absolute; top: 21px; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, var(--blue), var(--cyan)); opacity: .2; }
+    .process-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; position: relative; z-index: 2; }
+    .proc-step { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .75rem; }
+    .proc-num {
+      width: 42px; height: 42px; border-radius: 50%; background: var(--bg2); border: 1.5px solid var(--blue);
+      color: var(--blue-l); font-family: var(--ff-head); font-size: .9rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 5px var(--bg);
+    }
+    .proc-step h5 { font-family: var(--ff-head); font-size: .9rem; font-weight: 700; color: var(--text); }
+    .proc-step p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+    .form-wrap { max-width: 800px; margin-top: 3.5rem; background: var(--surf); border: 1px solid rgba(255,255,255,.05); border-radius: var(--r-lg); padding: clamp(1.8rem, 5vw, 3.5rem); margin-inline: auto; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .form-group { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.5rem; }
+    .form-group label { font-size: .75rem; font-weight: 600; color: var(--muted); letter-spacing: .05em; text-transform: uppercase; text-align: left; }
+    .form-group input, .form-group select, .form-group textarea {
+      background: rgba(255,255,255,.03); border: 1px solid var(--border2); border-radius: 8px;
+      color: var(--text); font-family: inherit; font-size: .9rem; padding: .8rem 1rem; outline: none; transition: border-color var(--ease), box-shadow var(--ease); width: 100%;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue-l); box-shadow: 0 0 0 3px rgba(45,127,255,.15); }
+    .form-group select {
+      cursor: pointer; -webkit-appearance: none; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238b9bbb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 1rem center; background-size: 12px; padding-right: 2.5rem;
+    }
+    .form-group select option { background: var(--surf); color: var(--text); }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-submit {
+      display: inline-flex; align-items: center; gap: .5rem; background: var(--blue); color: #fff;
+      font-family: var(--ff-head); font-size: .95rem; font-weight: 600; padding: .9rem 2.5rem; border: none; border-radius: 6px; transition: all var(--ease); cursor: pointer;
+    }
+    .form-submit:hover { background: var(--blue-l); transform: translateY(-2px); box-shadow: 0 8px 24px var(--blue-glow); }
+    .form-note { font-size: .75rem; color: rgba(136,153,187,.4); margin-top: 1.25rem; line-height: 1.6; text-align: center; }
+    .form-note a { color: var(--blue-l); }
+
+    .toast {
+      position: fixed; bottom: 2rem; right: 2rem; background: var(--surf2); border: 1px solid var(--cyan);
+      border-radius: 8px; padding: 1rem 1.5rem; font-size: .88rem; color: var(--text);
+      box-shadow: 0 12px 40px rgba(0,0,0,.5); transform: translateY(150%); opacity: 0; transition: transform .3s, opacity .3s; z-index: 2000;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); padding: 4.5rem clamp(1.5rem, 6vw, 5rem) 2rem; position: relative; width: 100%; display: block; clear: both; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .nav-logo { margin-bottom: 1rem; display: block; }
+    .footer-brand p { font-size: .8rem; color: var(--muted); line-height: 1.65; margin-bottom: .4rem; max-width: 280px; }
+    .footer-col h5 { font-family: var(--ff-head); font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.1rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: .7rem; }
+    .footer-col a { font-size: .8rem; color: var(--muted); transition: color var(--ease); }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.05); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: .72rem; color: rgba(136,153,187,.4); }
+    .footer-op { font-family: var(--ff-head); font-size: .72rem; letter-spacing: .06em; color: var(--muted); }
+
+    @media (max-width: 1024px) {
+      .types-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-track { grid-template-columns: repeat(3, 1fr); }
+      .p-line { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .types-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .scope-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .process-track { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+<!-- RFQ 样式 -->
+<style>
+.rfq-counter{display:inline-flex;align-items:center;gap:0.3rem;padding:0.3rem 0.65rem;background:rgba(45,127,255,0.16);border:1px solid rgba(45,127,255,0.4);border-radius:999px;color:var(--text);font-size:0.75rem;font-weight:600;cursor:pointer;transition:all var(--ease);white-space:nowrap;margin-left:-6px;margin-right:12px}
+.rfq-counter:hover{background:rgba(45,127,255,0.28);border-color:var(--cyan);box-shadow:0 0 20px var(--cyan-glow);transform:translateY(-1px)}
+.rfq-counter:active{transform:scale(0.96)}
+.rfq-counter #rfqCount{color:var(--cyan);font-weight:700}
+.rfq-panel{position:fixed;top:0;right:-440px;width:440px;height:100%;background:#fff;box-shadow:-4px 0 20px rgba(0,0,0,0.15);z-index:9999;transition:right 0.25s ease;padding:1.5rem;overflow-y:auto;box-sizing:border-box;color:#1a2a3a}
+.rfq-panel.open{right:0}
+.rfq-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.rfq-panel-header h3{margin:0;font-size:1.05rem;font-weight:700;color:#0a1a2a}
+.rfq-close{background:none;border:none;font-size:1.4rem;line-height:1;color:#5a6a7a;cursor:pointer;padding:0.2rem 0.4rem;border-radius:4px}
+.rfq-close:hover{background:#f1f4f7;color:#0a1a2a}
+.rfq-list-header{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0 0.3rem 0.3rem;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:#8b9bbb;border-bottom:1px solid #e5e7eb}
+#rfqItems{max-height:260px;overflow-y:auto;margin-bottom:0.5rem}
+.rfq-empty{font-size:0.85rem;color:#8b9bbb;padding:1rem 0.4rem;text-align:center;margin:0}
+.rfq-item-row{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0.4rem 0.3rem;border-bottom:1px solid #f0f2f5;font-size:0.8rem}
+.rfq-item-row:last-child{border-bottom:none}
+.rfq-col-size{color:#5a6a7a;text-align:center;font-variant-numeric:tabular-nums}
+.rfq-col-code{color:#0a1a2a;font-weight:500;white-space:nowrap}
+.rfq-col-qty{text-align:center;color:#0a1a2a;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center;min-width:72px;gap:10px}
+.rfq-col-remove{background:none;border:none;color:#b0bac6;font-size:1.1rem;line-height:1;cursor:pointer;padding:0}
+.rfq-col-remove:hover{color:#d64545}
+.rfq-contact-block{margin-top:1.25rem;border-top:1px solid #e5e7eb;padding-top:1rem}
+.rfq-contact-title{font-weight:600;margin:0 0 10px 0;font-size:0.85rem;color:#0a1a2a}
+.rfq-field-label{display:block;margin-bottom:10px;font-size:0.8rem;color:#5a6a7a}
+.rfq-field-label-last{margin-bottom:4px}
+.rfq-field-input{width:100%;margin-top:4px;padding:8px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:0.85rem;color:#1a2a3a}
+.rfq-field-input:focus{outline:none;border-color:#0052a0;box-shadow:0 0 0 2px rgba(0,82,160,0.12)}
+.rfq-submit-wrap{margin-top:1.25rem}
+.quote-btn{background:#0052a0;color:#fff;border:none;padding:0.7rem 2rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s,transform .1s;text-decoration:none;display:block;width:100%;text-align:center}
+.quote-btn:hover{background:#003d7a;transform:translateY(-1px)}
+@media (max-width: 480px) {
+  .rfq-panel { width: 100vw; max-width: 100vw; }
+  .rfq-list-header,
+  .rfq-item-row { grid-template-columns: 50px 1fr 64px 24px; font-size: 0.75rem; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="ni">
+    <a href="/zh/index.html" class="logo">LIAP<em>LIAS</em></a>
+    <ul class="nl" id="nl">
+      <li><a class="na" href="/zh/index.html" data-p="index.html">首页</a></li>
+      <li><a class="na" href="/zh/cooperation.html" data-p="cooperation.html">合作模式</a></li>
+      <li><a class="na" href="/zh/industries.html" data-p="industries.html">服务行业</a></li>
+      <li><a class="na" href="/zh/code-search.html" data-p="code-search.html">编码查询</a></li>
+      <li><a class="na" href="/zh/custom-cnc.html" data-p="custom-cnc.html">Custom CNC</a></li>
+      <li><a class="na" href="/zh/solutions.html" data-p="solutions.html">解决方案</a></li>
+      <li><a class="na" href="/zh/partners.html" data-p="partners.html">合作伙伴</a></li>
+      <li><a class="na" href="/zh/contact.html" data-p="contact.html">联系我们</a></li>
+      <li class="menu-lang">
+        <a href="/en/partners.html" class="lb">EN</a>
+        <a href="/de/partners.html" class="lb">DE</a>
+        <a href="/fr/partners.html" class="lb">FR</a>
+        <a href="/zh/partners.html" class="lb act">中</a>
+      </li>
+<li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
+    </ul>
+    <div class="nr">
+      <div class="lp hm">
+        <a href="/en/partners.html" class="lb">EN</a>
+        <a href="/de/partners.html" class="lb">DE</a>
+        <a href="/fr/partners.html" class="lb">FR</a>
+        <a href="/zh/partners.html" class="lb act">中</a>
+      </div>
+      <a href="/zh/code-search.html" class="btn btn-p btn-sm hm btn-pulse">获取报价</a>
+      <button class="ham" id="ham" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+<div class="c"> 
+  <div class="rv">
+    <div class="hero-tag">合作伙伴计划</div>
+    <h1>
+      基于共同的<br>
+      <span class="hero-gradient">精度标准</span><br>
+      <span class="hero-muted">而非共担风险。</span>
+    </h1>
+    <p>LIAPLIAS按照自身标准筛选合作伙伴——分销商、系统集成商及需要稳定、品牌背书模具标准件供应的OEM客户。没有中间商介入。</p>
+  </div>
+</div>
+</header>
+
+<section class="section" style="padding-top:0">
+<div class="c"> 
+  <div class="rv">
+    <div class="section-label">合作对象</div>
+    <div class="section-title">三类合作伙伴</div>
+    <div class="section-body">每类合作伙伴均有独立的入驻流程、差异化的定价结构与明确的服务边界。</div>
+  </div>
+
+  <div class="types-grid">
+    <div class="type-card rv d1">
+      <div class="type-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <h3>授权分销商</h3>
+      <p>已建立模具及冲压件供应网络、寻求标准化品牌产品线的区域分销商——透明定价、稳定货源。</p>
+      <span class="type-tag">分销渠道</span>
+    </div>
+
+    <div class="type-card rv d2">
+      <div class="type-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14M12 2v2m0 16v2M2 12h2m16 0h2"/></svg>
+      </div>
+      <h3>OEM / 系统集成商</h3>
+      <p>需要按LIAPLIAS LIA系列标准进行定制BOM供应的制造商——直接技术支持、来源可追溯。</p>
+      <span class="type-tag">OEM客户</span>
+    </div>
+
+    <div class="type-card rv d3">
+      <div class="type-icon">
+        <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      </div>
+      <h3>战略大客户</h3>
+      <p>大批量采购商、模具车间或采购集团，需要多品类、多币种协议，并配备专属客户经理和季度业务回顾。</p>
+      <span class="type-tag">战略合作</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" style="background:var(--bg2)">
+<div class="c"> 
+  <div class="rv">
+    <div class="section-label">合作价值</div>
+    <div class="section-title">LIAPLIAS为合作方<br>带来什么</div>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-item rv d1">
+      <span class="why-num">26+</span>
+      <h4>产品大类</h4>
+      <p>从导柱到斜顶杆——一个品牌、一套编码体系，覆盖全系模具标准件。</p>
+    </div>
+    <div class="why-item rv d2">
+      <span class="why-num">100%</span>
+      <h4>源头管控</h4>
+      <p>无灰色市场风险。每个SKU均可追溯至生产来源。我们掌控规格，不只是挂名。</p>
+    </div>
+    <div class="why-item rv d3">
+      <span class="why-num">LIA CODE</span>
+      <h4>交叉对照</h4>
+      <p>每个LIA编码均对应HASCO和Meusburger型号。客户可无缝切换，无需重新设计。</p>
+    </div>
+    <div class="why-item rv d4">
+      <span class="why-num">1</span>
+      <h4>一个联系人</h4>
+      <p>一位客户经理，全程负责产品、物流、文件及售后，不推诿。</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section scope-section">
+<div class="c"> 
+  <div class="rv">
+    <div class="section-label">合作范围</div>
+    <div class="section-title">协议覆盖内容</div>
+  </div>
+
+  <div class="scope-wrap rv d1">
+    <div class="scope-col included">
+      <h4>包含内容</h4>
+      <ul class="scope-list">
+        <li>完整LIA系列产品目录实时报价访问权限</li>
+        <li>授权在本地市场物料中使用LIAPLIAS品牌</li>
+        <li>技术BOM匹配支持（LIA ↔ HASCO ↔ Meusburger）</li>
+        <li>专属客户经理，含明确的响应SLA承诺</li>
+        <li>联合市场规划及季度业务回顾</li>
+        <li>联名技术数据表及产品文档</li>
+        <li>供应紧张期间的优先配货权</li>
+      </ul>
+    </div>
+    <div class="scope-col excluded">
+      <h4>不包含内容</h4>
+      <ul class="scope-list">
+        <li>区域独家代理权（标准协议为非独家）</li>
+        <li>转授权或贴牌（OEM贴牌）权利</li>
+        <li>供应商身份或上游成本结构的披露</li>
+        <li>未通过LIAPLIAS系统登记的销售佣金</li>
+        <li>自动续约——所有协议须每年确认</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" style="background:var(--bg2)">
+<div class="c"> 
+  <div class="rv">
+    <div class="section-label">入驻流程</div>
+    <div class="section-title">从申请到首单</div>
+    <div class="section-body">标准分销商账户处理周期为5–10个工作日。战略大客户可能需要额外的资质审核。</div>
+  </div>
+
+  <div class="process-container rv d1">
+    <div class="p-line" aria-hidden="true"></div>
+    <div class="process-track">
+      <div class="proc-step">
+        <div class="proc-num">01</div>
+        <h5>提交申请</h5>
+        <p>填写下方申请表格。所有字段均为初步审核必填项。</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">02</div>
+        <h5>资质评估</h5>
+        <p>评估品类契合度、区域覆盖能力及商业资质。</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">03</div>
+        <h5>协议与定价</h5>
+        <p>确认合作伙伴等级，发出定价级别及合同文件供签署。</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">04</div>
+        <h5>系统开通</h5>
+        <p>开通LIA产品目录访问权限，分配BOM工具及客户经理。</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">05</div>
+        <h5>首单发货</h5>
+        <p>安排入驻沟通电话，寄送初始产品样品套装。</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="apply">
+  <div class="rv" style="text-align:center">
+    <div class="section-label" style="justify-content:center">立即申请</div>
+    <div class="section-title">合作伙伴申请</div>
+    <div class="section-body" style="margin-inline:auto">由NOLVO运营。所有申请将在3个工作日内审核。初步联系将通过邮件进行：<strong style="color:var(--text)">info@liaplias.com</strong></div>
+  </div>
+
+  <div class="form-wrap rv d1">
+    <form id="partnerForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">公司名称 *</label>
+          <input type="text" id="company" name="company" placeholder="示例：上海某某模具有限公司" required />
+        </div>
+        <div class="form-group">
+          <label for="country">国家/地区 *</label>
+          <select id="country" name="country" required>
+            <option value="" disabled selected>请选择</option>
+            <optgroup label="亚太">
+              <option>中国大陆</option><option>中国台湾</option><option>日本</option>
+              <option>韩国</option><option>印度</option><option>其他亚太</option>
+            </optgroup>
+            <optgroup label="欧洲">
+              <option>德国</option><option>法国</option><option>意大利</option>
+              <option>西班牙</option><option>荷兰</option><option>波兰</option>
+              <option>其他欧洲</option>
+            </optgroup>
+            <optgroup label="美洲">
+              <option>美国</option><option>加拿大</option><option>墨西哥</option><option>其他美洲</option>
+            </optgroup>
+            <optgroup label="其他"><option>其他地区</option></optgroup>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact-name">联系人姓名 *</label>
+          <input type="text" id="contact-name" name="contact_name" placeholder="张三" required />
+        </div>
+        <div class="form-group">
+          <label for="title">职位</label>
+          <input type="text" id="title" name="title" placeholder="采购总监" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">企业邮箱 *</label>
+          <input type="email" id="email" name="email" placeholder="zhangsan@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">电话 / 微信</label>
+          <input type="tel" id="phone" name="phone" placeholder="+86 138 …" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="partner-type">合作类型 *</label>
+        <select id="partner-type" name="partner_type" required>
+          <option value="" disabled selected>请选择</option>
+          <option value="distributor">授权分销商</option>
+          <option value="oem">OEM / 系统集成商</option>
+          <option value="strategic">战略大客户</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="categories">主要关注产品类别</label>
+        <input type="text" id="categories" name="categories" placeholder="如：导柱(GP)、顶针(EP)、司筒(SS)" />
+      </div>
+
+      <div class="form-group">
+        <label for="volume">预计年采购额（欧元或等值货币）</label>
+        <select id="volume" name="volume">
+          <option value="" disabled selected>请选择范围</option>
+          <option>5万欧元以下</option>
+          <option>5–20万欧元</option>
+          <option>20–50万欧元</option>
+          <option>50–100万欧元</option>
+          <option>100万欧元以上</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">公司简介及合作目标 *</label>
+        <textarea id="message" name="message" placeholder="请简要介绍贵公司、现有产品类别、目标行业，以及对此次合作的期望。" required></textarea>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <button type="submit" class="form-submit">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          提交申请
+        </button>
+      </div>
+
+      <p class="form-note">
+        提交即表示您同意LIAPLIAS / NOLVO就您的申请与您取得联系。我们不会将您的信息分享给第三方。
+        如有疑问，请联系 <a href="mailto:info@liaplias.com">info@liaplias.com</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">LIAP<em>LIAS</em></span>
+      <p>精密CNC零件 — 中国制造，全球适用。</p>
+      <p>由 NOLVO 运营</p>
+      <p>LIAPLIAS® 商标已注册于欧盟及美国。</p>
+    </div>
+    <div class="footer-col">
+      <h5>导航</h5>
+      <ul>
+        <li><a href="/zh/cooperation.html">合作模式</a></li>
+        <li><a href="/zh/industries.html">服务行业</a></li>
+        <li><a href="/zh/code-search.html">编码查询</a></li>
+        <li><a href="/zh/solutions.html">解决方案</a></li>
+        <li><a href="/zh/partners.html">合作伙伴</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>法律</h5>
+      <ul>
+        <li><a href="/zh/privacy.html">隐私政策</a></li>
+        <li><a href="/zh/terms.html">使用条款</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>联系</h5>
+      <ul>
+        <li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li>
+        <li><a href="https://liaplias.com">liaplias.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LIAPLIAS. 版权所有。</p>
+    <span class="footer-op">由 NOLVO 运营</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast">✓ 申请已提交，我们将在3个工作日内与您联系。</div>
+
+<script>
+(function() {
+  const nav = document.getElementById('nav');
+  let lastY = 0, ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        nav.classList.toggle('sc', y > 12);
+        if (y > 90 && y > lastY + 10) nav.classList.add('hd');
+        else if (y < lastY - 5) nav.classList.remove('hd');
+        lastY = y;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  const ham = document.getElementById('ham');
+  const nl = document.getElementById('nl');
+  if (ham && nl) {
+    ham.addEventListener('click', () => {
+      const open = nl.classList.toggle('op');
+      ham.classList.toggle('op', open);
+      ham.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    nl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nl.classList.remove('op');
+        ham.classList.remove('op');
+        ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+
+  const form = document.getElementById('partnerForm');
+  const toast = document.getElementById('toast');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.form-submit');
+      const originalHtml = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = '提交中…';
+
+      const data = Object.fromEntries(new FormData(form));
+      data.form_type = 'partner_application';
+      data.lang = 'zh';
+
+      try {
+        const res = await fetch('/api/partners', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error('Server error');
+      } catch (err) {}
+
+      form.reset();
+      btn.disabled = false;
+      btn.innerHTML = '✓ 已提交';
+
+      if (toast) {
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 5000);
+      }
+      setTimeout(() => { btn.innerHTML = originalHtml; }, 4000);
+    });
+  }
+})();
+</script>
+
+<script>
+(function() {
+  let currentPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  if (currentPage === 'en' || currentPage === 'zh' || currentPage === 'de' || currentPage === 'fr') {
+    currentPage = 'index.html';
+  }
+  const cleanCurrentPage = currentPage.replace('.html', '');
+  document.querySelectorAll('.na').forEach(link => {
+    let targetPage = link.getAttribute('data-p');
+    if (!targetPage) return;
+    const cleanTargetPage = targetPage.replace('.html', '');
+    if (cleanTargetPage === cleanCurrentPage) {
+      link.classList.add('act');
+    }
+  });
+})();
+</script>
+<!-- RFQ 侧边栏面板 -->
+<div class="rfq-panel" id="rfqPanel">
+  <div class="rfq-panel-header">
+    <h3>RFQ List</h3>
+    <button class="rfq-close" onclick="toggleRfqPanel()">&times;</button>
+  </div>
+  <div class="rfq-list-header">
+    <span class="rfq-col-size">Size</span>
+    <span class="rfq-col-code">LIA Code</span>
+    <span class="rfq-col-qty">Qty</span>
+    <span class="rfq-col-remove"></span>
+  </div>
+  <div id="rfqItems"><p class="rfq-empty">No items added yet.</p></div>
+  <div class="rfq-contact-block">
+    <p class="rfq-contact-title">Contact Information (Required)</p>
+    <label class="rfq-field-label">Full Name *<input type="text" id="rfqName" placeholder="John Doe" class="rfq-field-input"></label>
+    <label class="rfq-field-label">Company Name *<input type="text" id="rfqCompany" placeholder="Your Company" class="rfq-field-input"></label>
+    <label class="rfq-field-label rfq-field-label-last">Email Address *<input type="email" id="rfqEmail" placeholder="you@company.com" class="rfq-field-input"></label>
+  </div>
+  <div class="rfq-submit-wrap">
+    <a href="#" class="quote-btn" id="submitRfqBtn">Submit RFQ</a>
+  </div>
+</div>
+<script src="../rfq-submit.js"></script>
+</body>
+</html>

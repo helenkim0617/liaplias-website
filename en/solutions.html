@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Solutions — LIAPLIAS | Platform Independence, Local Support, Key Account Development</title>
+<meta name="description" content="LIAPLIAS delivers three core solutions: platform-independent sourcing, localized after-sales support in Europe, and dedicated key account development for global manufacturers."/>
+<link rel="canonical" href="https://liaplias.com/en/solutions.html"/>
+<link rel="alternate" hreflang="en" href="https://liaplias.com/en/solutions.html"/>
+<link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/solutions.html"/>
+<link rel="alternate" hreflang="de" href="https://liaplias.com/de/solutions.html"/>
+<link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/solutions.html"/>
+<link rel="alternate" hreflang="x-default" href="https://liaplias.com/en/solutions.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0a0f1e;--bg2:#0d1525;--surf:#111827;--surf2:#1a2440;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
+  --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+  --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
+  --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
+  --ease:250ms cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;
+  font-size:16px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{cursor:pointer;font:inherit;border:none;background:none}
+::selection{background:rgba(45,127,255,.3)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#1e3060;border-radius:3px}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.1;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.5rem)}
+h2{font-size:clamp(1.6rem,4vw,2.6rem)}
+h3{font-size:1.2rem}
+h4{font-size:.95rem;font-weight:600}
+p{max-width:65ch}
+.c{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.sec{padding-block:clamp(4rem,8vw,7rem)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.2rem}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.78rem 1.85rem;border-radius:var(--r);
+  font-family:'Space Grotesk',sans-serif;font-size:.875rem;font-weight:600;
+  letter-spacing:.03em;white-space:nowrap;transition:all var(--ease)}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{background:var(--blue-l);transform:translateY(-2px);box-shadow:0 8px 28px var(--blue-glow)}
+.btn-o{background:transparent;color:var(--cyan);border:1.5px solid rgba(0,212,255,.4)}
+.btn-o:hover{background:rgba(0,212,255,.08);border-color:var(--cyan);transform:translateY(-2px)}
+.btn-lg{padding:.92rem 2.35rem;font-size:.95rem}
+.btn-sm{padding:.5rem 1.1rem;font-size:.78rem}
+@keyframes pulse-glow{
+  0%  {box-shadow:0 0 0 0   rgba(45,127,255,.55),0 8px 28px rgba(45,127,255,.25)}
+  50% {box-shadow:0 0 0 8px rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.45)}
+  100%{box-shadow:0 0 0 0   rgba(45,127,255,0),  0 8px 28px rgba(45,127,255,.25)}
+}
+.btn-pulse{animation:pulse-glow 1.5s cubic-bezier(.4,0,.6,1) infinite}
+.btn-pulse:hover{animation:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* Nav */
+#nav{position:fixed;inset-inline:0;top:0;z-index:1000;height:var(--nav-h);display:flex;align-items:center;
+  transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
+#nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
+#nav.hd{transform:translateY(-100%)}
+.ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+  max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em}
+.logo em{font-style:normal;color:var(--cyan)}
+.nl{display:flex;align-items:center;gap:1.6rem}
+.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--text-mid);
+  transition:color var(--ease);position:relative;padding-block:.25rem}
+.na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;
+  background:var(--cyan);transition:width var(--ease)}
+.na:hover,.na.act{color:var(--text)}
+.na:hover::after,.na.act::after{width:100%}
+.nr{display:flex;align-items:center;gap:.65rem}
+.lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
+  border:1px solid var(--border2);border-radius:6px;padding:3px}
+.lb{font-size:.67rem;font-weight:700;letter-spacing:.07em;padding:4px 9px;border-radius:4px;
+  color:var(--text-mid);transition:all var(--ease);cursor:pointer}
+.lb:hover{color:var(--text)}
+.lb.act{background:var(--blue);color:#fff}
+.lb[disabled]{opacity:.3;cursor:not-allowed;pointer-events:none}
+.ham{display:none;flex-direction:column;gap:5px;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--ease)}
+.ham.op span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.op span:nth-child(2){opacity:0}
+.ham.op span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.menu-lang {
+  display: none;
+}
+@media(max-width:920px){
+  .nl{display:none;flex-direction:column;gap:1.5rem;position:fixed;
+    inset:var(--nav-h) 0 0;background:var(--bg);padding:2.5rem 1.5rem;z-index:999;overflow-y:auto}
+  .nl.op{display:flex}
+  .nl .na{font-size:0.9rem;color:var(--text)}
+  .ham{display:flex}
+  .hm{display:none!important}
+  .top-lang{display:none!important}
+  .menu-lang{display:flex;justify-content:center;gap:0.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
+  .menu-lang .lb{font-size:0.67rem;padding:4px 9px}
+}
+
+/* Page hero */
+.page-hero{padding-top:calc(var(--nav-h) + 5rem);padding-bottom:4rem;
+  background:linear-gradient(180deg,rgba(45,127,255,.08) 0%,transparent 100%);
+  border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:36px 36px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 30%,transparent 100%)}
+.page-hero .inner{position:relative;z-index:1}
+.page-hero h1{margin-bottom:.85rem}
+.page-hero p{color:var(--text-mid);font-size:1rem;max-width:600px}
+
+/* Solution panels — large alternating layout */
+.sol-section{padding-block:clamp(4rem,8vw,7rem)}
+.sol-section+.sol-section{border-top:1px solid var(--border)}
+.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.sol-grid.rev{direction:rtl}
+.sol-grid.rev>*{direction:ltr}
+
+/* Number accent */
+.sol-num{
+  font-family:'Space Grotesk',sans-serif;font-size:7rem;font-weight:800;
+  line-height:1;letter-spacing:-.04em;
+  background:linear-gradient(135deg,rgba(45,127,255,.2),rgba(0,212,255,.08));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:-.75rem;display:block;
+}
+.sol-meta h2{margin-bottom:1rem}
+.sol-meta p{font-size:.95rem;color:var(--text-mid);line-height:1.75;max-width:100%;margin-bottom:1.5rem}
+
+/* Feature list */
+.feat-list{display:flex;flex-direction:column;gap:.85rem;margin-bottom:2rem}
+.feat-item{display:flex;align-items:flex-start;gap:.85rem}
+.feat-check{
+  width:22px;height:22px;border-radius:50%;flex-shrink:0;margin-top:.1rem;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:#fff;
+}
+.feat-item p{font-size:.875rem;color:var(--text-mid);line-height:1.65;max-width:100%}
+.feat-item strong{color:var(--text);font-weight:600}
+
+/* Visual card */
+.sol-card{
+  background:var(--surf);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:2.5rem;position:relative;overflow:hidden;
+}
+.sol-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(45,127,255,.08),transparent);
+  pointer-events:none;
+}
+.sol-card-icon{font-size:3rem;margin-bottom:1.5rem;display:block;position:relative;z-index:1}
+.sol-card h3{font-size:1.05rem;margin-bottom:.5rem;position:relative;z-index:1}
+.sol-card-desc{font-size:.85rem;color:var(--text-mid);line-height:1.65;
+  max-width:100%;position:relative;z-index:1;margin-bottom:1.5rem}
+
+/* Metrics row inside card */
+.sol-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;position:relative;z-index:1}
+.sol-metric{
+  background:rgba(255,255,255,.03);border:1px solid var(--border);
+  border-radius:var(--r);padding:1rem;
+}
+.sol-metric-val{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:800;
+  background:linear-gradient(135deg,var(--blue-l),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  display:block;margin-bottom:.15rem;}
+.sol-metric-lbl{font-size:.7rem;color:var(--text-dim);letter-spacing:.05em}
+
+/* Sub-items list in card */
+.card-items{display:flex;flex-direction:column;gap:.6rem;position:relative;z-index:1}
+.card-item{display:flex;align-items:flex-start;gap:.6rem;
+  padding:.65rem .75rem;background:rgba(255,255,255,.025);
+  border:1px solid var(--border);border-radius:var(--r);
+  transition:border-color var(--ease),background var(--ease)}
+.card-item:hover{border-color:rgba(0,212,255,.25);background:rgba(0,212,255,.03)}
+.ci-dot{width:5px;height:5px;border-radius:50%;background:var(--cyan);flex-shrink:0;margin-top:.35rem}
+.ci-text{font-size:.8rem;color:var(--text-mid);line-height:1.55;max-width:100%}
+.ci-text strong{color:var(--text);font-weight:500}
+
+/* CTA */
+.cta-wrap{background:linear-gradient(135deg,rgba(45,127,255,.14),rgba(0,212,255,.07));
+  border:1px solid rgba(45,127,255,.22);border-radius:var(--r-lg);
+  padding:clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem);text-align:center;position:relative;overflow:hidden}
+.cta-wrap::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 55% 55% at 50% -5%,rgba(45,127,255,.15),transparent);pointer-events:none}
+.cta-wrap h2{position:relative;z-index:1;margin-bottom:.75rem}
+.cta-wrap p{position:relative;z-index:1;color:var(--text-mid);max-width:500px;
+  margin-inline:auto;margin-bottom:2rem;font-size:.95rem}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;position:relative;z-index:1}
+
+/* Footer */
+footer{background:var(--surf);border-top:1px solid var(--border);padding-block:2.5rem 1.5rem;margin-top:4rem}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-inner p{font-size:.75rem;color:var(--text-dim)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-size:.75rem;color:var(--text-dim);transition:color var(--ease)}
+.foot-links a:hover{color:var(--text)}
+
+@media(max-width:900px){
+  .sol-grid,.sol-grid.rev{grid-template-columns:1fr;direction:ltr;gap:2.5rem}
+  .sol-num{font-size:5rem}
+  .sol-metrics{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .sol-metrics{grid-template-columns:1fr}
+}
+</style>
+<!-- RFQ 样式 -->
+<style>
+.rfq-counter{display:inline-flex;align-items:center;gap:0.3rem;padding:0.3rem 0.65rem;background:rgba(45,127,255,0.16);border:1px solid rgba(45,127,255,0.4);border-radius:999px;color:var(--text);font-size:0.75rem;font-weight:600;cursor:pointer;transition:all var(--ease);white-space:nowrap;margin-left:-6px;margin-right:12px}
+.rfq-counter:hover{background:rgba(45,127,255,0.28);border-color:var(--cyan);box-shadow:0 0 20px var(--cyan-glow);transform:translateY(-1px)}
+.rfq-counter:active{transform:scale(0.96)}
+.rfq-counter #rfqCount{color:var(--cyan);font-weight:700}
+.rfq-panel{position:fixed;top:0;right:-440px;width:440px;height:100%;background:#fff;box-shadow:-4px 0 20px rgba(0,0,0,0.15);z-index:9999;transition:right 0.25s ease;padding:1.5rem;overflow-y:auto;box-sizing:border-box;color:#1a2a3a}
+.rfq-panel.open{right:0}
+.rfq-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.rfq-panel-header h3{margin:0;font-size:1.05rem;font-weight:700;color:#0a1a2a}
+.rfq-close{background:none;border:none;font-size:1.4rem;line-height:1;color:#5a6a7a;cursor:pointer;padding:0.2rem 0.4rem;border-radius:4px}
+.rfq-close:hover{background:#f1f4f7;color:#0a1a2a}
+.rfq-list-header{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0 0.3rem 0.3rem;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:#8b9bbb;border-bottom:1px solid #e5e7eb}
+#rfqItems{max-height:260px;overflow-y:auto;margin-bottom:0.5rem}
+.rfq-empty{font-size:0.85rem;color:#8b9bbb;padding:1rem 0.4rem;text-align:center;margin:0}
+.rfq-item-row{display:grid;grid-template-columns:56px minmax(100px,160px) 72px 28px;gap:0.8rem;align-items:center;padding:0.4rem 0.3rem;border-bottom:1px solid #f0f2f5;font-size:0.8rem}
+.rfq-item-row:last-child{border-bottom:none}
+.rfq-col-size{color:#5a6a7a;text-align:center;font-variant-numeric:tabular-nums}
+.rfq-col-code{color:#0a1a2a;font-weight:500;white-space:nowrap}
+.rfq-col-qty{text-align:center;color:#0a1a2a;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center;min-width:72px;gap:10px}
+.rfq-col-remove{background:none;border:none;color:#b0bac6;font-size:1.1rem;line-height:1;cursor:pointer;padding:0}
+.rfq-col-remove:hover{color:#d64545}
+.rfq-contact-block{margin-top:1.25rem;border-top:1px solid #e5e7eb;padding-top:1rem}
+.rfq-contact-title{font-weight:600;margin:0 0 10px 0;font-size:0.85rem;color:#0a1a2a}
+.rfq-field-label{display:block;margin-bottom:10px;font-size:0.8rem;color:#5a6a7a}
+.rfq-field-label-last{margin-bottom:4px}
+.rfq-field-input{width:100%;margin-top:4px;padding:8px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:0.85rem;color:#1a2a3a}
+.rfq-field-input:focus{outline:none;border-color:#0052a0;box-shadow:0 0 0 2px rgba(0,82,160,0.12)}
+.rfq-submit-wrap{margin-top:1.25rem}
+.quote-btn{background:#0052a0;color:#fff;border:none;padding:0.7rem 2rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s,transform .1s;text-decoration:none;display:block;width:100%;text-align:center}
+.quote-btn:hover{background:#003d7a;transform:translateY(-1px)}
+@media (max-width: 480px) {
+  .rfq-panel { width: 100vw; max-width: 100vw; }
+  .rfq-list-header,
+  .rfq-item-row { grid-template-columns: 50px 1fr 64px 24px; font-size: 0.75rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="ni">
+    <a href="/en/index.html" class="logo">LIA<em>PLIAS</em></a>
+    <ul class="nl" id="nl">
+      <li><a class="na" href="/en/index.html" data-p="index.html">Home</a></li>
+      <li><a class="na" href="/en/cooperation.html" data-p="cooperation.html">Cooperation</a></li>
+      <li><a class="na" href="/en/industries.html" data-p="industries.html">Industries</a></li>
+      <li><a class="na" href="/en/code-search.html" data-p="code-search.html">Code Search</a></li>
+      <li><a class="na" href="/en/custom-cnc.html" data-p="custom-cnc.html">Custom CNC</a></li>
+      <li><a class="na" href="/en/solutions.html" data-p="solutions.html">Solutions</a></li>
+      <li><a class="na" href="/en/partners.html" data-p="partners.html">Partners</a></li>
+      <li><a class="na" href="/en/contact.html" data-p="contact.html">Contact</a></li>
+      <li class="menu-lang">
+        <a href="/en/solutions.html" class="lb act">EN</a>
+        <a href="/de/solutions.html" class="lb">DE</a>
+        <a href="/fr/solutions.html" class="lb">FR</a>
+        <a href="/zh/solutions.html" class="lb">中</a>
+      </li>
+<li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
+
+    </ul>
+    <div class="nr">
+      <div class="lp hm">
+        <a href="/en/solutions.html" class="lb act">EN</a>
+        <a href="/de/solutions.html" class="lb">DE</a>
+        <a href="/fr/solutions.html" class="lb">FR</a>
+        <a href="/zh/solutions.html" class="lb">中</a>
+      </div>
+      <a href="/en/code-search.html" class="btn btn-p btn-sm hm btn-pulse">Get a Quote</a>
+      <button class="ham" id="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="c inner">
+    <div class="eyebrow">Solutions</div>
+    <h1>Three Solutions. One Brand.</h1>
+    <p>LIAPLIAS is built around three structural advantages — independence from single-platform dependency, localized after-sales support, and dedicated key account management for high-volume customers.</p>
+  </div>
+</div>
+
+<!-- SOLUTION 1: Platform Independence -->
+<section class="sol-section" id="s1">
+  <div class="c">
+    <div class="sol-grid rev">
+      <div class="sol-meta rv">
+        <span class="sol-num">01</span>
+        <div class="eyebrow">Platform Independence</div>
+        <h2>Your Supply Chain. Not Tied to Any Platform.</h2>
+        <p>LIAPLIAS operates as a direct brand — not a marketplace, not a broker. Your orders, specifications, and pricing agreements are maintained directly with us. No platform dependency, no algorithmic repricing, no risk of supplier substitution without your knowledge.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Direct brand relationship</strong> — you deal with LIAPLIAS directly, not through a third-party platform that can change terms or delist products.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Locked specifications</strong> — approved part specs, material grades, and supplier assignments are fixed in your account. No substitutions without your sign-off.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>LIA code ownership</strong> — your LIA part numbers belong to your procurement system. They map to stable specifications regardless of market changes.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Transparent pricing structure</strong> — unit price, tooling cost, and freight are itemized separately. No bundled fees or hidden markups.</p>
+          </div>
+        </div>
+        <a href="/en/contact.html" class="btn btn-p btn-pulse">Discuss Your Requirements</a>
+      </div>
+      <div class="sol-card rv d2">
+        <span class="sol-card-icon">🔓</span>
+        <h3>Why Independence Matters</h3>
+        <p class="sol-card-desc">Most industrial buyers have experienced the risk of platform dependency — a supplier changes, a product gets relisted, pricing shifts without notice. LIAPLIAS is structured to eliminate that risk.</p>
+        <div class="card-items">
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>No platform intermediary</strong> — direct contracts, direct communication, direct accountability.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Stable part numbers</strong> — LIA codes are permanent references that don't change with market conditions.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Audit-ready documentation</strong> — all specs, certs, and QC records are archived and available on request, indefinitely.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Multi-supplier redundancy</strong> — each SKU category has 2–3 qualified production sources to protect your delivery schedule.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION 2: Localized After-Sales -->
+<section class="sol-section" id="s2" style="background:var(--bg2)">
+  <div class="c">
+    <div class="sol-grid">
+      <div class="sol-card rv">
+        <span class="sol-card-icon">🇪🇺</span>
+        <h3>After-Sales Service — Where You Are</h3>
+        <p class="sol-card-desc">Quality issues, delivery discrepancies, and technical questions are resolved in your time zone, in your language. LIAPLIAS after-sales support is not routed through a Chinese call center — it is handled by a dedicated European-facing team.</p>
+        <div class="sol-metrics">
+          <div class="sol-metric">
+            <span class="sol-metric-val">24h</span>
+            <span class="sol-metric-lbl">Response to quality claims</span>
+          </div>
+          <div class="sol-metric">
+            <span class="sol-metric-val">EN / DE</span>
+            <span class="sol-metric-lbl">Support languages</span>
+          </div>
+          <div class="sol-metric">
+            <span class="sol-metric-val">1</span>
+            <span class="sol-metric-lbl">Dedicated contact person</span>
+          </div>
+          <div class="sol-metric">
+            <span class="sol-metric-val">100%</span>
+            <span class="sol-metric-lbl">Lot-traceable deliveries</span>
+          </div>
+        </div>
+      </div>
+      <div class="sol-meta rv d2">
+        <span class="sol-num">02</span>
+        <div class="eyebrow">After-Sales Support</div>
+        <h2>Local Accountability. Not Long-Distance Excuses.</h2>
+        <p>When a batch has a dimensional issue, you need a resolution — not a timezone delay. LIAPLIAS maintains a European-facing support structure with clear escalation protocols and documented response commitments.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Quality claim response within 24 hours</strong> — not 5 business days. Root cause analysis within 72 hours for confirmed non-conformances.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Replacement or credit within one delivery cycle</strong> — for confirmed defective batches, we resolve at our cost, not yours.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>LIA traceability system</strong> — every batch number links to factory, production date, QC report, and material certificate. Investigation starts with data, not guesswork.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Dedicated account contact</strong> — one person who knows your specifications, your history, and your delivery requirements. Not a rotating ticket queue.</p>
+          </div>
+        </div>
+        <a href="/en/contact.html" class="btn btn-p btn-pulse">Talk to Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION 3: Key Account Development -->
+<section class="sol-section" id="s3">
+  <div class="c">
+    <div class="sol-grid rev">
+      <div class="sol-meta rv">
+        <span class="sol-num">03</span>
+        <div class="eyebrow">Key Account Development</div>
+        <h2>Built for Customers Who Buy at Scale.</h2>
+        <p>For purchasing managers and procurement teams with regular, high-volume component needs, LIAPLIAS offers a structured key account program — with consolidated pricing, scheduled delivery, and dedicated technical support to manage your entire standard component portfolio.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Annual framework agreements</strong> — fixed pricing for 12 months, with volume-tiered discounts. Budget predictability for your procurement cycle.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Portfolio consolidation</strong> — we map your existing HASCO or Meusburger parts to LIA equivalents and provide a single consolidated catalog for your standard components.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Scheduled replenishment</strong> — for high-frequency SKUs, we set up buffer stock at our side and trigger shipments on your schedule, not on a reactive basis.</p>
+          </div>
+          <div class="feat-item">
+            <div class="feat-check">✓</div>
+            <p><strong>Technical consultation included</strong> — our team reviews your tooling BOM and identifies consolidation opportunities, alternative specifications, or cost reduction options.</p>
+          </div>
+        </div>
+        <a href="/en/contact.html" class="btn btn-p btn-pulse">Apply for Key Account</a>
+      </div>
+      <div class="sol-card rv d2">
+        <span class="sol-card-icon">🤝</span>
+        <h3>What Key Account Customers Get</h3>
+        <p class="sol-card-desc">A structured long-term supply relationship — not ad hoc ordering. Designed for procurement teams managing 50–500+ component SKUs across multiple tooling projects.</p>
+        <div class="card-items">
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Fixed annual pricing</strong> — no spot-market volatility. Your unit costs are contractually set for the agreement period.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>BOM management service</strong> — we maintain your component catalog in the LIA system and flag obsolete or out-of-spec items proactively.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Priority production slots</strong> — key account orders are scheduled before spot orders at our factories. Lead time is guaranteed, not estimated.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Quarterly business review</strong> — usage analysis, new product introductions, and pricing review every quarter. Supply chain as a managed partnership.</div>
+          </div>
+          <div class="card-item">
+            <div class="ci-dot"></div>
+            <div class="ci-text"><strong>Customs & compliance support</strong> — CE documentation, import duty classification, and REACH/RoHS compliance records maintained for your audit files.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec" style="padding-top:0">
+  <div class="c">
+    <div class="cta-wrap rv">
+      <h2>Which Solution Fits Your Business?</h2>
+      <p>Tell us about your sourcing requirements and we will recommend the right engagement model — from first order to long-term framework.</p>
+      <div class="cta-btns">
+        <a href="/en/contact.html"     class="btn btn-p btn-lg btn-pulse">Contact Our Team</a>
+        <a href="/en/code-search.html" class="btn btn-o btn-lg">Search Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="foot-inner">
+      <p>© 2026 LIAPLIAS. All rights reserved. Operated by NOLVO.</p>
+      <div class="foot-links">
+        <a href="/en/index.html">Home</a>
+        <a href="/en/code-search.html">Code Search</a>
+        <a href="mailto:info@liaplias.com">info@liaplias.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const nav = document.getElementById('nav');
+  let lastY = 0, ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        nav.classList.toggle('sc', y > 12);
+        if (y > 90 && y > lastY + 10) nav.classList.add('hd');
+        else if (y < lastY - 5) nav.classList.remove('hd');
+        lastY = y;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  const ham = document.getElementById('ham');
+  const nl = document.getElementById('nl');
+  if (ham && nl) {
+    ham.addEventListener('click', () => {
+      const open = nl.classList.toggle('op');
+      ham.classList.toggle('op', open);
+      ham.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    nl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nl.classList.remove('op');
+        ham.classList.remove('op');
+        ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  const curPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  document.querySelectorAll('[data-p]').forEach(a => {
+    if (a.getAttribute('data-p') === curPage) a.classList.add('act');
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+})();
+</script>
+<script>
+(function() {
+  let currentPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  if (currentPage === 'en' || currentPage === 'zh' || currentPage === 'de' || currentPage === 'fr') {
+    currentPage = 'index.html';
+  }
+  const cleanCurrentPage = currentPage.replace('.html', '');
+  document.querySelectorAll('.na').forEach(link => {
+    let targetPage = link.getAttribute('data-p');
+    if (!targetPage) return;
+    const cleanTargetPage = targetPage.replace('.html', '');
+    if (cleanTargetPage === cleanCurrentPage) {
+      link.classList.add('act');
+    }
+  });
+})();
+</script>
+<!-- RFQ 侧边栏面板 -->
+<div class="rfq-panel" id="rfqPanel">
+  <div class="rfq-panel-header">
+    <h3>RFQ List</h3>
+    <button class="rfq-close" onclick="toggleRfqPanel()">&times;</button>
+  </div>
+  <div class="rfq-list-header">
+    <span class="rfq-col-size">Size</span>
+    <span class="rfq-col-code">LIA Code</span>
+    <span class="rfq-col-qty">Qty</span>
+    <span class="rfq-col-remove"></span>
+  </div>
+  <div id="rfqItems"><p class="rfq-empty">No items added yet.</p></div>
+  <div class="rfq-contact-block">
+    <p class="rfq-contact-title">Contact Information (Required)</p>
+    <label class="rfq-field-label">Full Name *<input type="text" id="rfqName" placeholder="John Doe" class="rfq-field-input"></label>
+    <label class="rfq-field-label">Company Name *<input type="text" id="rfqCompany" placeholder="Your Company" class="rfq-field-input"></label>
+    <label class="rfq-field-label rfq-field-label-last">Email Address *<input type="email" id="rfqEmail" placeholder="you@company.com" class="rfq-field-input"></label>
+  </div>
+  <div class="rfq-submit-wrap">
+    <a href="#" class="quote-btn" id="submitRfqBtn">Submit RFQ</a>
+  </div>
+</div>
+
+<script src="../rfq-submit.js"></script>
+
+</body>
+</html>

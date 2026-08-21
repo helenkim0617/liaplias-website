@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | LIAPLIAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:    #0a0f1e;
+      --surf:  #111827;
+      --blue:  #2d7fff;
+      --cyan:  #00d4ff;
+      --text:  #f0f4ff;
+      --muted: #8899bb;
+      --border: rgba(45,127,255,.18);
+      --ff-head: 'Syne', sans-serif;
+      --ff-body: 'DM Sans', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-body);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ── GRID BACKGROUND ── */
+    .grid-bg {
+      position: fixed; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(45,127,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,127,255,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    }
+
+    /* ── GLOW ORBS ── */
+    .orb {
+      position: fixed; border-radius: 50%; pointer-events: none;
+      filter: blur(80px);
+    }
+    .orb-1 {
+      width: 500px; height: 500px;
+      background: rgba(45,127,255,.08);
+      top: -100px; left: -100px;
+      animation: drift1 12s ease-in-out infinite alternate;
+    }
+    .orb-2 {
+      width: 400px; height: 400px;
+      background: rgba(0,212,255,.06);
+      bottom: -80px; right: -60px;
+      animation: drift2 10s ease-in-out infinite alternate;
+    }
+    @keyframes drift1 { to { transform: translate(40px, 30px); } }
+    @keyframes drift2 { to { transform: translate(-30px, -40px); } }
+
+    /* ── NOISE ── */
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9999; opacity: .4;
+    }
+
+    /* ── CONTENT ── */
+    .container {
+      position: relative; z-index: 10;
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      padding: 2rem;
+      animation: fadeUp .8s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── CODE NUMBER ── */
+    .error-code {
+      font-family: var(--ff-head);
+      font-size: clamp(7rem, 18vw, 14rem);
+      font-weight: 800;
+      line-height: .85;
+      letter-spacing: -.05em;
+      background: linear-gradient(135deg,
+        rgba(45,127,255,.15) 0%,
+        rgba(0,212,255,.12) 50%,
+        rgba(45,127,255,.08) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      user-select: none;
+      margin-bottom: 1rem;
+    }
+    /* Glitch layers */
+    .error-code::before,
+    .error-code::after {
+      content: '404';
+      position: absolute; inset: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .error-code::before {
+      background: linear-gradient(135deg, var(--blue), transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glitch1 3.5s infinite;
+      clip-path: polygon(0 30%, 100% 30%, 100% 55%, 0 55%);
+    }
+    .error-code::after {
+      background: linear-gradient(135deg, var(--cyan), transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glitch2 3.5s infinite;
+      clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
+    }
+    @keyframes glitch1 {
+      0%, 90%, 100% { transform: translateX(0); opacity: 0; }
+      91% { transform: translateX(-3px); opacity: .6; }
+      93% { transform: translateX(3px); opacity: .4; }
+      95% { transform: translateX(0); opacity: 0; }
+    }
+    @keyframes glitch2 {
+      0%, 88%, 100% { transform: translateX(0); opacity: 0; }
+      89% { transform: translateX(3px); opacity: .5; }
+      91% { transform: translateX(-2px); opacity: .3; }
+      93% { transform: translateX(0); opacity: 0; }
+    }
+
+    /* ── SEPARATOR ── */
+    .sep {
+      width: 48px; height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      border-radius: 2px;
+      margin-bottom: 1.4rem;
+    }
+
+    /* ── TEXT ── */
+    h1 {
+      font-family: var(--ff-head);
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
+      font-weight: 700; letter-spacing: -.01em;
+      margin-bottom: .7rem;
+    }
+    p {
+      color: var(--muted); font-size: .95rem;
+      max-width: 400px; line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+
+    /* ── ACTIONS ── */
+    .actions {
+      display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--blue); color: #fff;
+      font-family: var(--ff-head); font-size: .88rem; font-weight: 700;
+      padding: .7rem 1.6rem; border-radius: 8px;
+      border: none; cursor: pointer; text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: #1a6df0; transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: transparent; color: var(--muted);
+      font-family: var(--ff-body); font-size: .88rem; font-weight: 500;
+      padding: .7rem 1.4rem; border-radius: 8px;
+      border: 1px solid var(--border); text-decoration: none;
+      transition: border-color .2s, color .2s, transform .15s;
+    }
+    .btn-ghost:hover { border-color: rgba(45,127,255,.45); color: var(--text); transform: translateY(-1px); }
+
+    /* ── QUICK LINKS ── */
+    .quick-links {
+      display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;
+    }
+    .quick-links a {
+      font-size: .78rem; color: var(--muted);
+      text-decoration: none; letter-spacing: .04em;
+      transition: color .2s;
+      display: flex; align-items: center; gap: .3rem;
+    }
+    .quick-links a::before { content: '›'; color: var(--blue); font-size: 1rem; }
+    .quick-links a:hover { color: var(--cyan); }
+
+    /* ── LOGO ── */
+    .nav-logo {
+      position: fixed; top: 0; left: 0; right: 0;
+      padding: 1.2rem clamp(1.5rem, 5vw, 4rem);
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 100;
+    }
+    .logo-text {
+      font-family: var(--ff-head); font-size: 1.1rem; font-weight: 800;
+      letter-spacing: .08em;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .logo-sub {
+      font-size: .72rem; color: var(--muted); letter-spacing: .06em;
+    }
+
+    /* ── LANG ── */
+    .lang-row {
+      position: fixed; top: 1.1rem; right: clamp(1.5rem, 5vw, 4rem);
+      display: flex; gap: .5rem; z-index: 100;
+    }
+    .lang-row a {
+      font-size: .72rem; color: var(--muted);
+      padding: .2rem .4rem; border: 1px solid transparent;
+      border-radius: 4px; transition: .2s; text-decoration: none;
+    }
+    .lang-row a:hover { border-color: var(--border); color: var(--cyan); }
+    .lang-row a.cur { border-color: var(--blue); color: var(--blue); }
+
+    @media (max-width: 480px) {
+      .actions { flex-direction: column; align-items: center; }
+      .quick-links { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-bg"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="nav-logo">
+    <a href="/en/" class="logo-text">LIAPLIAS</a>
+    <span class="logo-sub">Operated by NOLVO</span>
+  </div>
+
+  <div class="lang-row">
+    <a href="/en/404.html" class="cur">EN</a>
+    <a href="/zh/404.html">中文</a>
+    <a href="/de/404.html">DE</a>
+    <a href="/fr/404.html">FR</a>
+  </div>
+
+  <div class="container">
+    <div class="error-code">404</div>
+    <div class="sep"></div>
+    <h1>Page not found</h1>
+    <p>The page you're looking for doesn't exist, has been moved, or the URL may contain an error. Try one of the links below.</p>
+
+    <div class="actions">
+      <a href="/en/" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Back to Home
+      </a>
+      <a href="/en/code-search.html" class="btn-ghost">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search by Code
+      </a>
+    </div>
+
+    <div class="quick-links">
+      <a href="/en/cooperation.html">Cooperation</a>
+      <a href="/en/industries.html">Industries</a>
+      <a href="/en/solutions.html">Solutions</a>
+      <a href="/en/partners.html">Partners</a>
+      <a href="/en/contact.html">Contact</a>
+    </div>
+  </div>
+
+</body>
+</html>
