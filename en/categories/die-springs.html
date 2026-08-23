@@ -1,31 +1,3 @@
-<!--
-  2026-08-08 修复说明：
-  - meta description / og:description / JSON-LD description 原本硬编码为通用句式，
-    没有使用 category-mapping.json 里针对每个分类单独写的 meta_description_en，改为 ISO 10243 die springs compatible with HASCO Z165/Z166 &amp; Meusburger F4200. High fatigue life across light to extra-heavy loads. Request a quote!
-  - Hero区域的介绍段落原本是硬编码的通用句子，改为 LIAPLIAS delivers high-performance mold die springs engineered for 1:1 interchangeability with European standard series, including HASCO (Z165/Z166) and Meusburger (F4200). Fully compliant with ISO 10243 color-coding standards—VL (Green), L (Blue), M (Red), and H (Yellow)—our springs are manufactured from premium 55CrSi alloy spring steel for maximum fatigue resistance and long service life under extreme cycling. Download 3D CAD models or request an instant quote today.，使用 category-mapping.json 里的真实文案
-  - 顶部"Browse by category"快捷入口原本硬编码写死6个分类的slug/名称，改为 <a href="/en/categories/guide-pillars-bushings.html" class="hcat">Guide Pillars &amp; Guide Bushings</a>
-    <a href="/en/categories/ejector-pins.html" class="hcat">Ejector Pins</a>
-    <a href="/en/categories/mold-fasteners.html" class="hcat">Mold Fasteners</a>
-    <a href="/en/categories/die-springs.html" class="hcat">Die Springs</a>
-    <a href="/en/categories/locating-centering-components.html" class="hcat">Locating &amp; Centering Components</a>
-    <a href="/en/categories/mold-standard-components.html" class="hcat">Mold Standard Components</a>，
-    由 build-categories.js 动态生成，以后分类改名/新增分类不用再手动改模板
-  - 底部"Related Categories"用的占位符是 <li><a href="/en/categories/guide-pillars-bushings.html">Guide Pillars &amp; Guide Bushings</a></li><li><a href="/en/categories/ejector-pins.html">Ejector Pins</a></li><li><a href="/en/categories/mold-fasteners.html">Mold Fasteners</a></li><li><a href="/en/categories/locating-centering-components.html">Locating &amp; Centering Components</a></li><li><a href="/en/categories/mold-standard-components.html">Mold Standard Components</a></li>（保持不变），
-    此前 build-categories.js 的正则只匹配 （少了_bottom），导致这里从未被填充，
-    已在脚本侧修复正则
-
-  2026-08-09 German rollout：整个模板改成EN/DE两语言共用（不再各语言各一份模板）——
-  - 原 // 改名为不带_en后缀的通用占位符
-    （Die Springs/ISO 10243 die springs compatible with HASCO Z165/Z166 &amp; Meusburger F4200. High fatigue life across light to extra-heavy loads. Request a quote!/LIAPLIAS delivers high-performance mold die springs engineered for 1:1 interchangeability with European standard series, including HASCO (Z165/Z166) and Meusburger (F4200). Fully compliant with ISO 10243 color-coding standards—VL (Green), L (Blue), M (Red), and H (Yellow)—our springs are manufactured from premium 55CrSi alloy spring steel for maximum fatigue resistance and long service life under extreme cycling. Download 3D CAD models or request an instant quote today.），因为德语版会用同一套占位符承接德语内容
-  - 新增 en（html lang属性+canonical/og:url自引用）、die-springs/systemdruckfedern（两个语言版真实slug，
-    用于hreflang标签+语言切换器）、act/（当前语言在切换器里显示active态）
-  - 新增约40个  界面文案占位符，由 build-categories.js 的 UI_STRINGS 字典按语言填充
-  - 约定：canonical/og:url自引用、hreflang标签、语言切换器EN/DE两个按钮 = 真实指向两个语言版本；
-    其余站内链接（导航栏/面包屑Home&Categories/Hero区Code Search提示/底部CTA/页脚导航）目前仍统一指向
-    英文版页面（因为cooperation/industries/code-search/solutions/partners/contact/privacy/terms/首页
-    这些页面还没有德语版），但显示文字会翻译——跟详情页"返回分类"链接用的是同一个处理原则，
-    等这些页面陆续做出德语版后再把对应链接切换过去
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +28,14 @@
     { "@type": "ListItem", "position": 2, "name": "Categories", "item": "https://liaplias.com/en/categories/" },
     { "@type": "ListItem", "position": 3, "name": "Die Springs", "item": "https://liaplias.com/en/categories/die-springs.html" }
   ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": []
 }
 </script>
 

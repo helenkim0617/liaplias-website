@@ -428,10 +428,11 @@ const categoryDisplayName = categoryInfo
     "description": "${esc(displayName)} - ${esc(din || '')}",
     "productGroupID": "${esc(category_code)}",
     "brand": { "@type": "Brand", "name": "LIAPLIAS" },
-    "category": "${esc(displayName)}",
+    "seller": { "@type": "Organization", "name": "LIAPLIAS", "url": "https://liaplias.com" },
+    "category": "${esc(categoryDisplayName)}",
     "variesBy": ["https://schema.org/width"],
     "hasVariant": [
-      ${variants.map(v => `{ "@type": "Product", "sku": "${esc(v.lia_code)}", "name": "${esc(displayName)} ${esc(v.spec_display || '')}" }`).join(',\n      ')}
+      ${variants.map(v => `{ "@type": "Product", "sku": "${esc(v.lia_code)}", "mpn": "${esc(v.lia_code)}", "name": "${esc(displayName)} ${esc(v.spec_display || '')}" }`).join(',\n      ')}
     ]
   }
   </script>

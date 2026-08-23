@@ -233,6 +233,26 @@ function generateFamilyCard(categoryCode, variants, familyConfig, lang) {
     </div>
   `;
 }
+// ===== 生成分类页 ItemList JSON-LD（跟product_cards用同一份family分组数据，一个category_code一条） =====
+function generateItemListJson(codes, byCode, familyConfig, lang) {
+  const items = codes
+    .filter(code => byCode.has(code) && familyConfig.families[code])
+    .map((code, index) => {
+      const familyCfg = familyConfig.families[code];
+      const variants = byCode.get(code);
+      const first = variants[0] || {};
+      const tr = (familyCfg.translations && familyCfg.translations[lang]) || {};
+      const displayName = (lang === 'de' ? tr.name : null) || first.category_name_en || familyCfg.name || code;
+      const slug = lang === 'de' ? (familyCfg.slug_de || familyCfg.slug_en) : familyCfg.slug_en;
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://liaplias.com/${lang}/products/${slug}.html`,
+        name: displayName,
+      };
+    });
+  return JSON.stringify(items);
+}
 // ===== 生成相关分类链接（底部，排除当前分类） =====
 // 2026-08-09：DE版优先用cat.slug_de/name_de，缺失时兜底回退英文页面并警告
 function generateRelatedCategoryLinks(currentSlug, allCategories, lang) {
@@ -249,7 +269,6 @@ function generateRelatedCategoryLinks(currentSlug, allCategories, lang) {
     })
     .join('');
 }
-
 // ===== 生成顶部"Browse by category"快捷入口（全部分类，含当前分类） =====
 function generateCategoryQuicklinks(allCategories, lang) {
   return allCategories
@@ -306,6 +325,7 @@ function generateCategoryPage(category, allCategories, products, familyConfig, t
     .filter(code => byCode.has(code))
     .map(code => generateFamilyCard(code, byCode.get(code), familyConfig, lang))
     .join('');
+  const itemListJson = generateItemListJson(codes, byCode, familyConfig, lang);
 
   const relatedLinks = generateRelatedCategoryLinks(seo_slug, allCategories, lang);
   const quicklinks = generateCategoryQuicklinks(allCategories, lang);
@@ -340,6 +360,7 @@ function generateCategoryPage(category, allCategories, products, familyConfig, t
     .replace(/\{\{product_count\}\}/g, productCount)
     .replace(/\{\{product_count_text\}\}/g, esc(t.productCountText(productCount)))
     .replace(/\{\{product_cards\}\}/g, familyCards)
+    .replace(/\{\{itemlist_jsonld\}\}/g, itemListJson)
     // 2026-08-13：导航栏/CTA按钮/页脚这3处Code Search链接改用占位符，按语言分流
     .replace(/\{\{code_search_path\}\}/g, lang === 'de' ? '/de/code-search.html' : '/en/code-search.html')
     .replace(/\{\{category_quicklinks\}\}/g, quicklinks)

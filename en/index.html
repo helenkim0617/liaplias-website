@@ -192,18 +192,21 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 @media(max-width:768px){.sg{grid-template-columns:repeat(2,1fr)}.si+.si{border-left:none;border-top:1px solid var(--border)}.cg{grid-template-columns:1fr}.ig{grid-template-columns:1fr}.stg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.ctaw{padding:3rem 1.5rem}.htitle{font-size:1.8rem}}
 @media(max-width:480px){.hcta{flex-direction:column;align-items:flex-start}.btn-lg{width:100%;justify-content:center}}
 /* ============ 浮动视频入口 + 弹窗 ============ */
-.video-fab{position:fixed;right:1.5rem;bottom:1.5rem;z-index:2000;display:flex;align-items:center;gap:.6rem;
-  padding:.8rem 1.3rem .8rem .9rem;border-radius:999px;border:1px solid rgba(45,212,191,.35);
-  background:linear-gradient(135deg,rgba(13,21,37,.92) 0%,rgba(17,24,39,.92) 100%);backdrop-filter:blur(10px);
-  color:var(--text);cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,.45);
+.video-fab{position:fixed;right:1.5rem;bottom:1.5rem;z-index:2000;width:200px;height:112px;
+  border-radius:14px;overflow:hidden;border:1px solid rgba(45,212,191,.35);
+  background:#0a0f1a;cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,.45);
   animation:strong-pulse 2.4s ease-in-out infinite;transition:transform var(--ease),border-color var(--ease)}
 .video-fab:hover{transform:translateY(-3px);border-color:var(--teal);animation:none}
-.video-fab-ic{width:34px;height:34px;border-radius:50%;background:var(--teal);color:#04201c;
-  display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
-.video-fab-txt{display:flex;flex-direction:column;line-height:1.25}
-.video-fab-txt b{font-family:'Space Grotesk',sans-serif;font-size:.78rem;letter-spacing:.02em}
-.video-fab-txt span{font-size:.66rem;color:var(--text-mid)}
-@media(max-width:640px){.video-fab-txt{display:none}.video-fab{padding:.8rem;border-radius:50%}}
+.video-fab video{width:100%;height:100%;object-fit:cover;display:block}
+.video-fab-mute{position:absolute;top:.5rem;right:.5rem;width:24px;height:24px;border-radius:50%;
+  background:rgba(6,10,20,.65);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:.7rem}
+.video-fab-label{position:absolute;left:0;right:0;bottom:0;padding:.4rem .6rem;
+  background:linear-gradient(0deg,rgba(6,10,20,.85) 0%,rgba(6,10,20,0) 100%);
+  display:flex;align-items:center;gap:.4rem}
+.video-fab-label .fab-play{width:20px;height:20px;border-radius:50%;background:var(--teal);color:#04201c;
+  display:flex;align-items:center;justify-content:center;font-size:.6rem;flex-shrink:0}
+.video-fab-label b{font-family:'Space Grotesk',sans-serif;font-size:.7rem;letter-spacing:.02em;color:var(--text)}
+@media(max-width:640px){.video-fab{width:120px;height:68px;border-radius:10px}.video-fab-label b{font-size:.6rem}}
 
 .vm-overlay{position:fixed;inset:0;z-index:3000;background:rgba(6,10,20,.86);backdrop-filter:blur(6px);
   display:none;align-items:center;justify-content:center;padding:1.5rem;overflow-y:auto}
@@ -411,8 +414,9 @@ body.vm-lock{overflow:hidden}
 </footer>
 <!-- ============ 浮动视频入口 ============ -->
 <div class="video-fab" onclick="openVideoModal()">
-  <span class="video-fab-ic">▶</span>
-  <span class="video-fab-txt"><b>Watch Partners</b><span>Verified Network</span></span>
+  <video id="fabVideo" autoplay muted loop playsinline></video>
+  <span class="video-fab-mute">🔇</span>
+  <span class="video-fab-label"><span class="fab-play">▶</span><b>Watch Partners</b></span>
 </div>
 
 
@@ -619,11 +623,53 @@ body.vm-lock{overflow:hidden}
   当前状态：位置2、位置3（下标1、2）已启用；位置1、位置4（下标0、3）预留未启用
 */
 const PARTNER_VIDEOS = [
-  { active:false, name:'[Partner Company Name]', blurb:'Reserved — coming soon.', video:'', poster:'', link:'/en/showcase/partner-01.html' },
-  { active:true,  name:'[Partner Company Name]', blurb:'[One-line summary of manufacturing scope and core strengths — e.g. non-standard CNC machining, multi-axis capability, X years in operation]', video:'[VIDEO FILE URL — Partner 2]', poster:'[POSTER IMAGE URL — Partner 2]', link:'/en/showcase/partner-02.html' },
-  { active:true,  name:'[Partner Company Name]', blurb:'[One-line summary of manufacturing scope and core strengths — e.g. non-standard CNC machining, multi-axis capability, X years in operation]', video:'[VIDEO FILE URL — Partner 3]', poster:'[POSTER IMAGE URL — Partner 3]', link:'/en/showcase/partner-03.html' },
-  { active:false, name:'[Partner Company Name]', blurb:'Reserved — coming soon.', video:'', poster:'', link:'/en/showcase/partner-04.html' }
+  {
+    active: true,
+    name: '[Shenzhen Colevo Technology Co., Ltd.]',
+    blurb: 'Shenzhen Colevo Technology Co., Ltd. specializes in custom precision machining for high-end industries such as aerospace, automotive, and medical devices; having served over 90 Western clients, we are your trusted manufacturing partner for non-standard precision parts.',
+    video: 'https://video.liaplias.com/partner-01.mp4',
+    poster: '/assets/videos/partner-01-poster.jpg',
+    link: '/en/showcase/partner-01.html'
+  },
+  {
+    active: false,
+    name: '[Partner Company Name]',
+    blurb: '[One-line summary of manufacturing scope and core strengths — e.g. non-standard CNC machining, multi-axis capability, X years in operation]',
+    video: '[VIDEO FILE URL — Partner 2]',
+    poster: '[POSTER IMAGE URL — Partner 2]',
+    link: '/en/showcase/partner-02.html'
+  },
+  {
+    active: false,
+    name: '[Partner Company Name]',
+    blurb: '[One-line summary of manufacturing scope and core strengths — e.g. non-standard CNC machining, multi-axis capability, X years in operation]',
+    video: '[VIDEO FILE URL — Partner 3]',
+    poster: '[POSTER IMAGE URL — Partner 3]',
+    link: '/en/showcase/partner-03.html'
+  },
+  {
+    active: false,
+    name: '[Partner Company Name]',
+    blurb: 'Reserved — coming soon.',
+    video: '',
+    poster: '',
+    link: '/en/showcase/partner-04.html'
+  }
 ];
+
+function initFabPreview(){
+  const fab = document.querySelector('.video-fab');
+  const vid = document.getElementById('fabVideo');
+  const active = PARTNER_VIDEOS.find(p => p.active);
+  if(!active || !fab || !vid){
+    if(fab) fab.style.display = 'none';
+    return;
+  }
+  vid.src = active.video;
+  if(active.poster) vid.poster = active.poster;
+  vid.play().catch(()=>{});
+}
+document.addEventListener('DOMContentLoaded', initFabPreview);
 
 function buildVmTabs(){
   const wrap = document.getElementById('vmTabs');

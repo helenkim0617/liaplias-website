@@ -1,31 +1,3 @@
-<!--
-  2026-08-08 修复说明：
-  - meta description / og:description / JSON-LD description 原本硬编码为通用句式，
-    没有使用 category-mapping.json 里针对每个分类单独写的 meta_description_en，改为 Zentrier- &amp; Positionierelemente kompatibel mit HASCO Z71/Z73 &amp; Meusburger E2300. Gehärteter Stahl, mikrometergenau. Schnell lieferbar. Angebot anfordern!
-  - Hero区域的介绍段落原本是硬编码的通用句子，改为 LIAPLIAS bietet hochpräzise Zentrierstifte, Führungsbuchsen und Zentrierringe für den 1:1-Austausch mit europäischen Formnormalien wie HASCO (Z71/Z73/Z53) und Meusburger (E2300/E2310/E2110). Gefertigt aus gehärtetem, präzisionsgeschliffenem Werkzeugstahl für mikrometergenaue Zentrierung und maximale Wiederholgenauigkeit. Laden Sie CAD-Daten herunter oder fordern Sie ein schnelles Angebot an.，使用 category-mapping.json 里的真实文案
-  - 顶部"Browse by category"快捷入口原本硬编码写死6个分类的slug/名称，改为 <a href="/de/categories/fuehrungssaeulen-fuehrungsbuchsen.html" class="hcat">Führungssäulen &amp; Führungsbuchsen</a>
-    <a href="/de/categories/auswerferstifte.html" class="hcat">Auswerferstifte</a>
-    <a href="/de/categories/befestigungselemente.html" class="hcat">Befestigungselemente</a>
-    <a href="/de/categories/systemdruckfedern.html" class="hcat">Systemdruckfedern</a>
-    <a href="/de/categories/zentrier-positionierelemente.html" class="hcat">Zentrier &amp; Positionierelemente</a>
-    <a href="/de/categories/formenbau-normalien.html" class="hcat">Formenbau Normalien</a>，
-    由 build-categories.js 动态生成，以后分类改名/新增分类不用再手动改模板
-  - 底部"Related Categories"用的占位符是 <li><a href="/de/categories/fuehrungssaeulen-fuehrungsbuchsen.html">Führungssäulen &amp; Führungsbuchsen</a></li><li><a href="/de/categories/auswerferstifte.html">Auswerferstifte</a></li><li><a href="/de/categories/befestigungselemente.html">Befestigungselemente</a></li><li><a href="/de/categories/systemdruckfedern.html">Systemdruckfedern</a></li><li><a href="/de/categories/formenbau-normalien.html">Formenbau Normalien</a></li>（保持不变），
-    此前 build-categories.js 的正则只匹配 （少了_bottom），导致这里从未被填充，
-    已在脚本侧修复正则
-
-  2026-08-09 German rollout：整个模板改成EN/DE两语言共用（不再各语言各一份模板）——
-  - 原 // 改名为不带_en后缀的通用占位符
-    （Zentrier &amp; Positionierelemente/Zentrier- &amp; Positionierelemente kompatibel mit HASCO Z71/Z73 &amp; Meusburger E2300. Gehärteter Stahl, mikrometergenau. Schnell lieferbar. Angebot anfordern!/LIAPLIAS bietet hochpräzise Zentrierstifte, Führungsbuchsen und Zentrierringe für den 1:1-Austausch mit europäischen Formnormalien wie HASCO (Z71/Z73/Z53) und Meusburger (E2300/E2310/E2110). Gefertigt aus gehärtetem, präzisionsgeschliffenem Werkzeugstahl für mikrometergenaue Zentrierung und maximale Wiederholgenauigkeit. Laden Sie CAD-Daten herunter oder fordern Sie ein schnelles Angebot an.），因为德语版会用同一套占位符承接德语内容
-  - 新增 de（html lang属性+canonical/og:url自引用）、locating-centering-components/zentrier-positionierelemente（两个语言版真实slug，
-    用于hreflang标签+语言切换器）、/act（当前语言在切换器里显示active态）
-  - 新增约40个  界面文案占位符，由 build-categories.js 的 UI_STRINGS 字典按语言填充
-  - 约定：canonical/og:url自引用、hreflang标签、语言切换器EN/DE两个按钮 = 真实指向两个语言版本；
-    其余站内链接（导航栏/面包屑Home&Categories/Hero区Code Search提示/底部CTA/页脚导航）目前仍统一指向
-    英文版页面（因为cooperation/industries/code-search/solutions/partners/contact/privacy/terms/首页
-    这些页面还没有德语版），但显示文字会翻译——跟详情页"返回分类"链接用的是同一个处理原则，
-    等这些页面陆续做出德语版后再把对应链接切换过去
--->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -56,6 +28,14 @@
     { "@type": "ListItem", "position": 2, "name": "Kategorien", "item": "https://liaplias.com/en/categories/" },
     { "@type": "ListItem", "position": 3, "name": "Zentrier &amp; Positionierelemente", "item": "https://liaplias.com/de/categories/zentrier-positionierelemente.html" }
   ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": []
 }
 </script>
 
