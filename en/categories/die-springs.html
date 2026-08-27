@@ -375,7 +375,68 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
   color: #4ade80;
   font-weight: 600;
 }
-
+/* ===== RFQ 侧边栏面板（从产品详情页模板同步，此前分类页模板遗漏了这段） ===== */
+.rfq-panel { position: fixed; top: 0; right: -440px; width: 440px; height: 100%; background: #fff; box-shadow: -4px 0 20px rgba(0,0,0,0.15); z-index: 30; transition: right 0.25s ease; padding: 1.5rem; overflow-y: auto; box-sizing: border-box; }
+.rfq-panel.open { right: 0; }
+.rfq-panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.rfq-panel-header h3 { margin: 0; font-size: 1.05rem; font-weight: 700; color: #0a1a2a; }
+.rfq-close { background: none; border: none; font-size: 1.4rem; line-height: 1; color: #5a6a7a; cursor: pointer; padding: 0.2rem 0.4rem; border-radius: 4px; }
+.rfq-close:hover { background: #f1f4f7; color: #0a1a2a; }
+.rfq-list-header {
+  display: grid;
+  grid-template-columns: 56px minmax(100px, 160px) 72px 28px;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0 0.3rem 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #8b9bbb;
+  border-bottom: 1px solid #e5e7eb;
+}
+#rfqItems { max-height: 260px; overflow-y: auto; margin-bottom: 0.5rem; }
+.rfq-empty { font-size: 0.85rem; color: #8b9bbb; padding: 1rem 0.4rem; text-align: center; margin: 0; }
+.rfq-item-row {
+  display: grid;
+  grid-template-columns: 56px minmax(100px, 160px) 72px 28px;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.4rem 0.3rem;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 0.8rem;
+}
+.rfq-item-row:last-child { border-bottom: none; }
+.rfq-col-size { color: #5a6a7a; text-align: center; font-variant-numeric: tabular-nums; }
+.rfq-col-code { color: #0a1a2a; font-weight: 500; white-space: nowrap; }
+.rfq-col-qty {
+  text-align: center;
+  color: #0a1a2a;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  gap: 10px;
+}
+.rfq-col-remove { background: none; border: none; color: #b0bac6; font-size: 1.1rem; line-height: 1; cursor: pointer; padding: 0; }
+.rfq-col-remove:hover { color: #d64545; }
+.rfq-contact-block { margin-top: 1.25rem; border-top: 1px solid #e5e7eb; padding-top: 1rem; }
+.rfq-contact-title { font-weight: 600; margin: 0 0 10px 0; font-size: 0.85rem; color: #0a1a2a; }
+.rfq-field-label { display: block; margin-bottom: 10px; font-size: 0.8rem; color: #5a6a7a; }
+.rfq-field-label-last { margin-bottom: 4px; }
+.rfq-field-input { width: 100%; margin-top: 4px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 0.85rem; }
+.rfq-field-input:focus { outline: none; border-color: #0052a0; box-shadow: 0 0 0 2px rgba(0, 82, 160, 0.12); }
+.rfq-submit-wrap { margin-top: 1.25rem; }
+.rfq-counter { background: #0052a0; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; color: #fff; }
+@media (max-width: 768px) {
+  .rfq-panel { width: 90%; right: -100%; }
+}
+@media (max-width: 480px) {
+  .rfq-panel { width: 100vw; max-width: 100vw; }
+  .rfq-list-header,
+  .rfq-item-row { grid-template-columns: 56px 1fr 78px 24px; font-size: 0.78rem; }
+}
 
 </style>
 </head>

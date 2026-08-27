@@ -428,13 +428,16 @@ footer{background:var(--surf);border-top:1px solid var(--border);
             <button class="btn btn-p" onclick="runSearch()">Search</button>
           </div>
           <div class="filter-row">
-            <span class="filter-label">Browse by Category:</span>
-            <a class="fchip" href="/en/categories/guide-pillars-bushings.html">Guide Pillars &amp; Bushings</a>
-            <a class="fchip" href="/en/categories/ejector-pins.html">Ejector Pins</a>
-            <a class="fchip" href="/en/categories/mold-fasteners.html">Fastening Components</a>
-            <a class="fchip" href="/en/categories/die-springs.html">Die Springs</a>
-            <a class="fchip" href="/en/categories/locating-centering-components.html">Locating &amp; Centering</a>
-            <a class="fchip" href="/en/categories/mold-standard-components.html">Standard Components</a>
+            <span class="filter-label">Filter:</span>
+            <!-- AUTO-GENERATED:FILTER_ROW:START (source: category-mapping.json) -->
+            <button class="fchip on" data-cat="all" onclick="toggleCat(this)">All Categories</button>
+            <button class="fchip" data-cat="GP,GB,SS01" onclick="toggleCat(this)">Guide Pillars & Guide Bushings</button>
+            <button class="fchip" data-cat="EP01,EF,EB,ES" onclick="toggleCat(this)">Ejector Pins</button>
+            <button class="fchip" data-cat="SH01,SC,SS,SW,CS" onclick="toggleCat(this)">Mold Fasteners</button>
+            <button class="fchip" data-cat="SP,NS" onclick="toggleCat(this)">Die Springs</button>
+            <button class="fchip" data-cat="LP,LB,LR" onclick="toggleCat(this)">Locating & Centering Components</button>
+            <button class="fchip" data-cat="SB,TR,RP,BP,GG" onclick="toggleCat(this)">Mold Standard Components</button>
+            <!-- AUTO-GENERATED:FILTER_ROW:END -->
           </div>
         </div>
         <div id="bom-panel">
@@ -649,8 +652,8 @@ function showLoading() {
 // AUTO-GENERATED:FAMILY_GROUPED_CATEGORIES:START
 const FAMILY_GROUPED_CATEGORIES = [
   "EP01",
-  "SS01",
-  "SH01"
+  "SH01",
+  "SS01"
 ];
 // AUTO-GENERATED:FAMILY_GROUPED_CATEGORIES:END
 // 品类对应DIN标准号（数据库暂无此字段，先在前端配置）
@@ -715,10 +718,10 @@ function groupIntoFamilies(results, hasQuery) {
 const FAMILY_PATH_MAP = {
   'EP01': '/en/products/ejector-pin-ep01.html',
   'LIA-EP01': '/en/products/ejector-pin-ep01.html',
-  'SS01': '/en/products/guide-pillar-angle-pin-ss01.html',
-  'LIA-SS01': '/en/products/guide-pillar-angle-pin-ss01.html',
   'SH01': '/en/products/socket-head-cap-screw-sh01.html',
-  'LIA-SH01': '/en/products/socket-head-cap-screw-sh01.html'
+  'LIA-SH01': '/en/products/socket-head-cap-screw-sh01.html',
+  'SS01': '/en/products/guide-pillar-angle-pin-ss01.html',
+  'LIA-SS01': '/en/products/guide-pillar-angle-pin-ss01.html'
 };
 // AUTO-GENERATED:FAMILY_PATH_MAP:END
 

@@ -141,10 +141,10 @@ p{max-width:65ch}
 .search-input::placeholder{color:var(--text-dim)}
 .filter-row{display:flex;align-items:center;gap:.5rem;margin-top:1rem;flex-wrap:wrap}
 .filter-label{font-size:.72rem;color:var(--text-dim);letter-spacing:.06em;text-transform:uppercase}
-.fchip{display:inline-flex;align-items:center;padding:.25rem .7rem;border-radius:100px;font-size:.72rem;font-weight:600;cursor:pointer;
-  background:rgba(45,127,255,.1);border:1px solid rgba(45,127,255,.3);
-  color:var(--blue-l);transition:all var(--ease)}
-.fchip:hover{border-color:var(--cyan);color:var(--text);background:rgba(0,212,255,.12);transform:translateY(-1px)}
+.fchip{padding:.25rem .7rem;border-radius:100px;font-size:.72rem;font-weight:600;cursor:pointer;
+  background:rgba(255,255,255,.04);border:1px solid var(--border2);
+  color:var(--text-mid);transition:all var(--ease)}
+.fchip.on{background:rgba(45,127,255,.15);border-color:rgba(45,127,255,.4);color:var(--blue-l)}
 #bom-panel{display:none}
 .drop-zone{border:2px dashed var(--border2);border-radius:var(--r-lg);padding:3rem 2rem;
   text-align:center;cursor:pointer;transition:border-color var(--ease),background var(--ease)}
@@ -532,6 +532,7 @@ footer{background:var(--surf);border-top:1px solid var(--border);
 
 let PRODUCTS       = [];
 let currentTab     = 'search';
+let activeCat      = 'all';  // ← 新增
 let currentResults = [];
 let bomRows        = [];
 let modalProduct   = null;
@@ -611,12 +612,23 @@ function switchTab(tab) {
   if (tab === 'search') renderResults(currentResults);
   else document.getElementById('results-area').innerHTML = '';
 }
+function toggleCat(btn) {
+  document.querySelectorAll('.fchip').forEach(c => c.classList.remove('on'));
+  btn.classList.add('on');
+  activeCat = btn.getAttribute('data-cat');
+  runSearch();
+}
+
 
 function runSearch() {
   const q = (document.getElementById('search-input')?.value || '').trim().toLowerCase();
   showLoading();
   setTimeout(() => {
     let results = PRODUCTS.filter(p => p.status === 'Active');
+    if (activeCat !== 'all') {
+      const cats = activeCat.split(',');
+      results = results.filter(p => cats.includes(p.category_code));
+    }
     if (q) {
       results = results.filter(p =>
         (p.hasco_code       || '').toLowerCase().includes(q) ||
