@@ -6,49 +6,47 @@
 <title>LIAPLIAS — 精密CNC零件 · 兼容HASCO与Meusburger</title>
 <meta name="description" content="按HASCO或Meusburger编号查询CNC标准件，或上传BOM表批量询价。来自认证中国工厂，全球配送。"/>
 <meta name="keywords" content="CNC零件,HASCO兼容,Meusburger兼容,模具标准件,顶针,导柱,中国CNC供应商"/>
-<link rel="canonical" href="https://liaplias.com/zh/index.html"/>
-<link rel="alternate" hreflang="en" href="https://liaplias.com/en/index.html"/>
-<link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/index.html"/>
-<link rel="alternate" hreflang="de" href="https://liaplias.com/de/index.html"/>
-<link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/index.html"/>
-<link rel="alternate" hreflang="x-default" href="https://liaplias.com/en/index.html"/>
+<link rel="canonical" href="https://www.liaplias.com/zh/"/>
+<link rel="alternate" hreflang="en" href="https://www.liaplias.com/en/"/>
+<link rel="alternate" hreflang="zh" href="https://www.liaplias.com/zh/"/>
+<link rel="alternate" hreflang="de" href="https://www.liaplias.com/de/"/>
+<link rel="alternate" hreflang="fr" href="https://www.liaplias.com/fr/"/>
+<link rel="alternate" hreflang="x-default" href="https://www.liaplias.com/en/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="LIAPLIAS — 精密CNC零件，中国制造"/>
 <meta property="og:description" content="兼容HASCO & Meusburger标准件 + 定制CNC加工，认证工厂，全球交付。"/>
-<meta property="og:url" content="https://liaplias.com/zh/index.html"/>
-<meta property="og:image" content="https://liaplias.com/assets/images/og-cover.jpg"/>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"LIAPLIAS",
- "url":"https://liaplias.com","contactPoint":{"@type":"ContactPoint",
- "email":"info@liaplias.com","contactType":"sales"}}
+<meta property="og:url" content="https://www.liaplias.com/zh/"/>
+<meta property="og:image" content="https://video.liaplias.com/og-cover.jpg"/>
+<script type="application/ld+json"> 
+  { 
+    "@context": "https://schema.org", 
+    "@type": "Organization", 
+    "name": "LIAPLIAS", 
+    "url": "https://www.liaplias.com", 
+    "description": "LIAPLIAS is a precision manufacturing sourcing and inquiry platform connecting international buyers with qualified manufacturing partners in China.", 
+    "contactPoint": { 
+      "@type": "ContactPoint", 
+      "email": "info@liaplias.com", 
+      "contactType": "sales" 
+    } 
+  } 
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --bg:        #0a0f1e;
-  --bg2:       #0d1525;
-  --surf:      #111827;
-  --surf2:     #1a2440;
-  --border:    rgba(255,255,255,.07);
-  --border2:   rgba(255,255,255,.13);
-  --blue:      #2d7fff;
-  --blue-l:    #5b9fff;
-  --blue-d:    #1a5cd4;
-  --blue-glow: rgba(45,127,255,.35);
-  --cyan:      #00d4ff;
-  --cyan-d:    #00a8cc;
-  --cyan-glow: rgba(0,212,255,.25);
-  --text:      #f0f4ff;
-  --text-mid:  #8b9bbb;
-  --text-dim:  #3d4f70;
-  --nav-h:     64px;
-  --r:         10px;
-  --r-lg:      18px;
-  --max-w:     1200px;
-  --ease:      250ms cubic-bezier(.4,0,.2,1);
+  --bg:#0a0f1e;--bg2:#0d1525;--surf:#111827;--surf2:#1a2440;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
+  --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+  --amber:#ffab40;
+  --teal:#2dd4bf;--teal-glow:rgba(45,212,191,.22);
+  --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
+  --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
+  --ease:250ms cubic-bezier(.4,0,.2,1);
 }
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -106,16 +104,18 @@ p{max-width:65ch}
   transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
 #nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
 #nav.hd{transform:translateY(-100%)}
-.ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+.ni{display:flex;align-items:center;justify-content:space-between;gap:2rem;width:100%;
   max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
 .logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em;display:flex;align-items:center}
 .logo em{font-style:normal;color:var(--cyan)}
 .nl{display:flex;align-items:center;gap:1.6rem}
-.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--text-mid);
+.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;line-height:1.2;color:var(--text-mid);
   transition:color var(--ease);position:relative;padding-block:.25rem}
 .na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--cyan);transition:width var(--ease)}
 .na:hover,.na.act{color:var(--text)}
 .na:hover::after,.na.act::after{width:100%}
+.nl-actions{display:flex;align-items:center;flex-wrap:nowrap;gap:.6rem;padding-left:1rem;margin-left:.3rem;border-left:1px solid var(--border)}
+.nl-actions .rfq-counter{margin:0}
 .nr{display:flex;align-items:center;gap:.65rem}
 .lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
   border:1px solid var(--border2);border-radius:6px;padding:3px}
@@ -138,6 +138,9 @@ p{max-width:65ch}
   .top-lang{display:none!important}
   .menu-lang{display:flex;justify-content:center;gap:0.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
   .menu-lang .lb{font-size:0.67rem;padding:4px 9px}
+  .nl-actions{flex-direction:column;align-items:stretch;flex-wrap:wrap;gap:1rem;padding-left:0;margin-left:0;border-left:none;border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;width:100%}
+  .nl-actions .btn{width:100%;justify-content:center}
+  .nl-actions .rfq-counter{justify-content:center;width:100%}
 }
 .hero{min-height:100vh;display:flex;align-items:center;padding-top:var(--nav-h);position:relative;overflow:hidden}
 .hbg{position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 68% 28%,rgba(45,127,255,.13) 0%,transparent 65%),radial-gradient(ellipse 50% 65% at 15% 72%,rgba(0,212,255,.08) 0%,transparent 60%),linear-gradient(170deg,#0a0f1e 0%,#0c1530 55%,#080d1c 100%)}
@@ -149,7 +152,22 @@ p{max-width:65ch}
 @keyframes drift{from{transform:translate(0,0)}to{transform:translate(20px,-30px)}}
 .hlines{position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent,transparent 3px,rgba(0,212,255,.012) 3px,rgba(0,212,255,.012) 4px);pointer-events:none}
 .hc{position:relative;z-index:2;max-width:780px}
-.chip{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.25);border-radius:100px;padding:.32rem .9rem;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.5rem}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:rgba(255,171,64,.09);
+  border:1px solid rgba(255,171,64,.28);
+  border-radius:100px;
+  padding:.32rem .9rem;
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--amber);
+  margin-bottom:1.5rem
+}
+
 .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:blink 2.2s ease infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3;transform:scale(.6)}}
 .htitle{font-size:clamp(2.5rem,6.5vw,4.8rem);font-weight:800;line-height:1.06;letter-spacing:-.015em;margin-bottom:1.5rem}
@@ -201,6 +219,7 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .fb .logo{margin-bottom:1rem;display:block;font-size:1.3rem}
 .fb p{font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.4rem;max-width:270px}
+.fb p:first-of-type{color:var(--text);font-weight:500}
 .fcol h5{font-family:'Space Grotesk',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.1rem}
 .fcol ul{display:flex;flex-direction:column;gap:.7rem}
 .fcol a{font-size:.8rem;color:var(--text-mid);transition:color var(--ease)}
@@ -208,16 +227,10 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 .fbot{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .fbot p,.fop{font-size:.72rem;color:var(--text-dim)}
 .fop{font-family:'Space Grotesk',sans-serif;letter-spacing:.06em;color:var(--text-mid)}
+
 @media(max-width:1024px){.ig{grid-template-columns:repeat(2,1fr)}.stg{grid-template-columns:repeat(2,1fr)}.sline{display:none}.fg{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){
-  .sg{grid-template-columns:repeat(2,1fr)}
-  .si+.si{border-left:none;border-top:1px solid var(--border)}
-  .cg{grid-template-columns:1fr}
-  .ig{grid-template-columns:1fr}
-  .stg{grid-template-columns:1fr}
-  .fg{grid-template-columns:1fr}
-  .ctaw{padding:3rem 1.5rem}
-}
+@media(max-width:768px){.sg{grid-template-columns:repeat(2,1fr)}.si+.si{border-left:none;border-top:1px solid var(--border)}.cg{grid-template-columns:1fr}.ig{grid-template-columns:1fr}.stg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.ctaw{padding:3rem 1.5rem}.htitle{font-size:1.8rem}}
+
 @media(max-width:480px){.hcta{flex-direction:column;align-items:flex-start}.btn-lg{width:100%;justify-content:center}}
 </style>
 
@@ -264,32 +277,36 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 
 <nav id="nav" role="navigation" aria-label="主导航">
   <div class="ni">
-    <a href="/zh/index.html" class="logo" aria-label="LIAPLIAS 首页">LIAP<em>LIAS</em></a>
+    <a href="/zh/" class="logo" aria-label="LIAPLIAS 首页">LIAP<em>LIAS</em></a>
     <ul class="nl" id="nl" role="list">
-      <li><a class="na" href="/zh/index.html" data-p="index.html">首页</a></li>
-      <li><a class="na" href="/zh/cooperation.html" data-p="cooperation.html">合作模式</a></li>
-      <li><a class="na" href="/zh/industries.html" data-p="industries.html">服务行业</a></li>
-      <li><a class="na" href="/zh/code-search.html" data-p="code-search.html">编码查询</a></li>
-      <li><a class="na" href="/zh/custom-cnc.html" data-p="custom-cnc.html">Custom CNC</a></li>
-      <li><a class="na" href="/zh/solutions.html" data-p="solutions.html">解决方案</a></li>
-      <li><a class="na" href="/zh/partners.html" data-p="partners.html">合作伙伴</a></li>
-      <li><a class="na" href="/zh/contact.html" data-p="contact.html">联系我们</a></li>
-      <li class="menu-lang">
-        <a href="/en/index.html" class="lb">EN</a>
-        <a href="/de/index.html" class="lb">DE</a>
-        <a href="/fr/index.html" class="lb">FR</a>
-        <a href="/zh/index.html" class="lb act">中</a>
-      </li>
-<li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
-    </ul>
+  <li><a class="na act" href="/zh/" data-p="index.html">首页</a></li>
+  <li><a class="na" href="/zh/why-liaplias/" data-p="why-liaplias.html">为什么选择 LIAPLIAS</a></li>
+  <li><a class="na" href="/zh/manufacturing/" data-p="manufacturing.html">制造服务</a></li>
+  <li><a class="na" href="/zh/code-search/" data-p="code-search.html">编码查询</a></li>
+  <li><a class="na" href="/zh/supply-network/" data-p="supply-network.html">供应网络</a></li>
+  <li><a class="na" href="/zh/partnerships/" data-p="partnerships.html">合作伙伴</a></li>
+  <li><a class="na" href="/zh/contact/" data-p="contact.html">联系我们</a></li>
+  <li class="menu-lang">
+    <a href="/en/" class="lb">EN</a>
+    <a href="/de/" class="lb">DE</a>
+    <a href="/fr/" class="lb">FR</a>
+    <a href="/zh/" class="lb act ">中</a>
+  </li>
+
+  <!-- Action zone: Send Inquiry + RFQ, kept on one row -->
+  <li class="nl-actions">
+    <a href="#" class="btn btn-p btn-sm" data-contact-trigger>发送询价</a>
+    <div class="rfq-counter" onclick="toggleRfqPanel()">RFQ (<span id="rfqCount">0</span>)</div>
+  </li>
+</ul>
+
     <div class="nr">
       <div class="lp hm" aria-label="选择语言">
-        <a href="/en/index.html" class="lb">EN</a>
-        <a href="/de/index.html" class="lb">DE</a>
-        <a href="/fr/index.html" class="lb">FR</a>
-        <a href="/zh/index.html" class="lb act">中</a>
+        <a href="/en/" class="lb">EN</a>
+        <a href="/de/" class="lb">DE</a>
+        <a href="/fr/" class="lb">FR</a>
+        <a href="/zh/" class="lb act">中</a>
       </div>
-      <a href="/zh/code-search.html" class="btn btn-p btn-sm hm btn-pulse">获取报价</a>
       <button class="ham" id="ham" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -304,22 +321,43 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
   <div class="orb o3" aria-hidden="true"></div>
   <div class="c">
     <div class="hc">
-      <div class="chip"><span class="dot" aria-hidden="true"></span>全球CNC采购合作伙伴</div>
-      <h1 class="htitle">精密CNC零件。<br><span class="t-g">中国制造。</span><br><span class="t-m">全球交付。</span></h1>
+      <div class="chip"><span class="dot" aria-hidden="true"></span>精密制造采购</div>
+      <h1 class="htitle">精密制造，<br><span class="t-g">围绕您的需求</span><br><span class="t-m">量身定制</span></h1>
       <p class="hsub">兼容HASCO与Meusburger编号的标准件，以及定制CNC加工件——来自认证中国工厂，直接配送到您的工厂。</p>
       <div class="hcta">
-        <a href="/zh/code-search.html" class="btn btn-p btn-lg btn-pulse">按编码查询</a>
-        <a href="/zh/cooperation.html" class="btn btn-o btn-lg">了解合作方式</a>
+        <a href="/zh/code-search/" class="btn btn-p btn-lg btn-pulse">按编码查询</a>
+        <a href="/zh/why-liaplias/" class="btn btn-o btn-lg">了解为什么选择 LIAPLIAS</a>
       </div>
       <div class="ctags">
-        <span class="ctag">兼容HASCO</span>
-        <span class="ctag">兼容Meusburger</span>
-        <span class="ctag">ISO认证工厂</span>
+      <span class="ctag">兼容HASCO</span>
+      <span class="ctag">兼容Meusburger</span>
+      <span class="ctag">工程审核</span>
+      <span class="ctag">经过资质审核的制造能力</span>
       </div>
-   <div class="hcats" id="categoryContainer">
-  <span class="hcats-label">按分类浏览</span>
-</div>
 
+    </div>
+  </div>
+</section>
+<section class="sec" id="two-paths">
+  <div class="c">
+    <div class="rv" style="text-align:center">
+      <div class="eyebrow" style="justify-content:center">两种采购方式</div>
+      <h2>为您的项目找到合适的路径</h2>
+      <p style="color:var(--text-mid);margin-inline:auto;margin-top:.9rem;font-size:.92rem;max-width:520px;text-align:center">选择最符合您需求的方式。</p>
+    </div>
+    <div class="cg">
+      <div class="cc rv d1">
+        <div class="cico">🔧</div>
+        <h3>需要定制件或非标准零件？</h3>
+        <p>发送图纸、STEP 文件或BOM，以便进行工程评审和制造伙伴匹配。</p>
+       <a href="/zh/contact/" class="clink">发送询价 →</a>
+      </div>
+      <div class="cc rv d2">
+        <div class="cico">⚙️</div>
+        <h3>寻找标准模具零部件？</h3>
+        <p>通过编码搜索 400 多种兼容 HASCO/Meusburger 的产品并获取报价。</p>
+        <a href="/zh/code-search/" class="clink">编码搜索 →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -327,10 +365,10 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 <div class="stats">
   <div class="c">
     <div class="sg">
-      <div class="si rv"><div class="sn" data-cu="400" data-sfx="+">400+</div><div class="sl">SKU数据库</div></div>
-      <div class="si rv d1"><div class="sn" data-cu="3" data-sfx="+">3+</div><div class="sl">认证工厂</div></div>
-      <div class="si rv d2"><div class="sn" data-cu="20" data-sfx="+">20+</div><div class="sl">覆盖国家</div></div>
-      <div class="si rv d3"><div class="sn">7–15</div><div class="sl">天交货期</div></div>
+      <div class="si rv"><div class="sn sn-cap">标准零件数据库</div></div>
+      <div class="si rv d1"><div class="sn sn-cap">经过资质审核的制造能力</div></div>
+      <div class="si rv d2"><div class="sn sn-cap">定制及标准零件</div></div>
+      <div class="si rv d3"><div class="sn sn-cap">单一对接联系人</div></div>
     </div>
   </div>
 </div>
@@ -343,10 +381,10 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
       <p style="color:var(--text-mid);margin-top:.9rem;font-size:.92rem;max-width:560px">从现货标准件到全定制加工件——一个合作伙伴，一套标准，一个联系点。</p>
     </div>
     <div class="cg">
-      <div class="cc rv d1"><div class="cico">⚙️</div><h3>标准件供应</h3><p>模具导向件、顶针、弹簧、紧固件等，完全兼容HASCO和Meusburger编号体系。</p><a href="/zh/code-search.html" class="clink">查询产品 →</a></div>
-      <div class="cc rv d2"><div class="cico">🔧</div><h3>定制CNC加工</h3><p>上传图纸（PDF/DWG），24小时内报价，公差可达±0.005mm。</p><a href="/zh/contact.html" class="clink">发送图纸 →</a></div>
-      <div class="cc rv d3"><div class="cico">🏭</div><h3>供应链整合</h3><p>整合多家工厂订单，统一质检，直接配送至您的仓库或项目现场。</p><a href="/zh/cooperation.html" class="clink">了解合作方式 →</a></div>
-      <div class="cc rv d4"><div class="cico">💻</div><h3>数字化产品目录</h3><p>按HASCO编号、Meusburger编号或关键词查询400+个SKU，支持BOM批量询价，无需注册。</p><a href="/zh/code-search.html" class="clink">浏览产品目录 →</a></div>
+     <div class="cc rv d1"><div class="cico">⚙️</div><h3>标准件供应</h3><p>模具导向件、顶针、弹簧、紧固件等，完全兼容HASCO和Meusburger编号体系。</p><a href="/zh/code-search/" class="clink">查询产品 →</a></div>
+     <div class="cc rv d2"><div class="cico">🔧</div><h3>定制CNC加工</h3><p>上传图纸（PDF/DWG），24小时内报价，公差可达±0.005mm。</p><a href="/zh/contact/" class="clink">发送图纸 →</a></div>
+     <div class="cc rv d3"><div class="cico">🏭</div><h3>项目协调</h3><p>我们通过制造网络协调生产和交付沟通，同时监控双方约定的质量控制要求。</p><a href="/zh/why-liaplias/" class="clink">了解为什么选择 LIAPLIAS →</a></div>
+     <div class="cc rv d4"><div class="cico">💻</div><h3>数字化产品目录</h3><p>按HASCO编号、Meusburger编号或关键词查询400+个SKU，支持BOM批量询价，无需注册。</p><a href="/zh/code-search/" class="clink">浏览产品目录 →</a></div>
     </div>
   </div>
 </section>
@@ -362,7 +400,6 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
       <div class="ic rv d1"><div class="ie">🏗️</div><h4>建筑与居住</h4><p>建筑五金、卫浴和集成房屋系统的精密配件。</p></div>
       <div class="ic rv d2"><div class="ie">✈️</div><h4>航空航天与工业</h4><p>高规格加工零件，可追溯，满足严苛工业应用需求。</p></div>
     </div>
-    <div style="text-align:center;margin-top:3rem" class="rv"><a href="/zh/industries.html" class="btn btn-o">查看全部行业</a></div>
   </div>
 </section>
 
@@ -373,7 +410,7 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
       <div class="sline" aria-hidden="true"></div>
       <div class="stg">
         <div class="st rv d1"><div class="stn" aria-label="第一步">01</div><div><h4>查询或上传</h4><p>输入HASCO/Meusburger编号、关键词，或上传BOM表格。</p></div></div>
-        <div class="st rv d2"><div class="stn" aria-label="第二步">02</div><div><h4>提交询价</h4><p>确认产品清单，填写数量和交货要求，提交询价。</p></div></div>
+        <div class="st rv d2"><div class="stn" aria-label="第二步">02</div><div><h4>提交询价</h4><p>确认产品清单，填写数量和交付要求，提交询价。</p></div></div>
         <div class="st rv d3"><div class="stn" aria-label="第三步">03</div><div><h4>收到报价</h4><p>24小时内收到含价格、交期和工厂认证的详细报价。</p></div></div>
         <div class="st rv d4"><div class="stn" aria-label="第四步">04</div><div><h4>确认与发货</h4><p>确认报价后，我们负责生产、质检和国际物流。</p></div></div>
       </div>
@@ -382,18 +419,56 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 </section>
 
 <section class="sec" style="padding-top:0">
-  <div class="c"><div class="ctaw rv"><h2>准备好简化您的CNC采购了吗？</h2><p>查询400+标准件，或上传BOM进行批量询价——无需注册账号。</p><div class="ctab"><a href="/zh/code-search.html" class="btn btn-p btn-lg">按编码查询</a><a href="/zh/contact.html" class="btn btn-o btn-lg">联系我们</a></div></div></div>
+  <div class="c"><div class="ctaw rv"><h2>准备好简化您的CNC采购了吗？</h2><p>查询400+标准件，或上传BOM进行批量询价——无需注册账号。</p><div class="ctab"><a href="/zh/code-search/" class="btn btn-p btn-lg">按编码查询</a><a href="/zh/contact/" class="btn btn-o btn-lg">联系我们</a></div></div></div>
 </section>
 
 <footer>
   <div class="c">
     <div class="fg">
-      <div class="fb"><span class="logo">LIAP<em>LIAS</em></span><p>精密CNC零件——中国制造，全球交付。</p><p>运营方：NOLVO</p><p>LIAPLIAS® 商标已在欧盟及美国注册。</p></div>
-      <div class="fcol"><h5>导航</h5><ul><li><a href="/zh/cooperation.html">合作模式</a></li><li><a href="/zh/industries.html">服务行业</a></li><li><a href="/zh/code-search.html">编码查询</a></li><li><a href="/zh/custom-cnc.html">Custom CNC</a></li><li><a href="/zh/solutions.html">解决方案</a></li><li><a href="/zh/partners.html">合作伙伴</a></li></ul></div>
-      <div class="fcol"><h5>法律</h5><ul><li><a href="/zh/privacy.html">隐私政策</a></li><li><a href="/zh/terms.html">使用条款</a></li></ul></div>
-      <div class="fcol"><h5>联系方式</h5><ul><li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li><li><a href="https://liaplias.com">liaplias.com</a></li></ul></div>
+
+      <div class="fb">
+        <span class="logo">LIAP<em>LIAS</em></span>
+        <p>合适的制造路径。合适的制造合作伙伴。<br>从需求到交付。</p>
+        <p>Operated by NOLVO</p>
+        <p>LIAPLIAS® 商标已在欧盟及美国注册。</p>
+      </div>
+
+      <div class="fcol">
+        <h5>导航</h5>
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/why-liaplias/">为什么选择 LIAPLIAS</a></li>
+          <li><a href="/zh/manufacturing/">制造服务</a></li>
+          <li><a href="/zh/code-search/">编码查询</a></li>
+          <li><a href="/zh/supply-network/">供应网络</a></li>
+          <li><a href="/zh/partnerships/">合作伙伴</a></li>
+          <li><a href="/zh/contact/">联系我们</a></li>
+        </ul>
+      </div>
+
+      <div class="fcol">
+        <h5>法律信息</h5>
+        <ul>
+          <li><a href="/zh/privacy/">隐私政策</a></li>
+          <li><a href="/zh/terms/">使用条款</a></li>
+        </ul>
+      </div>
+
+      <div class="fcol">
+        <h5>联系方式</h5>
+        <ul>
+          <li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li>
+          <li><a href="https://www.liaplias.com">liaplias.com</a></li>
+        </ul>
+      </div>
+
     </div>
-    <div class="fbot"><p>© 2026 LIAPLIAS 版权所有。运营方：NOLVO。</p><span class="fop">运营方：NOLVO</span></div>
+
+    <div class="fbot">
+      <p>© 2026 LIAPLIAS. 保留所有权利。</p>
+      <span class="fop">Operated by NOLVO</span>
+    </div>
+
   </div>
 </footer>
 
@@ -514,6 +589,7 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
   </div>
 </div>
 <script src="../rfq-submit.js"></script>
+<script src="/contact-window.js" defer></script>
 <script>
 (function loadCategories() {
   const container = document.getElementById('categoryContainer');

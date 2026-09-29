@@ -3,24 +3,34 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>LIAPLIAS — Pièces CNC de précision · Compatibles HASCO & Meusburger</title>
-<meta name="description" content="Recherchez des composants standards CNC compatibles HASCO & Meusburger, ou importez votre nomenclature (BOM) pour une demande de prix groupée. Usines chinoises certifiées, livraison mondiale."/>
-<meta name="keywords" content="pièces CNC, compatible HASCO, compatible Meusburger, composants standards de moules, éjecteurs, colonnes de guidage, fournisseur CNC Chine"/>
-<link rel="canonical" href="https://liaplias.com/fr/index.html"/>
-<link rel="alternate" hreflang="en" href="https://liaplias.com/en/index.html"/>
-<link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/index.html"/>
-<link rel="alternate" hreflang="de" href="https://liaplias.com/de/index.html"/>
-<link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/index.html"/>
-<link rel="alternate" hreflang="x-default" href="https://liaplias.com/en/index.html"/>
+<title>LIAPLIAS — Precision CNC Parts · HASCO & Meusburger Compatible</title>
+<meta name="description" content="Search HASCO & Meusburger compatible CNC standard components, or upload your BOM for bulk inquiry. Certified Chinese factories, global delivery."/>
+<meta name="keywords" content="CNC parts, HASCO compatible, Meusburger compatible, mold standard components, ejector pins, guide pillars, China CNC supplier"/>
+<link rel="canonical" href="https://www.liaplias.com/fr/"/>
+<link rel="alternate" hreflang="en" href="https://www.liaplias.com/en/"/>
+<link rel="alternate" hreflang="zh" href="https://www.liaplias.com/zh/"/>
+<link rel="alternate" hreflang="de" href="https://www.liaplias.com/de/"/>
+<link rel="alternate" hreflang="fr" href="https://www.liaplias.com/fr/"/>
+<link rel="alternate" hreflang="x-default" href="https://www.liaplias.com/en/"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="LIAPLIAS — Pièces CNC de précision, fabriquées en Chine"/>
-<meta property="og:description" content="Composants standards compatibles HASCO & Meusburger + usinage CNC sur mesure."/>
-<meta property="og:url" content="https://liaplias.com/fr/index.html"/>
-<meta property="og:image" content="https://liaplias.com/assets/images/og-cover.jpg"/>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"LIAPLIAS",
- "url":"https://liaplias.com","contactPoint":{"@type":"ContactPoint",
- "email":"info@liaplias.com","contactType":"sales"}}
+<meta property="og:title" content="LIAPLIAS — Precision CNC Parts, China Made"/>
+<meta property="og:description" content="HASCO & Meusburger compatible standard components + custom CNC machining."/>
+<meta property="og:url" content="https://www.liaplias.com/fr/"/>
+<meta property="og:image" content="https://video.liaplias.com/og-cover.jpg"/>
+
+<script type="application/ld+json"> 
+  { 
+    "@context": "https://schema.org", 
+    "@type": "Organization", 
+    "name": "LIAPLIAS", 
+    "url": "https://www.liaplias.com", 
+    "description": "LIAPLIAS is a precision manufacturing sourcing and inquiry platform connecting international buyers with qualified manufacturing partners in China.", 
+    "contactPoint": { 
+      "@type": "ContactPoint", 
+      "email": "info@liaplias.com", 
+      "contactType": "sales" 
+    } 
+  } 
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -31,6 +41,8 @@
   --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
   --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
   --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+  --amber:#ffab40;
+  --teal:#2dd4bf;--teal-glow:rgba(45,212,191,.22);
   --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
   --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
   --ease:250ms cubic-bezier(.4,0,.2,1);
@@ -82,16 +94,18 @@ p{max-width:65ch}
   transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
 #nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
 #nav.hd{transform:translateY(-100%)}
-.ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+.ni{display:flex;align-items:center;justify-content:space-between;gap:2rem;width:100%;
   max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
 .logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em;display:flex;align-items:center}
 .logo em{font-style:normal;color:var(--cyan)}
 .nl{display:flex;align-items:center;gap:1.6rem}
-.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--text-mid);
+.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;line-height:1.2;color:var(--text-mid);
   transition:color var(--ease);position:relative;padding-block:.25rem}
 .na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--cyan);transition:width var(--ease)}
 .na:hover,.na.act{color:var(--text)}
 .na:hover::after,.na.act::after{width:100%}
+.nl-actions{display:flex;align-items:center;flex-wrap:nowrap;gap:.6rem;padding-left:1rem;margin-left:.3rem;border-left:1px solid var(--border)}
+.nl-actions .rfq-counter{margin:0}
 .nr{display:flex;align-items:center;gap:.65rem}
 .lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
   border:1px solid var(--border2);border-radius:6px;padding:3px}
@@ -115,6 +129,9 @@ p{max-width:65ch}
   .top-lang{display:none!important}
   .menu-lang{display:flex;justify-content:center;gap:0.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
   .menu-lang .lb{font-size:0.67rem;padding:4px 9px}
+  .nl-actions{flex-direction:column;align-items:stretch;flex-wrap:wrap;gap:1rem;padding-left:0;margin-left:0;border-left:none;border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;width:100%}
+  .nl-actions .btn{width:100%;justify-content:center}
+  .nl-actions .rfq-counter{justify-content:center;width:100%}
 }
 .hero{min-height:100vh;display:flex;align-items:center;padding-top:var(--nav-h);position:relative;overflow:hidden}
 .hbg{position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 68% 28%,rgba(45,127,255,.13) 0%,transparent 65%),radial-gradient(ellipse 50% 65% at 15% 72%,rgba(0,212,255,.08) 0%,transparent 60%),linear-gradient(170deg,#0a0f1e 0%,#0c1530 55%,#080d1c 100%)}
@@ -126,7 +143,21 @@ p{max-width:65ch}
 @keyframes drift{from{transform:translate(0,0)}to{transform:translate(20px,-30px)}}
 .hlines{position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent,transparent 3px,rgba(0,212,255,.012) 3px,rgba(0,212,255,.012) 4px);pointer-events:none}
 .hc{position:relative;z-index:2;max-width:780px}
-.chip{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.25);border-radius:100px;padding:.32rem .9rem;font-size:.7rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.5rem}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:rgba(255,171,64,.09);
+  border:1px solid rgba(255,171,64,.28);
+  border-radius:100px;
+  padding:.32rem .9rem;
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--amber);
+  margin-bottom:1.5rem
+}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:blink 2.2s ease infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3;transform:scale(.6)}}
 .htitle{font-size:clamp(2.2rem,6vw,4.5rem);font-weight:800;line-height:1.04;letter-spacing:-.02em;margin-bottom:1.5rem}
@@ -142,6 +173,7 @@ p{max-width:65ch}
 .si{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.3rem}
 .si+.si{border-left:1px solid var(--border)}
 .sn{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;line-height:1;background:linear-gradient(135deg,var(--blue-l),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sn-cap{font-size:clamp(1rem,2.2vw,1.35rem);line-height:1.35;letter-spacing:.005em}
 .sl{font-size:.78rem;color:var(--text-dim);letter-spacing:.05em;margin-top:.1rem}
 .cg{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3.5rem}
 .cc{background:var(--surf);border:1px solid var(--border);border-radius:var(--r-lg);padding:2rem;display:flex;flex-direction:column;gap:1rem;transition:border-color var(--ease),transform var(--ease),box-shadow var(--ease)}
@@ -151,6 +183,13 @@ p{max-width:65ch}
 .cc p{font-size:.86rem;color:var(--text-mid);line-height:1.65;max-width:100%}
 .clink{font-size:.75rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--blue-l);display:inline-flex;align-items:center;gap:.3rem;transition:gap var(--ease),color var(--ease);margin-top:auto}
 .clink:hover{gap:.6rem;color:var(--cyan)}
+.hcats{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.hcats-label{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);margin-right:.3rem}
+.hcat{font-size:.76rem;font-weight:500;color:var(--blue-l);background:rgba(45,127,255,.1);
+  border:1px solid rgba(45,127,255,.3);border-radius:100px;padding:.4rem 1rem;
+  transition:all var(--ease);cursor:pointer}
+.hcat:hover{color:var(--text);border-color:var(--cyan);background:rgba(0,212,255,.12);transform:translateY(-1px)}
+@media(max-width:640px){.hcats{gap:.5rem}.hcats-label{width:100%;margin-bottom:.2rem}}
 .ig{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3.5rem}
 .ic{background:rgba(255,255,255,.022);border:1px solid var(--border);border-radius:var(--r);padding:1.6rem;transition:border-color var(--ease),background var(--ease),transform var(--ease)}
 .ic:hover{border-color:rgba(0,212,255,.3);background:rgba(0,212,255,.04);transform:translateY(-3px)}
@@ -173,6 +212,7 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .fb .logo{margin-bottom:1rem;display:block;font-size:1.3rem}
 .fb p{font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.4rem;max-width:270px}
+.fb p:first-of-type{color:var(--text);font-weight:500}
 .fcol h5{font-family:'Space Grotesk',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.1rem}
 .fcol ul{display:flex;flex-direction:column;gap:.7rem}
 .fcol a{font-size:.8rem;color:var(--text-mid);transition:color var(--ease)}
@@ -181,26 +221,104 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 .fbot p,.fop{font-size:.72rem;color:var(--text-dim)}
 .fop{font-family:'Space Grotesk',sans-serif;letter-spacing:.06em;color:var(--text-mid)}
 @media(max-width:1024px){.ig{grid-template-columns:repeat(2,1fr)}.stg{grid-template-columns:repeat(2,1fr)}.sline{display:none}.fg{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){
-  .sg{grid-template-columns:repeat(2,1fr)}
-  .si+.si{border-left:none;border-top:1px solid var(--border)}
-  .cg{grid-template-columns:1fr}
-  .ig{grid-template-columns:1fr}
-  .stg{grid-template-columns:1fr}
-  .fg{grid-template-columns:1fr}
-  .ctaw{padding:3rem 1.5rem}
-  .htitle{font-size:1.8rem}
-}
+@media(max-width:768px){.sg{grid-template-columns:repeat(2,1fr)}.si+.si{border-left:none;border-top:1px solid var(--border)}.cg{grid-template-columns:1fr}.ig{grid-template-columns:1fr}.stg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.ctaw{padding:3rem 1.5rem}.htitle{font-size:1.8rem}}
 @media(max-width:480px){.hcta{flex-direction:column;align-items:flex-start}.btn-lg{width:100%;justify-content:center}}
-/* ===== 分类标签样式 — 与英文版一致（蓝色高亮风格） ===== */
-.hcats{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-.hcats-label{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);margin-right:.3rem}
-.hcat{font-size:.76rem;font-weight:500;color:var(--blue-l);background:rgba(45,127,255,.1);
-  border:1px solid rgba(45,127,255,.3);border-radius:100px;padding:.4rem 1rem;
-  transition:all var(--ease);cursor:pointer}
-.hcat:hover{color:var(--text);border-color:var(--cyan);background:rgba(0,212,255,.12);transform:translateY(-1px)}
-@media(max-width:640px){.hcats{gap:.5rem}.hcats-label{width:100%;margin-bottom:.2rem}}
+/* ============ 浮动视频入口 + 弹窗 ============ */
+.vm-overlay{position:fixed;inset:0;z-index:3000;background:rgba(6,10,20,.86);backdrop-filter:blur(6px);
+  display:none;align-items:center;justify-content:center;padding:1.5rem;overflow-y:auto}
+.vm-overlay.open{display:flex}
+.vm-box{width:100%;max-width:760px;background:var(--surf);border:1px solid var(--border2);border-radius:var(--r-lg);
+  overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.6);animation:vm-in .25s ease}
+@keyframes vm-in{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.vm-head{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border)}
+.vm-head .eyebrow{margin:0}
+.vm-close{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid var(--border2);
+  color:var(--text-mid);font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:all var(--ease);flex-shrink:0}
+.vm-close:hover{background:rgba(255,255,255,.12);color:var(--text)}
+.vm-media{aspect-ratio:16/9;background:#000;position:relative}
+.vm-media video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+.vm-info{padding:1.1rem 1.25rem}
+.vm-info h4{font-size:1rem;margin-bottom:.4rem}
+.vm-info p{font-size:.82rem;color:var(--text-mid);line-height:1.6;margin-bottom:.9rem}
+.vm-tabs{display:flex;gap:.5rem;padding:0 1.25rem 1.25rem;flex-wrap:wrap}
+.vm-tab{padding:.5rem 1rem;border-radius:999px;border:1px solid var(--border2);background:rgba(255,255,255,.03);
+  font-size:.74rem;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all var(--ease)}
+.vm-tab:hover{border-color:var(--teal);color:var(--text)}
+.vm-tab.active{background:var(--teal);border-color:var(--teal);color:#04201c}
+.vm-tab[disabled]{opacity:.35;cursor:not-allowed;pointer-events:none}
+.vm-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem;font-weight:600;color:var(--teal)}
+body.vm-lock{overflow:hidden}
+
+/* ============ 广告展示区 ============ */
+.partner-showcase {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 2000;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.partner-item {
+  position: relative;  /* ← 加这一行 */
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--ease);
+  border: 1px solid rgba(45, 212, 191, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.partner-showcase .partner-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(45, 212, 191, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.partner-showcase .partner-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.partner-video-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity var(--ease);
+}
+
+.partner-item:hover .partner-video-badge {
+  opacity: 0.85;
+}
+@media (max-width: 640px) {
+  .partner-showcase {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    gap: 0.5rem;
+  }
+  .partner-showcase .partner-item {
+    width: 120px;
+  }
+}
+
 </style>
+
 <!-- RFQ 样式 -->
 <style>
 .rfq-counter{display:inline-flex;align-items:center;gap:0.3rem;padding:0.3rem 0.65rem;background:rgba(45,127,255,0.16);border:1px solid rgba(45,127,255,0.4);border-radius:999px;color:var(--text);font-size:0.75rem;font-weight:600;cursor:pointer;transition:all var(--ease);white-space:nowrap;margin-left:-6px;margin-right:12px}
@@ -241,35 +359,38 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 </head>
 <body>
 
-<nav id="nav" role="navigation" aria-label="Navigation principale">
+<nav id="nav" role="navigation" aria-label="Main navigation">
   <div class="ni">
-    <a href="/fr/index.html" class="logo" aria-label="LIAPLIAS accueil">LIAP<em>LIAS</em></a>
-    <ul class="nl" id="nl" role="list">
-      <li><a class="na" href="/fr/index.html" data-p="index.html">Accueil</a></li>
-      <li><a class="na" href="/fr/cooperation.html" data-p="cooperation.html">Coopération</a></li>
-      <li><a class="na" href="/fr/industries.html" data-p="industries.html">Secteurs</a></li>
-      <li><a class="na" href="/fr/code-search.html" data-p="code-search.html">Recherche par code</a></li>
-      <li><a class="na" href="/fr/custom-cnc.html" data-p="custom-cnc.html">Custom CNC</a></li>
-      <li><a class="na" href="/fr/solutions.html" data-p="solutions.html">Solutions</a></li>
-      <li><a class="na" href="/fr/partners.html" data-p="partners.html">Partenaires</a></li>
-      <li><a class="na" href="/fr/contact.html" data-p="contact.html">Contact</a></li>
+    <a href="/fr/" class="logo" aria-label="LIAPLIAS home">LIAP<em>LIAS</em></a>
+        <ul class="nl" id="nl" role="list">
+      <li><a class="na act" href="/fr/" data-p="index.html">Accueil</a></li>
+      <li><a class="na" href="/fr/why-liaplias/" data-p="why-liaplias.html">Pourquoi LIAPLIAS</a></li>
+      <li><a class="na" href="/fr/manufacturing/" data-p="manufacturing.html">Fabrication</a></li>
+      <li><a class="na" href="/fr/code-search/" data-p="code-search.html">Recherche par Code</a></li>
+      <li><a class="na" href="/fr/supply-network/" data-p="supply-network.html">Réseau de Fabrication</a></li>
+      <li><a class="na" href="/fr/partnerships/" data-p="partnerships.html">Partenariats</a></li>
+      <li><a class="na" href="/fr/contact/" data-p="contact.html">Contact</a></li>
       <li class="menu-lang">
-        <a href="/en/index.html" class="lb">EN</a>
-        <a href="/de/index.html" class="lb">DE</a>
-        <a href="/fr/index.html" class="lb act">FR</a>
-        <a href="/zh/index.html" class="lb">中</a>
+      <a href="/en/" class="lb">EN</a>
+      <a href="/de/" class="lb">DE</a>
+      <a href="/fr/" class="lb act">FR</a>
+      <a href="/zh/" class="lb">中</a>
       </li>
-<li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
+      <!-- Action zone: Send Inquiry + RFQ, kept on one row -->
+      <li class="nl-actions">
+      <a href="#" class="btn btn-p btn-sm" data-contact-trigger>Envoyer une demande</a>
+      <div class="rfq-counter" onclick="toggleRfqPanel()">RFQ (<span id="rfqCount">0</span>)</div>
+     </li>
     </ul>
     <div class="nr">
-      <div class="lp hm" aria-label="Sélectionner la langue">
-        <a href="/en/index.html" class="lb">EN</a>
-        <a href="/de/index.html" class="lb">DE</a>
-        <a href="/fr/index.html" class="lb act">FR</a>
-        <a href="/zh/index.html" class="lb">中</a>
+      <div class="lp hm" aria-label="Select language">
+      <a href="/en/" class="lb">EN</a>
+      <a href="/de/" class="lb">DE</a>
+      <a href="/fr/" class="lb act">FR</a>
+      <a href="/zh/" class="lb">中</a>
       </div>
-      <a href="/fr/code-search.html" class="btn btn-p btn-sm hm btn-pulse">Demander un devis</a>
-      <button class="ham" id="ham" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  
+      <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -283,32 +404,53 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
   <div class="orb o3" aria-hidden="true"></div>
   <div class="c">
     <div class="hc">
-      <div class="chip"><span class="dot" aria-hidden="true"></span>Partenaire mondial d'approvisionnement CNC</div>
-      <h1 class="htitle">Pièces de Précision.<br><span class="t-g">Fabriquées en Chine.</span><br><span class="t-m">Prêtes pour le Monde.</span></h1>
-      <p class="hsub">Composants standards compatibles HASCO &amp; Meusburger, plus usinage CNC sur mesure — sourcés auprès d'usines chinoises certifiées, livrés à votre porte.</p>
+      <div class="chip"><span class="dot" aria-hidden="true"></span>Sourcing en fabrication de précision</div>
+      <h1 class="htitle">Fabrication de précision,<br><span class="t-g">adaptée à</span><br><span class="t-m">vos exigences</span></h1>
+      <p class="hsub">Des pièces de précision sur mesure aux éléments standards compatibles HASCO et Meusburger, LIAPLIAS met vos exigences en relation avec des capacités de fabrication qualifiées.</p>
       <div class="hcta">
-        <a href="/fr/code-search.html" class="btn btn-p btn-lg btn-pulse">Recherche par code</a>
-        <a href="/fr/cooperation.html" class="btn btn-o btn-lg">Notre fonctionnement</a>
+        <a href="#" class="btn btn-p btn-lg btn-pulse" data-contact-trigger>Envoyer une demande</a>
+        <a href="/fr/code-search/" class="btn btn-o btn-lg">Rechercher par code</a>
       </div>
       <div class="ctags">
         <span class="ctag">Compatible HASCO</span>
         <span class="ctag">Compatible Meusburger</span>
-        <span class="ctag">Usines certifiées ISO</span>
+        <span class="ctag">Revue technique</span>
+        <span class="ctag">Capacités de fabrication qualifiées</span>
       </div>
-      <div class="hcats" id="categoryContainer">
-      <span class="hcats-label">Parcourir par catégorie</span>
+
+    </div>
+  </div>
+</section>
+<section class="sec" id="two-paths">
+  <div class="c">
+    <div class="rv" style="text-align:center">
+      <div class="eyebrow" style="justify-content:center">Deux voies d&#39;approvisionnement</div>
+      <h2>Trouvez la voie adaptée à votre besoin</h2>
+      <p style="color:var(--text-mid);margin-inline:auto;margin-top:.9rem;font-size:.92rem;max-width:520px;text-align:center">Choisissez la voie qui correspond à votre besoin.</p>
+    </div>
+    <div class="cg">
+      <div class="cc rv d1">
+        <div class="cico">🔧</div>
+        <h3>Vous avez un besoin de fabrication sur mesure ou non standard ?</h3>
+        <p>Envoyez vos plans, fichiers STEP ou une nomenclature (BOM) pour une revue technique et une mise en relation avec les capacités de fabrication adaptées.</p>
+        <a href="#" class="clink" data-contact-trigger>Envoyer une demande →</a>
+      </div>
+      <div class="cc rv d2">
+        <div class="cico">⚙️</div>
+        <h3>Vous recherchez des éléments standards pour moules ?</h3>
+        <p>Recherchez des pièces compatibles HASCO/Meusburger par code et demandez un devis.</p>
+        <a href="/fr/code-search/" class="clink">Rechercher par code →</a>
       </div>
     </div>
   </div>
 </section>
-
 <div class="stats">
   <div class="c">
     <div class="sg">
-      <div class="si rv"><div class="sn" data-cu="400" data-sfx="+">400+</div><div class="sl">Références en base</div></div>
-      <div class="si rv d1"><div class="sn" data-cu="3" data-sfx="+">3+</div><div class="sl">Usines certifiées</div></div>
-      <div class="si rv d2"><div class="sn" data-cu="20" data-sfx="+">20+</div><div class="sl">Pays desservis</div></div>
-      <div class="si rv d3"><div class="sn">7–15</div><div class="sl">Jours de délai</div></div>
+      <div class="si rv"><div class="sn sn-cap">Base de données d&#39;éléments standards</div></div>
+      <div class="si rv d1"><div class="sn sn-cap">Capacités de fabrication qualifiées</div></div>
+      <div class="si rv d2"><div class="sn sn-cap">Pièces sur mesure &amp; éléments standards</div></div>
+      <div class="si rv d3"><div class="sn sn-cap">Un interlocuteur unique</div></div>
     </div>
   </div>
 </div>
@@ -316,67 +458,97 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
 <section class="sec" id="capabilities">
   <div class="c">
     <div class="rv">
-      <div class="eyebrow">Ce que nous offrons</div>
-      <h2>Capacité CNC complète</h2>
-      <p style="color:var(--text-mid);margin-top:.9rem;font-size:.92rem;max-width:560px">Des composants standards sur étagère aux pièces entièrement sur mesure — un seul partenaire, une seule norme, un seul interlocuteur.</p>
+      <div class="eyebrow">Notre offre</div>
+      <h2>Compétences en fabrication de précision</h2>
+      <p style="color:var(--text-mid);margin-top:.9rem;font-size:.92rem;max-width:560px">Des éléments standards à la fabrication de pièces sur mesure, nos compétences couvrent l&#39;usinage de précision, l&#39;outillage et d&#39;autres besoins de fabrication spécialisés.</p>
     </div>
     <div class="cg">
-      <div class="cc rv d1"><div class="cico">⚙️</div><h3>Composants standards</h3><p>Éléments de guidage, éjecteurs, ressorts, fixations et plus. Complètement compatibles avec les systèmes HASCO &amp; Meusburger.</p><a href="/fr/code-search.html" class="clink">Rechercher des pièces →</a></div>
-      <div class="cc rv d2"><div class="cico">🔧</div><h3>Usinage sur mesure</h3><p>Téléchargez votre dessin (PDF/DWG). Devis sous 24 heures. Tolérances jusqu'à ±0,005 mm.</p><a href="/fr/contact.html" class="clink">Envoyer un plan →</a></div>
-      <div class="cc rv d3"><div class="cico">🏭</div><h3>Intégration de la chaîne d'approvisionnement</h3><p>Nous consolidons les commandes entre usines, gérons le contrôle qualité et livrons directement à votre entrepôt.</p><a href="/fr/cooperation.html" class="clink">Notre fonctionnement →</a></div>
-      <div class="cc rv d4"><div class="cico">💻</div><h3>Catalogue numérique</h3><p>Recherchez 400+ références par code HASCO, code Meusburger ou mot-clé. Déposez votre nomenclature pour une demande groupée.</p><a href="/fr/code-search.html" class="clink">Parcourir le catalogue →</a></div>
+      <div class="cc rv d1"><div class="cico">⚙️</div><h3>Éléments Standards</h3><p>Éléments de guidage, éjecteurs, ressorts, éléments de fixation et plus encore. Entièrement compatibles avec les systèmes de numérotation HASCO et Meusburger.</p><a href="/fr/code-search/" class="clink">Rechercher par code →</a></div>
+      <div class="cc rv d2"><div class="cico">🔧</div><h3>Fabrication de Pièces sur Mesure</h3><p>Accompagnement de fabrication pour pièces de précision à partir de vos plans, spécifications et exigences projet.</p><a href="#" class="clink" data-contact-trigger>Envoyer une demande →</a></div>
+      <div class="cc rv d3"><div class="cico">🏭</div><h3>Coordination de Projet</h3><p>Nous coordonnons la production et les échanges liés à la livraison au sein de notre réseau de fabrication, tout en suivant les exigences qualité convenues.</p><a href="/fr/why-liaplias/" class="clink">Pourquoi LIAPLIAS →</a></div>
+      <div class="cc rv d4"><div class="cico">💻</div><h3>Catalogue Numérique</h3><p>Recherchez dans notre base de données par code HASCO, code Meusburger ou mot-clé. Soumettez une nomenclature pour une demande groupée — aucune inscription requise.</p><a href="/fr/code-search/" class="clink">Rechercher par code →</a></div>
     </div>
   </div>
 </section>
 
 <section class="sec" style="background:var(--bg2)" id="industries">
   <div class="c">
-    <div class="rv"><div class="eyebrow">Secteurs desservis</div><h2>Conçu pour les industries qui bâtissent le monde</h2></div>
+    <div class="rv"><div class="eyebrow">Secteurs que nous servons</div><h2>Au service des industries qui construisent tout</h2></div>
     <div class="ig">
-      <div class="ic rv d1"><div class="ie">🔩</div><h4>Moules &amp; Outillage</h4><p>Composants standards pour moules d'injection, outillages de coulée sous pression et matrices d'emboutissage.</p></div>
-      <div class="ic rv d2"><div class="ie">🚗</div><h4>Automobile</h4><p>Pièces de précision pour carrosserie, châssis, groupe motopropulseur et gabarits d'assemblage.</p></div>
-      <div class="ic rv d3"><div class="ie">📱</div><h4>Électronique &amp; 3C</h4><p>Fixations à tolérance fine, supports et boîtiers pour la fabrication d'électronique grand public.</p></div>
-      <div class="ic rv"><div class="ie">⚡</div><h4>Énergies nouvelles</h4><p>Composants structurels et fonctionnels pour batteries de VE, équipements solaires et éoliens.</p></div>
-      <div class="ic rv d1"><div class="ie">🏗️</div><h4>Bâtiment &amp; Construction</h4><p>Raccords de précision pour quincaillerie architecturale, sanitaire et systèmes de construction modulaires.</p></div>
-      <div class="ic rv d2"><div class="ie">✈️</div><h4>Aérospatiale &amp; Industrie</h4><p>Pièces de haute spécification avec traçabilité complète pour applications industrielles exigeantes.</p></div>
+      <div class="ic rv d1"><div class="ie">🤖</div><h4>Automatisation Industrielle</h4><p>Composants de précision pour systèmes d&#39;automatisation, ensembles robotisés et machines industrielles.</p></div>
+      <div class="ic rv d2"><div class="ie">⚕️</div><h4>Dispositifs Médicaux</h4><p>Composants usinés avec précision pour équipements médicaux et de diagnostic.</p></div>
+      <div class="ic rv d3"><div class="ie">🚗</div><h4>Automobile</h4><p>Pièces de précision pour carrosserie, châssis, groupe motopropulseur et gabarits de montage intérieur.</p></div>
+      <div class="ic rv"><div class="ie">⚡</div><h4>Équipements Énergétiques</h4><p>Composants structurels et fonctionnels pour batteries EV, équipements solaires et éoliens.</p></div>
+      <div class="ic rv d1"><div class="ie">📱</div><h4>Électronique</h4><p>Fixations, supports et boîtiers de haute précision pour la fabrication d&#39;électronique grand public.</p></div>
+      <div class="ic rv d2"><div class="ie">🔩</div><h4>Outillage &amp; Moules</h4><p>Éléments standards pour moules d&#39;injection, outils de moulage sous pression et outils d&#39;emboutissage.</p></div>
     </div>
-    <div style="text-align:center;margin-top:3rem" class="rv"><a href="/fr/industries.html" class="btn btn-o">Voir toutes les industries</a></div>
-  </div>
+     </div>
 </section>
 
 <section class="sec" id="how">
   <div class="c">
-    <div class="rv" style="text-align:center"><div class="eyebrow" style="justify-content:center">Comment ça fonctionne</div><h2>De la demande à la livraison en 4 étapes</h2></div>
+    <div class="rv" style="text-align:center"><div class="eyebrow" style="justify-content:center">Comment ça marche</div><h2>De la demande à la livraison en 4 étapes</h2></div>
     <div class="sw">
       <div class="sline" aria-hidden="true"></div>
       <div class="stg">
-        <div class="st rv d1"><div class="stn" aria-label="Étape 1">01</div><div><h4>Rechercher ou importer</h4><p>Saisissez un code HASCO/Meusburger, un mot-clé, ou importez votre tableau BOM.</p></div></div>
-        <div class="st rv d2"><div class="stn" aria-label="Étape 2">02</div><div><h4>Soumettre la demande</h4><p>Confirmez votre liste de produits, ajoutez les quantités et exigences de livraison, puis soumettez.</p></div></div>
-        <div class="st rv d3"><div class="stn" aria-label="Étape 3">03</div><div><h4>Recevoir un devis</h4><p>Nous répondons sous 24 heures avec prix, délai et certification d'usine.</p></div></div>
-        <div class="st rv d4"><div class="stn" aria-label="Étape 4">04</div><div><h4>Confirmer &amp; Expédier</h4><p>Après votre approbation, nous gérons la production, le contrôle qualité et l'expédition internationale.</p></div></div>
+        <div class="st rv d1"><div class="stn" aria-label="Step 1">01</div><div><h4>Rechercher ou nous contacter</h4><p>Recherchez dans notre base de données par code, ou envoyez-nous directement votre besoin de fabrication.</p></div></div>
+        <div class="st rv d2"><div class="stn" aria-label="Step 2">02</div><div><h4>Analyse du besoin</h4><p>Nous analysons votre besoin et confirmons la voie la plus adaptée.</p></div></div>
+        <div class="st rv d3"><div class="stn" aria-label="Step 3">03</div><div><h4>Recevoir un devis</h4><p>Prix et délai basés sur votre besoin.</p></div></div>
+        <div class="st rv d4"><div class="stn" aria-label="Step 4">04</div><div><h4>Confirmer &amp; Livrer</h4><p>Validez le devis — nous coordonnons la production et la livraison.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="sec" style="padding-top:0">
-  <div class="c"><div class="ctaw rv"><h2>Prêt à simplifier votre approvisionnement CNC ?</h2><p>Recherchez 400+ composants standards ou déposez une nomenclature pour une demande groupée — aucune inscription requise.</p><div class="ctab"><a href="/fr/code-search.html" class="btn btn-p btn-lg">Recherche par code</a><a href="/fr/contact.html" class="btn btn-o btn-lg">Contactez-nous</a></div></div></div>
+  <div class="c"><div class="ctaw rv"><h2>Prêt à simplifier votre sourcing de fabrication ?</h2><p>Que vous ayez besoin de pièces sur mesure ou d&#39;éléments standards, LIAPLIAS est prêt à vous accompagner — sans inscription requise.</p><div class="ctab"><a href="#" class="btn btn-p btn-lg" data-contact-trigger>Envoyer une demande</a><a href="/fr/code-search/" class="btn btn-o btn-lg">Rechercher par code</a></div></div></div>
 </section>
 
 <footer>
-  <div class="c">
+<div class="c">
     <div class="fg">
-      <div class="fb"><span class="logo">LIAP<em>LIAS</em></span><p>Pièces CNC de précision — Fabriquées en Chine, prêtes pour le monde.</p><p>Exploité par NOLVO</p><p>LIAPLIAS® Marque déposée dans l'UE et aux États-Unis.</p></div>
-      <div class="fcol"><h5>Navigation</h5><ul><li><a href="/fr/cooperation.html">Coopération</a></li><li><a href="/fr/industries.html">Secteurs</a></li><li><a href="/fr/code-search.html">Recherche par code</a></li><li><a href="/fr/custom-cnc.html">Custom CNC</a></li><li><a href="/fr/solutions.html">Solutions</a></li><li><a href="/fr/partners.html">Partenaires</a></li></ul></div>
-      <div class="fcol"><h5>Mentions légales</h5><ul><li><a href="/fr/privacy.html">Politique de confidentialité</a></li><li><a href="/fr/terms.html">Conditions d'utilisation</a></li></ul></div>
-      <div class="fcol"><h5>Contact</h5><ul><li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li><li><a href="https://liaplias.com">liaplias.com</a></li></ul></div>
+      <div class="fb"><span class="logo">LIAP<em>LIAS</em></span><p>La bonne voie de fabrication. <br>Le bon partenaire de fabrication. <br>Du besoin à la livraison.</p><p>Exploité par NOLVO</p><p>LIAPLIAS® est une marque déposée dans l&#39;UE et aux États-Unis.</p></div>
+      <div class="fcol"><h5>Navigation</h5><ul><li><a href="/fr/">Accueil</a></li><li><a href="/fr/why-liaplias/">Pourquoi LIAPLIAS</a></li><li><a href="/fr/manufacturing/">Fabrication</a></li><li><a href="/fr/code-search/">Recherche par Code</a></li><li><a href="/fr/supply-network/">Réseau de Fabrication</a></li><li><a href="/fr/partnerships/">Partenariats</a></li><li><a href="/fr/contact/">Contact</a></li></ul></div>
+      <div class="fcol"><h5>Mentions légales</h5><ul><li><a href="/fr/privacy/">Politique de Confidentialité</a></li><li><a href="/fr/terms/">Conditions d&#39;Utilisation</a></li></ul></div>
+      <div class="fcol"><h5>Contact</h5><ul><li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li><li><a href="https://www.liaplias.com">liaplias.com</a></li></ul></div>
     </div>
     <div class="fbot"><p>© 2026 LIAPLIAS. Tous droits réservés.</p><span class="fop">Exploité par NOLVO</span></div>
   </div>
 </footer>
 
+<!-- ============ 广告展示区 ============ -->
+<div class="partner-showcase" id="partnerShowcase"></div>
+
+<!-- 侧边栏面板 -->
+<div class="rfq-panel" id="rfqPanel">
+  <div class="rfq-panel-header">
+    <h3>Liste RFQ</h3>
+    <button class="rfq-close" onclick="toggleRfqPanel()">&times;</button>
+  </div>
+  <div class="rfq-list-header">
+    <span class="rfq-col-size">Taille</span>
+    <span class="rfq-col-code">Code LIA</span>
+    <span class="rfq-col-qty">Qté</span>
+    <span class="rfq-col-remove"></span>
+  </div>
+  <div id="rfqItems"><p class="rfq-empty">Aucun article ajouté pour le moment.</p></div>
+  <div class="rfq-contact-block">
+    <p class="rfq-contact-title">Coordonnées (Obligatoire)</p>
+    <label class="rfq-field-label">Nom Complet *<input type="text" id="rfqName" placeholder="John Doe" class="rfq-field-input"></label>
+    <label class="rfq-field-label">Nom de l&#39;Entreprise *<input type="text" id="rfqCompany" placeholder="Your Company" class="rfq-field-input"></label>
+    <label class="rfq-field-label rfq-field-label-last">Adresse E-mail *<input type="email" id="rfqEmail" placeholder="you@company.com" class="rfq-field-input"></label>
+  </div>
+  <div class="rfq-submit-wrap">
+    <a href="#" class="quote-btn"  id="submitRfqBtn">Envoyer la RFQ</a>
+  </div>
+</div>
+
+<script src="../rfq-submit.js"></script>
+<script src="/contact-window.js" defer></script>
+
 <script>
 (function() {
+  // 导航栏滚动效果
   const nav = document.getElementById('nav');
   let lastY = 0, ticking = false;
   window.addEventListener('scroll', () => {
@@ -393,6 +565,7 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
     }
   }, { passive: true });
 
+  // 移动端汉堡菜单
   const ham = document.getElementById('ham');
   const nl = document.getElementById('nl');
   if (ham && nl) {
@@ -412,45 +585,20 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
     });
   }
 
-  const curPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
-
-  document.querySelectorAll('[data-p]').forEach(a => {
-    if (a.getAttribute('data-p') === curPage) a.classList.add('act');
-  });
-
+  // 滚动动画
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('in');
+        entry.target.classList.add('in');requestAnimationFrame(()=>{});
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.rv').forEach(el => observer.observe(el));
-
-  const countObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseFloat(el.dataset.cu);
-      const sfx = el.dataset.sfx || '';
-      if (isNaN(target)) return;
-      const duration = 1400;
-      const startTime = performance.now();
-      function update(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.floor(target * easeOutCubic) + sfx;
-        if (progress < 1) requestAnimationFrame(update);
-      }
-      requestAnimationFrame(update);
-      countObserver.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-cu]').forEach(el => countObserver.observe(el));
 })();
 </script>
+
+<!-- 导航高亮 - 修复后的版本 -->
 <script>
 (function() {
   let currentPage = location.pathname.split('/').filter(Boolean).pop() || 'index.html';
@@ -464,58 +612,168 @@ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4
     const cleanTargetPage = targetPage.replace('.html', '');
     if (cleanTargetPage === cleanCurrentPage) {
       link.classList.add('act');
+      console.log('高亮成功:', link.textContent, '匹配:', cleanCurrentPage);
     }
   });
 })();
 </script>
-<!-- RFQ 侧边栏面板 -->
-<div class="rfq-panel" id="rfqPanel">
-  <div class="rfq-panel-header">
-    <h3>RFQ List</h3>
-    <button class="rfq-close" onclick="toggleRfqPanel()">&times;</button>
-  </div>
-  <div class="rfq-list-header">
-    <span class="rfq-col-size">Size</span>
-    <span class="rfq-col-code">LIA Code</span>
-    <span class="rfq-col-qty">Qty</span>
-    <span class="rfq-col-remove"></span>
-  </div>
-  <div id="rfqItems"><p class="rfq-empty">No items added yet.</p></div>
-  <div class="rfq-contact-block">
-    <p class="rfq-contact-title">Contact Information (Required)</p>
-    <label class="rfq-field-label">Full Name *<input type="text" id="rfqName" placeholder="John Doe" class="rfq-field-input"></label>
-    <label class="rfq-field-label">Company Name *<input type="text" id="rfqCompany" placeholder="Your Company" class="rfq-field-input"></label>
-    <label class="rfq-field-label rfq-field-label-last">Email Address *<input type="email" id="rfqEmail" placeholder="you@company.com" class="rfq-field-input"></label>
-  </div>
-  <div class="rfq-submit-wrap">
-    <a href="#" class="quote-btn" id="submitRfqBtn">Submit RFQ</a>
+
+<!-- ============ 视频弹窗 ============ -->
+<div class="vm-overlay" id="vmOverlay" onclick="if(event.target===this)closeVideoModal()">
+  <div class="vm-box">
+    <div class="vm-head">
+      <div class="eyebrow">Partenaire à la Une</div>
+      <div class="vm-close" onclick="closeVideoModal()">&times;</div>
+    </div>
+    <div class="vm-media">
+      <video id="vmVideo" controls playsinline>
+        <source id="vmSource" src="" type="video/mp4">
+      </video>
+    </div>
+    <div class="vm-info">
+      <h4 id="vmName">—</h4>
+      <p id="vmBlurb">—</p>
+      <a href="#" id="vmLink" class="vm-link">Voir le profil complet →</a>
+    </div>
+    <div class="vm-tabs" id="vmTabs"></div>
   </div>
 </div>
 
-<script src="../rfq-submit.js"></script>
 <script>
-(function loadCategories() {
-  const container = document.getElementById('categoryContainer');
+/*
+  广告位管理说明：
+  共预留 4 个位置（PARTNER_VIDEOS 数组，下标 0-3）
+  要启用某个位置：把对应对象的 active 改成 true，并填入 video / poster / name / blurb / link 的真实内容
+  要停用某个位置：把 active 改回 false（内容留着或清空都可以，disabled 状态由 active 自动控制）
+  当前状态：位置1、位置2（下标0、1）已启用；位置3、位置4（下标2、3）预留未启用
+*/
+const PARTNER_VIDEOS = [
+  {
+    active: true,
+    name: '[Shenzhen Colevo Technology Co., Ltd.]',
+    blurb: 'Shenzhen Colevo Technology Co., Ltd. est spécialisée dans l&#39;usinage de précision sur mesure pour des secteurs exigeants tels que l&#39;aérospatiale, l&#39;automobile et les dispositifs médicaux. Avec plus de 90 clients occidentaux accompagnés, l&#39;entreprise est un partenaire de fabrication fiable pour les pièces de précision non standards.',
+    video: 'https://video.liaplias.com/partner-01.mp4',
+    poster: 'https://video.liaplias.com/partner-01-poster.jpg',
+    link: '/fr/showcase/partner-01.html'
+  },
+  {
+    active: false,
+    name: 'AMB 2026 欧洲市场合作计划',
+    blurb: 'AMB 2026 · 欧洲市场合作机会. Steve Kim 将于9月15-19日赴德国斯图加特，通过AMB及欧洲本地商务资源，帮助中国制造企业触达潜在欧洲客户。 ¥5,000 / 家 ｜ 仅限10家。提供企业资料 → 欧洲市场触达 → 客户需求反馈 → 有效机会持续跟进。想了解合作名额，请联系 Steve Kim',
+    video: 'https://video.liaplias.com/partner-02.mp4',
+    poster: 'https://video.liaplias.com/partner-02-poster.jpg',
+    link: '/fr/showcase/partner-02.html'
+  },
+  {
+    active: false,
+    name: '[Partner Company Name]',
+    blurb: '[One-line summary of manufacturing scope and core strengths — e.g. non-standard CNC machining, multi-axis capability, X years in operation]',
+    video: '[VIDEO FILE URL — Partner 3]',
+    poster: '[POSTER IMAGE URL — Partner 3]',
+    link: '/fr/showcase/partner-03.html'
+  },
+  {
+    active: false,
+    name: '[Partner Company Name]',
+    blurb: 'Reserved — coming soon.',
+    video: '',
+    poster: '',
+    link: '/fr/showcase/partner-04.html'
+  }
+];
+
+// ============================================================
+// 广告展示区 —— 直接显示所有 active 广告封面
+// ============================================================
+
+function renderAdShowcase() {
+  const container = document.getElementById('partnerShowcase');
   if (!container) return;
 
-  fetch('/assets/data/category-mapping.json')
-    .then(res => {
-      if (!res.ok) throw new Error('Failed to fetch category data');
-      return res.json();
-    })
-    .then(data => {
-      data.forEach(cat => {
-        const a = document.createElement('a');
-        a.href = `/en/categories/${cat.seo_slug}.html`;
-        a.className = 'hcat';
-        a.textContent = cat.name_fr;
-        container.appendChild(a);
-      });
-    })
-    .catch(() => {
-      container.style.display = 'none';
+  const activeAds = PARTNER_VIDEOS.filter(p => p.active);
+
+  if (activeAds.length === 0) {
+    container.style.display = 'none';
+    return;
+  }
+
+  let html = '';
+  activeAds.forEach(p => {
+    const originalIndex = PARTNER_VIDEOS.indexOf(p);
+    html += `
+     <div class="partner-item" data-index="${originalIndex}">
+     <img src="${p.poster}" alt="${p.name}" loading="lazy">
+     <span class="partner-video-badge">▶ VIDÉO</span>
+     </div>
+    `;
+  });
+
+  container.innerHTML = html;
+
+  container.querySelectorAll('.partner-item').forEach(item => {
+    item.addEventListener('click', function() {
+      const index = parseInt(this.dataset.index, 10);
+      if (!isNaN(index) && PARTNER_VIDEOS[index]?.active) {
+        openVideoModal(index);
+      }
     });
-})();
+  });
+}
+
+// ---- 初始化 ----
+document.addEventListener('DOMContentLoaded', function() {
+  renderAdShowcase();
+});
+
+function buildVmTabs(){
+  const wrap = document.getElementById('vmTabs');
+  wrap.innerHTML = '';
+  PARTNER_VIDEOS.forEach((p, i) => {
+    const b = document.createElement('button');
+    b.className = 'vm-tab';
+    b.textContent = 'Partner ' + (i + 1);
+    if (!p.active) b.disabled = true;
+    b.onclick = () => renderVideoSlot(i);
+    wrap.appendChild(b);
+  });
+}
+
+function renderVideoSlot(idx){
+  const p = PARTNER_VIDEOS[idx];
+  if (!p || !p.active) return;
+  const v = document.getElementById('vmVideo');
+  const src = document.getElementById('vmSource');
+  src.src = p.video;
+  v.poster = p.poster;
+  v.load();
+  v.play().catch(() => {});
+  document.getElementById('vmName').textContent = p.name;
+  document.getElementById('vmBlurb').textContent = p.blurb;
+  document.getElementById('vmLink').href = p.link;
+  document.querySelectorAll('.vm-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
+}
+
+function openVideoModal(startIdx){
+  buildVmTabs();
+  const idx = (typeof startIdx === 'number' && PARTNER_VIDEOS[startIdx] && PARTNER_VIDEOS[startIdx].active)
+    ? startIdx
+    : PARTNER_VIDEOS.findIndex(p => p.active);
+  if (idx === -1) return;
+  renderVideoSlot(idx);
+  document.getElementById('vmOverlay').classList.add('open');
+  document.body.classList.add('vm-lock');
+}
+
+function closeVideoModal(){
+  document.getElementById('vmOverlay').classList.remove('open');
+  document.body.classList.remove('vm-lock');
+  const v = document.getElementById('vmVideo');
+  v.pause();
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeVideoModal();
+});
 </script>
 
 </body>

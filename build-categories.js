@@ -25,7 +25,7 @@
 //    ——分类名/meta/介绍文案读 category-mapping.json 的 name_de/meta_description_de/introduction_de，
 //    缺失时兜底回退英文并打印警告（当前只有 ejector-pins / guide-pillars-guide-bushings 两个分类
 //    真正配了德语内容，其余4个分类德语页面暂时是英文内容的占位版本，等翻译到位后再补）
-// 9. 站内其余页面（cooperation/industries/code-search/solutions/partners/contact/privacy/terms/首页）
+// 9. 站内其余页面（industries/code-search/partners/contact/privacy/terms/首页）
 //    还没有德语版，德语分类页里指向这些页面的链接暂时仍指向英文版（文字翻译，链接不翻译）——
 //    跟详情页"返回分类"链接是同一个处理原则，等对应页面出了德语版再切换
 
@@ -56,11 +56,15 @@ const UI_STRINGS = {
     navCooperation: 'Cooperation',
     navIndustries: 'Industries',
     navCodeSearch: 'Code Search',
+    navWhy: 'Why LIAPLIAS',
     navSolutions: 'Solutions',
     navPartners: 'Partners',
     navContact: 'Contact',
+    navManufacturing: 'Manufacturing',
+    navSupplyNetwork: 'Supply Network',
+    sendInquiry: 'Send Inquiry',
     getQuote: 'Get a Quote',
-    codeSearchHint: 'Browse our range below, or search by your existing part number in <a href="/en/code-search.html">Code Search →</a>',
+    codeSearchHint: 'Browse our range below, or search by your existing part number in <a href="/en/code-search/">Code Search →</a>',
     browseByCategory: 'Browse by category',
     productRange: 'Product Range',
     browsePrefix: 'Browse',
@@ -68,7 +72,7 @@ const UI_STRINGS = {
     relatedCategories: 'Related Categories',
     requestQuote: 'Request Quote',
     contactUs: 'Contact Us',
-    footerTagline: 'Precision CNC Parts — China Made, World Ready.',
+    footerTagline: 'The Right Manufacturing Path. <br>The Right Manufacturing Partner. <br>Requirements to Delivery..',
     operatedBy: 'Operated by NOLVO',
     trademark: 'LIAPLIAS® Trademark registered in EU & US.',
     footerNavHeading: 'Navigation',
@@ -108,11 +112,15 @@ const UI_STRINGS = {
     navCooperation: 'Kooperation',
     navIndustries: 'Branchen',
     navCodeSearch: 'Code-Suche',
+    navWhy: 'Warum LIAPLIAS',
     navSolutions: 'Lösungen',
     navPartners: 'Partner',
     navContact: 'Kontakt',
+    navManufacturing: 'Fertigung',
+    navSupplyNetwork: 'Liefernetzwerk',
+    sendInquiry: 'Anfrage senden',
     getQuote: 'Angebot anfordern',
-    codeSearchHint: 'Durchsuchen Sie unten unser Sortiment oder suchen Sie mit Ihrer vorhandenen Teilenummer in der <a href="/de/code-search.html">Code-Suche →</a>',
+    codeSearchHint: 'Durchsuchen Sie unten unser Sortiment oder suchen Sie mit Ihrer vorhandenen Teilenummer in der <a href="/en/code-search/">Code Search →</a>',
     browseByCategory: 'Nach Kategorie durchsuchen',
     productRange: 'Produktsortiment',
     browsePrefix: 'Durchsuchen:',
@@ -120,7 +128,7 @@ const UI_STRINGS = {
     relatedCategories: 'Verwandte Kategorien',
     requestQuote: 'Angebot anfordern',
     contactUs: 'Kontakt aufnehmen',
-    footerTagline: 'Präzisions-CNC-Teile — China Made, World Ready.',
+    footerTagline: 'Der richtige Fertigungsweg. <br>Der richtige Fertigungspartner. <br>Von der Anforderung bis zur Lieferung.',
     operatedBy: 'Betrieben von NOLVO',
     trademark: 'LIAPLIAS® Warenzeichen eingetragen in EU & USA.',
     footerNavHeading: 'Navigation',
@@ -247,7 +255,7 @@ function generateItemListJson(codes, byCode, familyConfig, lang) {
       return {
         '@type': 'ListItem',
         position: index + 1,
-        url: `https://liaplias.com/${lang}/products/${slug}.html`,
+        url: `https://www.liaplias.com/${lang}/products/${slug}.html`,
         name: displayName,
       };
     });
@@ -362,7 +370,7 @@ function generateCategoryPage(category, allCategories, products, familyConfig, t
     .replace(/\{\{product_cards\}\}/g, familyCards)
     .replace(/\{\{itemlist_jsonld\}\}/g, itemListJson)
     // 2026-08-13：导航栏/CTA按钮/页脚这3处Code Search链接改用占位符，按语言分流
-    .replace(/\{\{code_search_path\}\}/g, lang === 'de' ? '/de/code-search.html' : '/en/code-search.html')
+    .replace(/\{\{code_search_path\}\}/g, lang === 'de' ? '/de/code-search/' : '/en/code-search/')
     .replace(/\{\{category_quicklinks\}\}/g, quicklinks)
     // 修复：模板里实际是 related_category_links_bottom（带_bottom），此前正则漏了这个后缀
     .replace(/\{\{related_category_links_bottom\}\}/g, relatedLinks)
@@ -374,9 +382,13 @@ function generateCategoryPage(category, allCategories, products, familyConfig, t
     .replace(/\{\{t_nav_cooperation\}\}/g, esc(t.navCooperation))
     .replace(/\{\{t_nav_industries\}\}/g, esc(t.navIndustries))
     .replace(/\{\{t_nav_code_search\}\}/g, esc(t.navCodeSearch))
+    .replace(/\{\{t_nav_why\}\}/g, esc(t.navWhy))
     .replace(/\{\{t_nav_solutions\}\}/g, esc(t.navSolutions))
     .replace(/\{\{t_nav_partners\}\}/g, esc(t.navPartners))
     .replace(/\{\{t_nav_contact\}\}/g, esc(t.navContact))
+    .replace(/\{\{t_nav_manufacturing\}\}/g, esc(t.navManufacturing))
+    .replace(/\{\{t_nav_supply_network\}\}/g, esc(t.navSupplyNetwork))
+    .replace(/\{\{t_send_inquiry\}\}/g, esc(t.sendInquiry))
     .replace(/\{\{t_get_quote\}\}/g, esc(t.getQuote))
     .replace(/\{\{t_code_search_hint\}\}/g, t.codeSearchHint) // 含<a>标签，不esc
     .replace(/\{\{t_browse_by_category\}\}/g, esc(t.browseByCategory))

@@ -306,8 +306,8 @@ function generateFamilyHTML(family, categoryMap, lang) {
   // German rollout（2026-08-09）：德语页面读取 config.translations.de，缺字段兜底回退到英文字段
   const tr = (config.translations && config.translations[lang]) || {};
   const slug = lang === 'de' ? (config.slug_de || config.slug_en) : (config.slug_en || config.slug);
-  const pageUrl = `https://liaplias.com/${lang}/products/${slug}.html`;
-  const homeUrl = `https://liaplias.com/${lang}/`;
+  const pageUrl = `https://www.liaplias.com/${lang}/products/${slug}.html`;
+  const homeUrl = `https://www.liaplias.com/${lang}/`;
   const pageTitle = tr.title || config.title;
 
   // 查出该 category_code 所属的SEO分类（Tier1）信息
@@ -417,9 +417,9 @@ const categoryDisplayName = categoryInfo
   <meta property="og:url" content="${pageUrl}">
   <meta property="og:site_name" content="LIAPLIAS">
   <link rel="canonical" href="${pageUrl}">
-  <link rel="alternate" hreflang="en" href="https://liaplias.com/en/products/${config.slug_en}.html">
-  <link rel="alternate" hreflang="de" href="https://liaplias.com/de/products/${config.slug_de}.html">
-  <link rel="alternate" hreflang="x-default" href="https://liaplias.com/en/products/${config.slug_en}.html">
+  <link rel="alternate" hreflang="en" href="https://www.liaplias.com/en/products/${config.slug_en}.html">
+  <link rel="alternate" hreflang="de" href="https://www.liaplias.com/de/products/${config.slug_de}.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.liaplias.com/en/products/${config.slug_en}.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
@@ -428,7 +428,7 @@ const categoryDisplayName = categoryInfo
     "description": "${esc(displayName)} - ${esc(din || '')}",
     "productGroupID": "${esc(category_code)}",
     "brand": { "@type": "Brand", "name": "LIAPLIAS" },
-    "seller": { "@type": "Organization", "name": "LIAPLIAS", "url": "https://liaplias.com" },
+    "seller": { "@type": "Organization", "name": "LIAPLIAS", "url": "https://www.liaplias.com" },
     "category": "${esc(categoryDisplayName)}",
     "variesBy": ["https://schema.org/width"],
     "hasVariant": [
@@ -442,7 +442,7 @@ const categoryDisplayName = categoryInfo
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "${esc(t.home)}", "item": "${homeUrl}" },
-      { "@type": "ListItem", "position": 2, "name": "${esc(categoryDisplayName)}", "item": "https://liaplias.com${categoryPath}" },
+      { "@type": "ListItem", "position": 2, "name": "${esc(categoryDisplayName)}", "item": "https://www.liaplias.com${categoryPath}" },
       { "@type": "ListItem", "position": 3, "name": "${esc(category_code)}", "item": "${pageUrl}" }
     ]
   }

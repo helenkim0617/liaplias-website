@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact & Demander un devis — LIAPLIAS</title>
-  <meta name="description" content="Contactez LIAPLIAS pour des demandes de produits, rapprochement de nomenclature (BOM) ou demandes de devis. Exploité par NOLVO. Réponse sous un jour ouvré." />
-  <link rel="canonical" href="https://liaplias.com/fr/contact.html" />
-  <link rel="alternate" hreflang="zh" href="https://liaplias.com/zh/contact.html" />
-  <link rel="alternate" hreflang="de" href="https://liaplias.com/de/contact.html" />
-  <link rel="alternate" hreflang="fr" href="https://liaplias.com/fr/contact.html" />
-  <link rel="alternate" hreflang="en" href="https://liaplias.com/en/contact.html" />
+  <meta name="description" content="Contactez LIAPLIAS pour des demandes de produits, rapprochement de nomenclature (BOM) ou demandes de devis. Exploité par NOLVO. Première réponse sous 1 jour ouvré." />
+  <link rel="canonical" href="https://www.liaplias.com/fr/contact/" />
+  <link rel="alternate" hreflang="zh" href="https://www.liaplias.com/zh/contact/" />
+  <link rel="alternate" hreflang="de" href="https://www.liaplias.com/de/contact/" />
+  <link rel="alternate" hreflang="fr" href="https://www.liaplias.com/fr/contact/" />
+  <link rel="alternate" hreflang="en" href="https://www.liaplias.com/en/contact/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,8 @@
   --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
   --blue:#2d7fff;--blue-l:#5b9fff;--blue-d:#1a5cd4;--blue-glow:rgba(45,127,255,.35);
   --cyan:#00d4ff;--cyan-glow:rgba(0,212,255,.25);
+  --amber:#ffab40;
+  --teal:#2dd4bf;--teal-glow:rgba(45,212,191,.22);
   --text:#f0f4ff;--text-mid:#8b9bbb;--text-dim:#3d4f70;
   --nav-h:64px;--r:10px;--r-lg:18px;--max-w:1200px;
   --ease:250ms cubic-bezier(.4,0,.2,1);
@@ -74,17 +76,19 @@ p{max-width:65ch}
   transition:background var(--ease),backdrop-filter var(--ease),box-shadow var(--ease),transform var(--ease)}
 #nav.sc{background:rgba(10,15,30,.9);backdrop-filter:blur(18px);box-shadow:0 1px 0 var(--border)}
 #nav.hd{transform:translateY(-100%)}
-.ni{display:flex;align-items:center;justify-content:space-between;width:100%;
+.ni{display:flex;align-items:center;justify-content:space-between;gap:2rem;width:100%;
   max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
 .logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;letter-spacing:.06em}
 .logo em{font-style:normal;color:var(--cyan)}
 .nl{display:flex;align-items:center;gap:1.6rem}
-.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--text-mid);
+.na{font-size:.8rem;font-weight:500;letter-spacing:.04em;line-height:1.2;color:var(--text-mid);
   transition:color var(--ease);position:relative;padding-block:.25rem}
 .na::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;
   background:var(--cyan);transition:width var(--ease)}
 .na:hover,.na.act{color:var(--text)}
 .na:hover::after,.na.act::after{width:100%}
+.nl-actions{display:flex;align-items:center;flex-wrap:nowrap;gap:.6rem;padding-left:1rem;margin-left:.3rem;border-left:1px solid var(--border)}
+.nl-actions .rfq-counter{margin:0}
 .nr{display:flex;align-items:center;gap:.65rem}
 .lp{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);
   border:1px solid var(--border2);border-radius:6px;padding:3px}
@@ -110,6 +114,9 @@ p{max-width:65ch}
   .top-lang{display:none!important}
   .menu-lang{display:flex;justify-content:center;gap:0.75rem;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--border)}
   .menu-lang .lb{font-size:0.67rem;padding:4px 9px}
+  .nl-actions{flex-direction:column;align-items:stretch;flex-wrap:wrap;gap:1rem;padding-left:0;margin-left:0;border-left:none;border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;width:100%}
+  .nl-actions .btn{width:100%;justify-content:center}
+  .nl-actions .rfq-counter{justify-content:center;width:100%}
 }
 
 /* ── 以下是你原有的 contact 页面样式（保持不变）────────────────── */
@@ -298,17 +305,19 @@ body::before {
 .faq-item.open .faq-a { display: block; }
 
 /* Footer */
-footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); padding: 4.5rem clamp(1.5rem, 6vw, 5rem) 2rem; position: relative; width: 100%; display: block; clear: both; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-.footer-brand .nav-logo { margin-bottom: 1rem; display: block; }
-.footer-brand p { font-size: .8rem; color: var(--muted); line-height: 1.65; margin-bottom: .4rem; max-width: 280px; }
-.footer-col h5 { font-family: var(--ff-head); font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.1rem; }
-.footer-col ul { display: flex; flex-direction: column; gap: .7rem; }
-.footer-col a { font-size: .8rem; color: var(--muted); transition: color var(--ease); }
-.footer-col a:hover { color: var(--text); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,.05); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-.footer-bottom p { font-size: .72rem; color: rgba(136,153,187,.4); }
-.footer-op { font-family: var(--ff-head); font-size: .72rem; letter-spacing: .06em; color: var(--muted); }
+ footer{background:var(--surf);border-top:1px solid var(--border);padding-block:4.5rem 2rem}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.fb .logo{margin-bottom:1rem;display:block;font-size:1.3rem}
+.fb p{font-size:.8rem;color:var(--text-mid);line-height:1.65;margin-bottom:.4rem;max-width:270px}
+.fb p:first-of-type{color:var(--text);font-weight:500}
+.fcol h5{font-family:'Space Grotesk',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.1rem}
+.fcol ul{display:flex;flex-direction:column;gap:.7rem}
+.fcol a{font-size:.8rem;color:var(--text-mid);transition:color var(--ease)}
+.fcol a:hover{color:var(--text)}
+.fbot{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fbot p,.fop{font-size:.72rem;color:var(--text-dim)}
+.fop{font-family:'Space Grotesk',sans-serif;letter-spacing:.06em;color:var(--text-mid)}
+
 
 /* Toast 提示 */
 .toast {
@@ -319,17 +328,14 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
 .toast.show { transform: translateY(0); opacity: 1; }
 
 /* 响应式 */
-@media (max-width: 1024px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
+@media(max-width:1024px){.ig{grid-template-columns:repeat(2,1fr)}.stg{grid-template-columns:repeat(2,1fr)}.sline{display:none}.fg{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.sg{grid-template-columns:repeat(2,1fr)}.si+.si{border-left:none;border-top:1px solid var(--border)}.cg{grid-template-columns:1fr}.ig{grid-template-columns:1fr}.stg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.ctaw{padding:3rem 1.5rem}.htitle{font-size:1.8rem}}
+
 @media (max-width: 920px) {
   .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .form-panel { position: static; }
 }
-@media (max-width: 768px) {
-  .form-row2 { grid-template-columns: 1fr; gap: 0; }
-  .footer-grid { grid-template-columns: 1fr; }
-}
+
 </style>
 <!-- RFQ 样式 -->
 <style>
@@ -374,33 +380,36 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
 <!-- NAVIGATION (cooperation 标准结构) -->
 <nav id="nav">
   <div class="ni">
-    <a href="/fr/index.html" class="logo">LIAP<em>LIAS</em></a>
-    <ul class="nl" id="nl">
-      <li><a class="na" href="/fr/index.html" data-p="index.html">Accueil</a></li>
-      <li><a class="na" href="/fr/cooperation.html" data-p="cooperation.html">Coopération</a></li>
-      <li><a class="na" href="/fr/industries.html" data-p="industries.html">Secteurs</a></li>
-      <li><a class="na" href="/fr/code-search.html" data-p="code-search.html">Recherche par code</a></li>
-      <li><a class="na" href="/fr/custom-cnc.html" data-p="custom-cnc.html">Custom CNC</a></li>
-      <li><a class="na" href="/fr/solutions.html" data-p="solutions.html">Solutions</a></li>
-      <li><a class="na" href="/fr/partners.html" data-p="partners.html">Partenaires</a></li>
-      <li><a class="na" href="/fr/contact.html" data-p="contact.html">Contact</a></li>
-      <li class="menu-lang">
-        <a href="/en/contact.html" class="lb">EN</a>
-        <a href="/de/contact.html" class="lb">DE</a>
-        <a href="/fr/contact.html" class="lb act">FR</a>
-        <a href="/zh/contact.html" class="lb">中</a>
-      </li>
-<li><div class="rfq-counter" onclick="toggleRfqPanel()">🛒 RFQ List (<span id="rfqCount">0</span>)</div></li>
-    </ul>
+    <a href="/fr/" class="logo">LIAP<em>LIAS</em></a>
+    <ul class="nl" id="nl" role="list">
+     <li><a class="na" href="/fr/" data-p="index.html">Accueil</a></li>
+     <li><a class="na" href="/fr/why-liaplias/" data-p="why-liaplias.html">Pourquoi LIAPLIAS</a></li>
+     <li><a class="na" href="/fr/manufacturing/" data-p="manufacturing.html">Fabrication</a></li>
+     <li><a class="na" href="/fr/code-search/" data-p="code-search.html">Recherche par code</a></li>
+     <li><a class="na" href="/fr/supply-network/" data-p="supply-network.html">Réseau d'approvisionnement</a></li>
+     <li><a class="na" href="/fr/partnerships/" data-p="partnerships.html">Partenariats</a></li>
+     <li><a class="na act" href="/fr/contact/" data-p="contact.html">Contact</a></li>
+     <li class="menu-lang">
+    <a href="/en/contact/" class="lb">EN</a>
+    <a href="/de/contact/" class="lb">DE</a>
+    <a href="/fr/contact/" class="lb act">FR</a>
+    <a href="/zh/contact/" class="lb">中</a>
+    </li>
+    <!-- Action zone: Send Inquiry + RFQ, kept on one row -->
+    <li class="nl-actions">
+    <a href="#" class="btn btn-p btn-sm" data-contact-trigger>Envoyer une demande</a>
+    <div class="rfq-counter" onclick="toggleRfqPanel()">RFQ (<span id="rfqCount">0</span>)</div>
+    </li>
+  </ul>
+
     <div class="nr">
       <div class="lp hm">
-        <a href="/en/contact.html" class="lb">EN</a>
-        <a href="/de/contact.html" class="lb">DE</a>
-        <a href="/fr/contact.html" class="lb act">FR</a>
-        <a href="/zh/contact.html" class="lb">中</a>
+        <a href="/en/contact/" class="lb">EN</a>
+        <a href="/de/contact/" class="lb">DE</a>
+        <a href="/fr/contact/" class="lb act">FR</a>
+        <a href="/zh/contact/" class="lb">中</a>
       </div>
-      <a href="/fr/contact.html#quote" class="btn btn-p btn-sm hm btn-pulse">Demander un devis</a>
-      <button class="ham" id="ham" aria-label="Menu" aria-expanded="false">
+        <button class="ham" id="ham" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -413,11 +422,11 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
     <div class="hero-tag">Contact</div>
     <h1>
       Un seul contact.<br>
-      <span class="hero-gradient">Pleine<br>responsabilité.</span>
+      <span class="hero-gradient">De la demande<br>à la livraison.</span>
     </h1>
     <p>Que vous ayez besoin d'un devis, d'un rapprochement de nomenclature (BOM) ou d'une clarification technique — contactez-nous directement. Pas de centres d'appels, pas de files d'attente de tickets.</p>
     <div class="sla-row">
-      <span class="sla-badge">Réponse sous un jour ouvré</span>
+      <span class="sla-badge">Première réponse sous 1 jour ouvré</span>
       <span class="sla-badge">Rapprochement HASCO / Meusburger</span>
       <span class="sla-badge">Import de BOM supporté</span>
     </div>
@@ -435,7 +444,7 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
 </div>
     <div class="info-card">
       <div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div><div class="info-label">Délai de réponse</div><div class="info-value">Sous un jour ouvré</div><div class="info-sub">Lun–Ven, heures ouvrables CET et CST. Les demandes urgentes sont signalées en conséquence.</div></div>
+      <div><div class="info-label">Délai de réponse</div><div class="info-value">Première réponse sous 1 jour ouvré</div><div class="info-sub">Lun–Ven, heures ouvrables CET et CST. Les demandes urgentes sont signalées en conséquence.</div></div>
     </div>
     <div class="info-card">
       <div class="info-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
@@ -447,7 +456,7 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
     </div>
     <div class="info-card">
       <div class="info-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <div><div class="info-label">Recherche par code</div><div class="info-value"><a href="/fr/code-search.html">Rechercher par code LIA / HASCO / Meusburger →</a></div><div class="info-sub">Trouvez les équivalents exacts de produits avant de soumettre votre demande.</div></div>
+      <div><div class="info-label">Recherche par code</div><div class="info-value"><a href="/fr/code-search/">Rechercher par code LIA / HASCO / Meusburger →</a></div><div class="info-sub">Trouvez les équivalents exacts de produits avant de soumettre votre demande.</div></div>
     </div>
   </div>
 
@@ -470,7 +479,7 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
         <div class="form-group"><label for="q-qty">Quantité & exigence de livraison</label><input type="text" id="q-qty" name="quantity" placeholder="ex. 500 pièces, livraison sous 4 semaines, DAP Hambourg" /></div>
         <div class="form-group"><label for="q-notes">Remarques supplémentaires</label><textarea id="q-notes" name="notes" placeholder="Variantes de matériau, classe de tolérance, traitement de surface ou toute autre spécification…"></textarea></div>
         <button type="submit" class="form-submit"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Envoyer la demande de devis</button>
-        <p class="form-note">Nous répondons sous un jour ouvré. <a href="mailto:info@liaplias.com">info@liaplias.com</a></p>
+        <p class="form-note">Première réponse sous 1 jour ouvré. <a href="mailto:info@liaplias.com">info@liaplias.com</a></p>
       </form>
     </div>
 
@@ -507,22 +516,62 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
   </div>
   <div class="faq-list rv d1">
     <div class="faq-item"><button class="faq-q">Quelle est la quantité de commande minimale ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Il n'y a pas de quantité minimale générale pour les articles de catalogue standard. Pour les spécifications particulières ou les combinaisons de suffixes non standard, une production minimale peut être requise. Indiquez votre besoin dans le formulaire de devis et nous le confirmerons.</div></div>
-    <div class="faq-item"><button class="faq-q">Pouvez-vous rapprocher notre nomenclature HASCO ou Meusburger existante ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Oui — c'est un service clé. Importez votre BOM dans l'onglet "Rapprochement BOM" ou utilisez notre outil de <a href="/fr/code-search.html" style="color:var(--cyan)">Recherche par code</a> pour trouver des équivalents avant de soumettre une demande.</div></div>
+    <div class="faq-item"><button class="faq-q">Pouvez-vous rapprocher notre nomenclature HASCO ou Meusburger existante ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Oui — c'est un service clé. Importez votre BOM dans l'onglet "Rapprochement BOM" ou utilisez notre outil de <a href="/fr/code-search/" style="color:var(--cyan)">Recherche par code</a> pour trouver des équivalents avant de soumettre une demande.</div></div>
     <div class="faq-item"><button class="faq-q">Quels délais de livraison dois-je prévoir ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Les articles en stock sont expédiés sous 3 à 5 jours ouvrés. Les configurations personnalisées ou les commandes en grande quantité nécessitent généralement un délai de production de 3 à 6 semaines. Le délai de livraison est confirmé avec chaque devis.</div></div>
     <div class="faq-item"><button class="faq-q">Quels Incoterms supportez-vous ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">EXW (origine), FOB, CIF et DAP sont tous supportés. Nous travaillons avec des transitaires établis pour le traitement des importations dans l'UE et aux États-Unis. La documentation douanière est fournie par défaut.</div></div>
-    <div class="faq-item"><button class="faq-q">Comment devenir distributeur agréé ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Visitez la page <a href="/fr/partners.html" style="color:var(--cyan)">Partenaires</a> et soumettez une candidature. Nous examinons toutes les candidatures sous 3 jours ouvrés et répondons avec les critères de qualification.</div></div>
+    <div class="faq-item"><button class="faq-q">Comment devenir distributeur agréé ?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Visitez la page <a href="/fr/partnerships/" style="color:var(--cyan)">Partenariats</a> et soumettez une candidature. Nous examinons toutes les candidatures sous 3 jours ouvrés et répondons avec les critères de qualification.</div></div>
   </div>
 </div>
 </section>
 
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand"><span class="nav-logo">LIAP<em>LIAS</em></span><p>Pièces CNC de précision — Fabriquées en Chine, prêtes pour le monde.</p><p>Exploité par NOLVO</p><p>LIAPLIAS® Marque déposée dans l'UE et aux États-Unis.</p></div>
-    <div class="footer-col"><h5>Navigation</h5><ul><li><a href="/fr/cooperation.html">Coopération</a></li><li><a href="/fr/industries.html">Secteurs</a></li><li><a href="/fr/code-search.html">Recherche par code</a></li><li><a href="/fr/solutions.html">Solutions</a></li><li><a href="/fr/partners.html">Partenaires</a></li></ul></div>
-    <div class="footer-col"><h5>Juridique</h5><ul><li><a href="/fr/privacy.html">Politique de confidentialité</a></li><li><a href="/fr/terms.html">Conditions d'utilisation</a></li></ul></div>
-    <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li><li><a href="https://liaplias.com">liaplias.com</a></li></ul></div>
+  <div class="c">
+    <div class="fg">
+
+      <div class="fb">
+        <span class="logo">LIAP<em>LIAS</em></span>
+        <p>La bonne voie de fabrication. <br>Le bon partenaire de fabrication. <br>Du besoin à la livraison.</p>
+        <p>Operated by NOLVO</p>
+        <p>Marque LIAPLIAS® déposée dans l'Union européenne et aux États-Unis.</p>
+      </div>
+
+      <div class="fcol">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="/fr/">Accueil</a></li>
+          <li><a href="/fr/why-liaplias/">Pourquoi LIAPLIAS</a></li>
+          <li><a href="/fr/manufacturing/">Fabrication</a></li>
+          <li><a href="/fr/code-search/">Recherche par code</a></li>
+          <li><a href="/fr/supply-network/">Réseau d'approvisionnement</a></li>
+          <li><a href="/fr/partnerships/">Partenariats</a></li>
+          <li><a href="/fr/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="fcol">
+        <h5>Mentions légales</h5>
+        <ul>
+          <li><a href="/fr/privacy/">Politique de confidentialité</a></li>
+          <li><a href="/fr/terms/">Conditions d'utilisation</a></li>
+        </ul>
+      </div>
+
+      <div class="fcol">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@liaplias.com">info@liaplias.com</a></li>
+          <li><a href="https://www.liaplias.com">liaplias.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="fbot">
+      <p>© 2026 LIAPLIAS. Tous droits réservés.</p>
+      <span class="fop">Operated by NOLVO</span>
+    </div>
+
   </div>
-  <div class="footer-bottom"><p>© 2026 LIAPLIAS. Tous droits réservés.</p><span class="footer-op">Exploité par NOLVO</span></div>
 </footer>
 
 <div class="toast" id="toast"></div>
@@ -645,7 +694,7 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
     });
   }
 
-  handleForm(document.getElementById('quoteForm'), 'quote', "✓ Demande de devis envoyée. Nous répondrons sous un jour ouvré.");
+  handleForm(document.getElementById('quoteForm'), 'quote', "✓ Demande de devis envoyée. Première réponse sous 1 jour ouvré.");
   handleForm(document.getElementById('bomForm'), 'bom_matching', '✓ BOM soumise. Les codes LIA rapprochés seront retournés sous 2 jours ouvrés.');
   handleForm(document.getElementById('generalForm'), 'general', '✓ Message envoyé à info@liaplias.com');
 
@@ -710,5 +759,6 @@ footer { background: var(--surf); border-top: 1px solid rgba(255,255,255,.05); p
 </div>
 
 <script src="../rfq-submit.js"></script>
+<script src="/contact-window.js" defer></script>
 </body>
 </html>

@@ -6,4 +6,4 @@ Allow: /fr/
 Disallow: /assets/data/
 Disallow: /workers/
 
-Sitemap: https://liaplias.com/sitemap.xml
+Sitemap: https://www.liaplias.com/sitemap.xml

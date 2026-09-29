@@ -86,30 +86,42 @@ function generateSitemap(families, categories) {
   });
   urls.push(...categoryUrls);
 
-  // 4. 主要页面（优先级 1.0）
+    // 4. 主要页面（优先级 1.0）
   const mainPages = [
-    { url: `${BASE_URL}/en/index.html`, priority: 1.0, changefreq: 'weekly' },
-    { url: `${BASE_URL}/en/code-search.html`, priority: 0.9, changefreq: 'weekly' },
-    { url: `${BASE_URL}/en/cooperation.html`, priority: 0.8, changefreq: 'monthly' },
-    { url: `${BASE_URL}/en/industries.html`, priority: 0.8, changefreq: 'monthly' },
-    { url: `${BASE_URL}/en/solutions.html`, priority: 0.8, changefreq: 'monthly' },
-    { url: `${BASE_URL}/en/partners.html`, priority: 0.8, changefreq: 'monthly' },
-    { url: `${BASE_URL}/en/contact.html`, priority: 0.9, changefreq: 'monthly' },
+    { url: `${BASE_URL}/en/`, priority: 1.0, changefreq: 'weekly' },
+    { url: `${BASE_URL}/en/why-liaplias/`, priority: 0.8, changefreq: 'monthly' },
+    { url: `${BASE_URL}/en/manufacturing/`, priority: 0.9, changefreq: 'monthly' },
+    { url: `${BASE_URL}/en/code-search/`, priority: 0.9, changefreq: 'weekly' },
+    { url: `${BASE_URL}/en/supply-network/`, priority: 0.8, changefreq: 'monthly' },
+    { url: `${BASE_URL}/en/partnerships/`, priority: 0.8, changefreq: 'monthly' },
+    { url: `${BASE_URL}/en/contact/`, priority: 0.8, changefreq: 'monthly' },
+    // ✨ 新增：合作伙伴详情页（优先级 0.7，低于主要页面）
+    { url: `${BASE_URL}/en/showcase/partner-01.html`, priority: 0.7, changefreq: 'monthly' },
   ];
+
   mainPages.forEach(page => {
     urls.push(generateUrlNode(page.url, page.priority, page.changefreq));
   });
+  
+// 5. 多语言版本（zh/de/fr）
+const langs = ['zh', 'de', 'fr'];
+const langPages = [
+  '',
+  'why-liaplias/',
+  'manufacturing/',
+  'code-search/',
+  'supply-network/',
+  'partnerships/',
+  'contact/'
+];
 
-  // 5. 多语言版本（zh/de/fr）
-  const langs = ['zh', 'de', 'fr'];
-  const langPages = ['index.html', 'code-search.html', 'cooperation.html', 'industries.html', 'solutions.html', 'partners.html', 'contact.html'];
-  langs.forEach(lang => {
-    langPages.forEach(page => {
-      const url = `${BASE_URL}/${lang}/${page}`;
-      const priority = page === 'index.html' ? 0.9 : (page === 'code-search.html' ? 0.8 : 0.7);
-      urls.push(generateUrlNode(url, priority, 'weekly'));
-    });
+langs.forEach(lang => {
+  langPages.forEach(page => {
+    const url = `${BASE_URL}/${lang}/${page}`;
+    const priority = page === '' ? 0.9 : (page === 'code-search/' ? 0.8 : 0.7);
+    urls.push(generateUrlNode(url, priority, 'weekly'));
   });
+});
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -139,14 +151,20 @@ function build() {
   fs.writeFileSync(SITEMAP_OUTPUT, sitemap, 'utf-8');
   console.log(`✅ 已生成: ${SITEMAP_OUTPUT}`);
 
-  // 4. 统计信息
-  const totalUrls = families.length + FAMILY_PAGES.length + categories.length * 2 + 7 + 21;
-  console.log(`📊 Sitemap 包含 ${totalUrls} 个 URL`);
-  console.log(`   - V2 Family 详情页: ${families.length} 个`);
-  console.log(`   - V1 遗留 Family 页: ${FAMILY_PAGES.length} 个`);
-  console.log(`   - 分类页: ${categories.length * 2} 个 (${categories.length} 英文 + ${categories.length} 德语)`);
-  console.log(`   - 其他页面: ${totalUrls - families.length - FAMILY_PAGES.length - categories.length} 个`);
-  console.log('🎉 构建完成!');
+// 4. 统计信息
+const totalUrls = families.length +
+  FAMILY_PAGES.length +
+  categories.length * 2 +
+  8 +
+  21;
+
+console.log(`📊 Sitemap 包含 ${totalUrls} 个 URL`);
+console.log(`   - V2 Family 详情页: ${families.length} 个`);
+console.log(`   - V1 遗留 Family 页: ${FAMILY_PAGES.length} 个`);
+console.log(`   - 分类页: ${categories.length * 2} 个 (${categories.length} 英文 + ${categories.length} 德语)`);
+console.log(`   - 主要页面: 8 个 (含 showcase/partner-01.html)`);
+console.log(`   - 多语言版本: 21 个`);
+console.log('🎉 构建完成!');
 }
 
 // ===== 执行 =====

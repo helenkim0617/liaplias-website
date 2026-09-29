@@ -1,22 +1,117 @@
 # Download files - 必须放在最前面
 /downloads/*          /downloads/:splat 200
 
-# www → 非www 域名统一，必须在其他所有规则之前
-https://www.liaplias.com/*  https://liaplias.com/:splat  301
+# 非www → www 域名统一，必须在其他所有规则之前
+https://liaplias.com/*  https://www.liaplias.com/:splat  301
 
 # Root redirect to English by default
-/                    /en/index.html    301
+/                    /en/    301
 
 # Language redirects
-/en                  /en/index.html    301
-/zh                  /zh/index.html    301
-/de                  /de/index.html    301
-/fr                  /fr/index.html    301
+/en                  /en/    301
+/zh                  /zh/    301
+/de                  /de/    301
+/fr                  /fr/    301
 
-# Category slug redirects
-/en/categories/guide-pillars-guide-bushings.html    /en/categories/guide-pillars-bushings.html    301
-/en/categories/guide-pillars-guide-bushings          /en/categories/guide-pillars-bushings          301
-/en/categories/mold-fastening-components.html    /en/categories/mold-fasteners.html    301
-/en/categories/mold-fastening-components          /en/categories/mold-fasteners          301
-/en/categories/mold-die-springs.html              /en/categories/die-springs.html        301
-/en/categories/mold-die-springs                    /en/categories/die-springs              301            301
+# Language homepage clean URL rewrites
+/en/                 /en/index.html    200
+/zh/                 /zh/index.html    200
+/de/                 /de/index.html    200
+/fr/                 /fr/index.html    200
+
+# Why LIAPLIAS clean URL rewrites
+/en/why-liaplias/    /en/why-liaplias.html    200
+/de/why-liaplias/    /de/why-liaplias.html    200
+/fr/why-liaplias/    /fr/why-liaplias.html    200
+/zh/why-liaplias/    /zh/why-liaplias.html    200
+
+# Manufacturing clean URL rewrites
+/en/manufacturing/    /en/manufacturing.html    200
+/de/manufacturing/    /de/manufacturing.html    200
+/fr/manufacturing/    /fr/manufacturing.html    200
+/zh/manufacturing/    /zh/manufacturing.html    200
+
+# Code Search  clean URL rewrites
+/en/code-search/    /en/code-search.html    200
+/de/code-search/    /de/code-search.html    200
+/fr/code-search/    /fr/code-search.html    200
+/zh/code-search/    /zh/code-search.html    200
+
+# supply-network clean URL rewrite
+/en/supply-network/    /en/supply-network.html    200
+/de/supply-network/    /de/supply-network.html    200
+/fr/supply-network/    /fr/supply-network.html    200
+/zh/supply-network/    /zh/supply-network.html    200
+
+# Partnerships clean URL rewrites
+/en/partnerships/    /en/partnerships.html    200
+/de/partnerships/    /de/partnerships.html    200
+/fr/partnerships/    /fr/partnerships.html    200
+/zh/partnerships/    /zh/partnerships.html    200
+
+# Contact clean URL rewrites
+/en/contact/    /en/contact.html    200
+/de/contact/    /de/contact.html    200
+/fr/contact/    /fr/contact.html    200
+/zh/contact/    /zh/contact.html    200
+
+# Privacy clean URL rewrites
+/en/privacy/   /en/privacy.html    200
+/de/privacy/   /de/privacy.html    200
+/fr/privacy/   /fr/privacy.html    200
+/zh/privacy/   /zh/privacy.html    200
+
+# Terms clean URL rewrites
+/en/terms/    /en/terms.html    200
+/de/terms/    /de/terms.html    200
+/fr/terms/    /fr/terms.html     200
+/zh/terms/    /zh/terms.html   200
+
+# Categories clean URL redirects — EN
+/en/categories/guide-pillars-bushings.html    /en/categories/guide-pillars-bushings    301
+/en/categories/ejector-pins.html              /en/categories/ejector-pins              301
+/en/categories/mold-fasteners.html             /en/categories/mold-fasteners             301
+/en/categories/die-springs.html                /en/categories/die-springs                301
+/en/categories/locating-centering-components.html    /en/categories/locating-centering-components    301
+/en/categories/mold-standard-components.html   /en/categories/mold-standard-components   301
+
+# Categories clean URL rewrites — EN
+#/en/categories/guide-pillars-bushings    /en/categories/guide-pillars-bushings.html    200
+#/en/categories/ejector-pins              /en/categories/ejector-pins.html              200
+#/en/categories/mold-fasteners             /en/categories/mold-fasteners.html             200
+#/en/categories/die-springs                /en/categories/die-springs.html                200
+#/en/categories/locating-centering-components    /en/categories/locating-centering-components.html    200
+#/en/categories/mold-standard-components   /en/categories/mold-standard-components.html   200
+
+# Categories clean URL redirects — DE
+/de/categories/fuehrungssaeulen-fuehrungsbuchsen.html    /de/categories/fuehrungssaeulen-fuehrungsbuchsen    301
+/de/categories/auswerferstifte.html                      /de/categories/auswerferstifte                      301
+/de/categories/befestigungselemente.html                 /de/categories/befestigungselemente                 301
+/de/categories/systemdruckfedern.html                    /de/categories/systemdruckfedern                    301
+/de/categories/zentrier-positionierelemente.html         /de/categories/zentrier-positionierelemente         301
+/de/categories/formenbau-normalien.html                  /de/categories/formenbau-normalien                  301
+
+# Categories clean URL rewrites — DE
+#/de/categories/fuehrungssaeulen-fuehrungsbuchsen    /de/categories/fuehrungssaeulen-fuehrungsbuchsen.html    200
+#/de/categories/auswerferstifte                      /de/categories/auswerferstifte.html                      200
+#/de/categories/befestigungselemente                 /de/categories/befestigungselemente.html                 200
+#/de/categories/systemdruckfedern                    /de/categories/systemdruckfedern.html                    200
+#/de/categories/zentrier-positionierelemente         /de/categories/zentrier-positionierelemente.html         200
+#/de/categories/formenbau-normalien                  /de/categories/formenbau-normalien.html                  200
+
+/en/cooperation.html    /en/why-liaplias/    301
+/en/solutions.html      /en/why-liaplias/    301
+/de/cooperation.html    /de/why-liaplias/    301
+/de/solutions.html      /de/why-liaplias/    301
+/fr/cooperation.html    /fr/why-liaplias/    301
+/fr/solutions.html      /fr/why-liaplias/    301
+/zh/cooperation.html    /zh/why-liaplias/    301
+/zh/solutions.html      /zh/why-liaplias/    301
+
+# Category slug redirects — optimized to final clean URLs
+/en/categories/guide-pillars-guide-bushings.html    /en/categories/guide-pillars-bushings    301
+/en/categories/guide-pillars-guide-bushings          /en/categories/guide-pillars-bushings    301
+/en/categories/mold-fastening-components.html       /en/categories/mold-fasteners             301
+/en/categories/mold-fastening-components             /en/categories/mold-fasteners             301
+/en/categories/mold-die-springs.html                 /en/categories/die-springs                301
+/en/categories/mold-die-springs                       /en/categories/die-springs                301
